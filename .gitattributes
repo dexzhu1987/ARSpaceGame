@@ -1,0 +1,2 @@
+arSpaceIOS/Libraries/libil2cpp.a filter=lfs diff=lfs merge=lfs -text
+arSpaceIOS/Libraries/libiPhone-lib.a filter=lfs diff=lfs merge=lfs -text
