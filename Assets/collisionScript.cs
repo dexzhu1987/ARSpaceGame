@@ -20,10 +20,15 @@ public class collisionScript : MonoBehaviour
     //for this to work both need colliders, one must have rigid body (spaceship) the other must have is trigger checked.
     void OnTriggerEnter(Collider col)
     {
-        GameObject explosion = Instantiate(Resources.Load("FlareMobile", typeof(GameObject))) as GameObject;
-        explosion.transform.position = transform.position;
-        Destroy(col.gameObject);
-        Destroy(explosion, 2);
+        
+        if (col.tag == "Player"){
+            GameObject explosion = Instantiate(Resources.Load("FlareMobile", typeof(GameObject))) as GameObject;
+            explosion.transform.position = transform.position;
+            Destroy(col.gameObject);
+            Destroy(explosion, 2);
+            Destroy(gameObject);
+        }
+      
 
 
         if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
@@ -36,7 +41,7 @@ public class collisionScript : MonoBehaviour
 
         }
 
-        Destroy(gameObject);
+      
 
 
     }
