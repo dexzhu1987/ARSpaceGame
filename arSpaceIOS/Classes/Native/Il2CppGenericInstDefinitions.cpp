@@ -377,8 +377,8 @@ extern const Il2CppType RectOffset_t1369453676_0_0_0;
 extern const Il2CppType TextAnchor_t2035777396_0_0_0;
 extern const Il2CppType AnimationTriggers_t2532145056_0_0_0;
 extern const Il2CppType Animator_t434523843_0_0_0;
-extern const Il2CppType MeshRenderer_t587009260_0_0_0;
 extern const Il2CppType AudioSource_t3935305588_0_0_0;
+extern const Il2CppType MeshRenderer_t587009260_0_0_0;
 extern const Il2CppType StandaloneInputModule_t2760469101_0_0_0;
 extern const Il2CppType ParticleSystemMultiplier_t2770350653_0_0_0;
 extern const Il2CppType ObjectResetter_t639177103_0_0_0;
@@ -1384,10 +1384,10 @@ static const RuntimeType* GenInst_AnimationTriggers_t2532145056_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_AnimationTriggers_t2532145056_0_0_0 = { 1, GenInst_AnimationTriggers_t2532145056_0_0_0_Types };
 static const RuntimeType* GenInst_Animator_t434523843_0_0_0_Types[] = { (&Animator_t434523843_0_0_0) };
 extern const Il2CppGenericInst GenInst_Animator_t434523843_0_0_0 = { 1, GenInst_Animator_t434523843_0_0_0_Types };
-static const RuntimeType* GenInst_MeshRenderer_t587009260_0_0_0_Types[] = { (&MeshRenderer_t587009260_0_0_0) };
-extern const Il2CppGenericInst GenInst_MeshRenderer_t587009260_0_0_0 = { 1, GenInst_MeshRenderer_t587009260_0_0_0_Types };
 static const RuntimeType* GenInst_AudioSource_t3935305588_0_0_0_Types[] = { (&AudioSource_t3935305588_0_0_0) };
 extern const Il2CppGenericInst GenInst_AudioSource_t3935305588_0_0_0 = { 1, GenInst_AudioSource_t3935305588_0_0_0_Types };
+static const RuntimeType* GenInst_MeshRenderer_t587009260_0_0_0_Types[] = { (&MeshRenderer_t587009260_0_0_0) };
+extern const Il2CppGenericInst GenInst_MeshRenderer_t587009260_0_0_0 = { 1, GenInst_MeshRenderer_t587009260_0_0_0_Types };
 static const RuntimeType* GenInst_StandaloneInputModule_t2760469101_0_0_0_Types[] = { (&StandaloneInputModule_t2760469101_0_0_0) };
 extern const Il2CppGenericInst GenInst_StandaloneInputModule_t2760469101_0_0_0 = { 1, GenInst_StandaloneInputModule_t2760469101_0_0_0_Types };
 static const RuntimeType* GenInst_ParticleSystemMultiplier_t2770350653_0_0_0_Types[] = { (&ParticleSystemMultiplier_t2770350653_0_0_0) };
@@ -2191,8 +2191,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[613] =
 	&GenInst_TextAnchor_t2035777396_0_0_0,
 	&GenInst_AnimationTriggers_t2532145056_0_0_0,
 	&GenInst_Animator_t434523843_0_0_0,
-	&GenInst_MeshRenderer_t587009260_0_0_0,
 	&GenInst_AudioSource_t3935305588_0_0_0,
+	&GenInst_MeshRenderer_t587009260_0_0_0,
 	&GenInst_StandaloneInputModule_t2760469101_0_0_0,
 	&GenInst_ParticleSystemMultiplier_t2770350653_0_0_0,
 	&GenInst_ObjectResetter_t639177103_0_0_0,

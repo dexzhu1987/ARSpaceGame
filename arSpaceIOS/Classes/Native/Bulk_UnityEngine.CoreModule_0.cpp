@@ -17977,6 +17977,8 @@ extern "C"  Component_t1923634451 * GameObject_GetComponentInChildren_m256779924
 extern "C"  Component_t1923634451 * GameObject_GetComponentInParent_m635782859 (GameObject_t1113636619 * __this, Type_t * ___type0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Component::GetComponentsForListInternal(System.Type,System.Object)
 extern "C"  void Component_GetComponentsForListInternal_m1419905927 (Component_t1923634451 * __this, Type_t * ___searchType0, RuntimeObject * ___resultList1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.String UnityEngine.GameObject::get_tag()
+extern "C"  String_t* GameObject_get_tag_m3951609671 (GameObject_t1113636619 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Component::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
 extern "C"  void Component_SendMessage_m2905932203 (Component_t1923634451 * __this, String_t* ___methodName0, RuntimeObject * ___value1, int32_t ___options2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Component::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
@@ -22802,6 +22804,24 @@ extern "C"  void Component_GetComponents_m1102698478 (Component_t1923634451 * __
 		List_1_t3395709193 * L_1 = ___results1;
 		Component_GetComponentsForListInternal_m1419905927(__this, L_0, L_1, /*hidden argument*/NULL);
 		return;
+	}
+}
+// System.String UnityEngine.Component::get_tag()
+extern "C"  String_t* Component_get_tag_m2716693327 (Component_t1923634451 * __this, const RuntimeMethod* method)
+{
+	String_t* V_0 = NULL;
+	{
+		GameObject_t1113636619 * L_0 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		NullCheck(L_0);
+		String_t* L_1 = GameObject_get_tag_m3951609671(L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		goto IL_0012;
+	}
+
+IL_0012:
+	{
+		String_t* L_2 = V_0;
+		return L_2;
 	}
 }
 // System.Void UnityEngine.Component::SendMessage(System.String)
@@ -28988,6 +29008,16 @@ extern "C"  bool GameObject_get_activeInHierarchy_m2006396688 (GameObject_t11136
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GameObject_get_activeInHierarchy_m2006396688_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::get_activeInHierarchy()");
 	bool retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
+// System.String UnityEngine.GameObject::get_tag()
+extern "C"  String_t* GameObject_get_tag_m3951609671 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	typedef String_t* (*GameObject_get_tag_m3951609671_ftn) (GameObject_t1113636619 *);
+	static GameObject_get_tag_m3951609671_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_get_tag_m3951609671_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::get_tag()");
+	String_t* retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
 // UnityEngine.GameObject[] UnityEngine.GameObject::FindGameObjectsWithTag(System.String)

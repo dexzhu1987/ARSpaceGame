@@ -39,6 +39,7 @@ public class mainCameraScipt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
+        this.transform.localRotation = cameraRotation;
 	}
 }

@@ -7527,6 +7527,7 @@ extern "C" void Component_GetComponentInChildren_m388868270 ();
 extern "C" void Component_GetComponentInParent_m779177818 ();
 extern "C" void Component_GetComponentsForListInternal_m1419905927 ();
 extern "C" void Component_GetComponents_m1102698478 ();
+extern "C" void Component_get_tag_m2716693327 ();
 extern "C" void Component_SendMessage_m3172125788 ();
 extern "C" void Component_SendMessage_m2905932203 ();
 extern "C" void Component_BroadcastMessage_m1122836454 ();
@@ -7691,6 +7692,7 @@ extern "C" void GameObject_set_layer_m3294992795 ();
 extern "C" void GameObject_SetActive_m796801857 ();
 extern "C" void GameObject_get_activeSelf_m1767405923 ();
 extern "C" void GameObject_get_activeInHierarchy_m2006396688 ();
+extern "C" void GameObject_get_tag_m3951609671 ();
 extern "C" void GameObject_FindGameObjectsWithTag_m2585173894 ();
 extern "C" void GameObject_SendMessage_m3720186693 ();
 extern "C" void GameObject_BroadcastMessage_m3721316603 ();
@@ -10863,6 +10865,16 @@ extern "C" void U3CMoveU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3C
 extern "C" void U3CMoveU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2738024937 ();
 extern "C" void U3CMoveU3Ec__Iterator0_Dispose_m3814727502 ();
 extern "C" void U3CMoveU3Ec__Iterator0_Reset_m4033852029 ();
+extern "C" void firstSceneBulletCollisionScript__ctor_m1092820501 ();
+extern "C" void firstSceneBulletCollisionScript_Start_m2865665621 ();
+extern "C" void firstSceneBulletCollisionScript_Update_m424318019 ();
+extern "C" void firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682 ();
+extern "C" void mainCameraScipt__ctor_m63351000 ();
+extern "C" void mainCameraScipt_Start_m735070828 ();
+extern "C" void mainCameraScipt_OnButtonDown_m3286132977 ();
+extern "C" void mainCameraScipt_Update_m2502302330 ();
+extern "C" void spin__ctor_m1306856874 ();
+extern "C" void spin_Update_m1355771218 ();
 extern "C" void webCamScript__ctor_m4109342415 ();
 extern "C" void webCamScript_Start_m2600668231 ();
 extern "C" void webCamScript_OnButtonDown_m320040433 ();
@@ -11201,7 +11213,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11182] = 
+extern const Il2CppMethodPointer g_MethodPointers[11194] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -18711,6 +18723,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11182] =
 	Component_GetComponentInParent_m779177818,
 	Component_GetComponentsForListInternal_m1419905927,
 	Component_GetComponents_m1102698478,
+	Component_get_tag_m2716693327,
 	Component_SendMessage_m3172125788,
 	Component_SendMessage_m2905932203,
 	Component_BroadcastMessage_m1122836454,
@@ -18875,6 +18888,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11182] =
 	GameObject_SetActive_m796801857,
 	GameObject_get_activeSelf_m1767405923,
 	GameObject_get_activeInHierarchy_m2006396688,
+	GameObject_get_tag_m3951609671,
 	GameObject_FindGameObjectsWithTag_m2585173894,
 	GameObject_SendMessage_m3720186693,
 	GameObject_BroadcastMessage_m3721316603,
@@ -22047,6 +22061,16 @@ extern const Il2CppMethodPointer g_MethodPointers[11182] =
 	U3CMoveU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2738024937,
 	U3CMoveU3Ec__Iterator0_Dispose_m3814727502,
 	U3CMoveU3Ec__Iterator0_Reset_m4033852029,
+	firstSceneBulletCollisionScript__ctor_m1092820501,
+	firstSceneBulletCollisionScript_Start_m2865665621,
+	firstSceneBulletCollisionScript_Update_m424318019,
+	firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682,
+	mainCameraScipt__ctor_m63351000,
+	mainCameraScipt_Start_m735070828,
+	mainCameraScipt_OnButtonDown_m3286132977,
+	mainCameraScipt_Update_m2502302330,
+	spin__ctor_m1306856874,
+	spin_Update_m1355771218,
 	webCamScript__ctor_m4109342415,
 	webCamScript_Start_m2600668231,
 	webCamScript_OnButtonDown_m320040433,
