@@ -45193,6 +45193,16 @@ extern "C"  float Time_get_unscaledDeltaTime_m4270080131 (RuntimeObject * __this
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.Single UnityEngine.Time::get_timeScale()
+extern "C"  float Time_get_timeScale_m701790074 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef float (*Time_get_timeScale_m701790074_ftn) ();
+	static Time_get_timeScale_m701790074_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Time_get_timeScale_m701790074_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_timeScale()");
+	float retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // System.Int32 UnityEngine.Time::get_frameCount()
 extern "C"  int32_t Time_get_frameCount_m1220035214 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {

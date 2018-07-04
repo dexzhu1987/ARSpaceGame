@@ -2732,6 +2732,15 @@ extern "C"  bool CanvasGroup_get_interactable_m1362547832 (CanvasGroup_t40835117
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.CanvasGroup::set_interactable(System.Boolean)
+extern "C"  void CanvasGroup_set_interactable_m1698617177 (CanvasGroup_t4083511760 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*CanvasGroup_set_interactable_m1698617177_ftn) (CanvasGroup_t4083511760 *, bool);
+	static CanvasGroup_set_interactable_m1698617177_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CanvasGroup_set_interactable_m1698617177_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasGroup::set_interactable(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Boolean UnityEngine.CanvasGroup::get_blocksRaycasts()
 extern "C"  bool CanvasGroup_get_blocksRaycasts_m1805542303 (CanvasGroup_t4083511760 * __this, const RuntimeMethod* method)
 {
@@ -2741,6 +2750,15 @@ extern "C"  bool CanvasGroup_get_blocksRaycasts_m1805542303 (CanvasGroup_t408351
 	_il2cpp_icall_func = (CanvasGroup_get_blocksRaycasts_m1805542303_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasGroup::get_blocksRaycasts()");
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
+}
+// System.Void UnityEngine.CanvasGroup::set_blocksRaycasts(System.Boolean)
+extern "C"  void CanvasGroup_set_blocksRaycasts_m3675023212 (CanvasGroup_t4083511760 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*CanvasGroup_set_blocksRaycasts_m3675023212_ftn) (CanvasGroup_t4083511760 *, bool);
+	static CanvasGroup_set_blocksRaycasts_m3675023212_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (CanvasGroup_set_blocksRaycasts_m3675023212_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.CanvasGroup::set_blocksRaycasts(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Boolean UnityEngine.CanvasGroup::get_ignoreParentGroups()
 extern "C"  bool CanvasGroup_get_ignoreParentGroups_m865591534 (CanvasGroup_t4083511760 * __this, const RuntimeMethod* method)

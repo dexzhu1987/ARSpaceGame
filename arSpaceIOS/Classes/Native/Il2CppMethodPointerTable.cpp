@@ -8286,6 +8286,7 @@ extern "C" void Time_get_time_m2907476221 ();
 extern "C" void Time_get_deltaTime_m372706562 ();
 extern "C" void Time_get_unscaledTime_m3457564332 ();
 extern "C" void Time_get_unscaledDeltaTime_m4270080131 ();
+extern "C" void Time_get_timeScale_m701790074 ();
 extern "C" void Time_get_frameCount_m1220035214 ();
 extern "C" void Time_get_realtimeSinceStartup_m3141794964 ();
 extern "C" void TooltipAttribute__ctor_m534364555 ();
@@ -8577,9 +8578,16 @@ extern "C" void AnimatorControllerPlayable_SetHandle_m2260644454_AdjustorThunk (
 extern "C" void AnimatorControllerPlayable_Equals_m3421642688_AdjustorThunk ();
 extern "C" void AnimatorControllerPlayable__cctor_m3439442711 ();
 extern "C" void AnimationState__ctor_m1160185825 ();
+extern "C" void Animator_GetBool_m2865822416 ();
+extern "C" void Animator_SetBool_m234840832 ();
 extern "C" void Animator_SetTrigger_m2134052629 ();
 extern "C" void Animator_ResetTrigger_m2321267720 ();
+extern "C" void Animator_GetAnimatorStateInfo_m2045721220 ();
+extern "C" void Animator_GetCurrentAnimatorStateInfo_m18694920 ();
 extern "C" void Animator_get_hasBoundPlayables_m2940726619 ();
+extern "C" void Animator_StringToHash_m1666053228 ();
+extern "C" void Animator_SetBoolString_m1913721706 ();
+extern "C" void Animator_GetBoolString_m4261382084 ();
 extern "C" void Animator_SetTriggerString_m2612407758 ();
 extern "C" void Animator_ResetTriggerString_m394341254 ();
 extern "C" void AnimatorOverrideController_OnInvalidateOverrideController_m3380737075 ();
@@ -8587,11 +8595,13 @@ extern "C" void OnOverrideControllerDirtyCallback__ctor_m2479189580 ();
 extern "C" void OnOverrideControllerDirtyCallback_Invoke_m764065723 ();
 extern "C" void OnOverrideControllerDirtyCallback_BeginInvoke_m3152352859 ();
 extern "C" void OnOverrideControllerDirtyCallback_EndInvoke_m2432606376 ();
+extern "C" void AnimatorStateInfo_IsName_m3393819976_AdjustorThunk ();
 extern "C" void AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk ();
 extern "C" void AudioClipPlayable_Equals_m3705880618_AdjustorThunk ();
 extern "C" void AudioMixerPlayable_GetHandle_m57919556_AdjustorThunk ();
 extern "C" void AudioMixerPlayable_Equals_m1649866213_AdjustorThunk ();
 extern "C" void AudioClip__ctor_m1211547677 ();
+extern "C" void AudioClip_get_length_m4269890037 ();
 extern "C" void AudioClip_get_ambisonic_m3815052287 ();
 extern "C" void AudioClip_InvokePCMReaderCallback_Internal_m224395634 ();
 extern "C" void AudioClip_InvokePCMSetPositionCallback_Internal_m3097960898 ();
@@ -8640,11 +8650,16 @@ extern "C" void AudioConfigurationChangeHandler__ctor_m1059338375 ();
 extern "C" void AudioConfigurationChangeHandler_Invoke_m1233557945 ();
 extern "C" void AudioConfigurationChangeHandler_BeginInvoke_m4104069447 ();
 extern "C" void AudioConfigurationChangeHandler_EndInvoke_m4175380841 ();
+extern "C" void AudioSource_set_volume_m1273312851 ();
 extern "C" void AudioSource_get_clip_m1234340632 ();
 extern "C" void AudioSource_set_clip_m31653938 ();
 extern "C" void AudioSource_Play_m3389845180 ();
 extern "C" void AudioSource_Play_m48294159 ();
 extern "C" void AudioSource_get_isPlaying_m1896551654 ();
+extern "C" void AudioSource_PlayClipAtPoint_m3293894611 ();
+extern "C" void AudioSource_PlayClipAtPoint_m3985620478 ();
+extern "C" void AudioSource_set_loop_m3659884460 ();
+extern "C" void AudioSource_set_spatialBlend_m3924907960 ();
 extern "C" void AudioSource_get_spatializeInternal_m2117549793 ();
 extern "C" void AudioSource_get_spatialize_m3609701298 ();
 extern "C" void AudioSource_GetNumExtensionProperties_m1231815209 ();
@@ -9113,7 +9128,9 @@ extern "C" void WillRenderCanvases_EndInvoke_m164864243 ();
 extern "C" void CanvasGroup_get_alpha_m2918269489 ();
 extern "C" void CanvasGroup_set_alpha_m4032573 ();
 extern "C" void CanvasGroup_get_interactable_m1362547832 ();
+extern "C" void CanvasGroup_set_interactable_m1698617177 ();
 extern "C" void CanvasGroup_get_blocksRaycasts_m1805542303 ();
+extern "C" void CanvasGroup_set_blocksRaycasts_m3675023212 ();
 extern "C" void CanvasGroup_get_ignoreParentGroups_m865591534 ();
 extern "C" void CanvasGroup_IsRaycastLocationValid_m2128397950 ();
 extern "C" void CanvasRenderer_SetColor_m3072996306 ();
@@ -10855,6 +10872,7 @@ extern "C" void collisionScript__ctor_m2261690481 ();
 extern "C" void collisionScript_Start_m3702951863 ();
 extern "C" void collisionScript_Update_m1042092368 ();
 extern "C" void collisionScript_OnTriggerEnter_m3054314804 ();
+extern "C" void collisionScript__cctor_m854787679 ();
 extern "C" void enemyScript__ctor_m1749966647 ();
 extern "C" void enemyScript_Start_m2832459671 ();
 extern "C" void enemyScript_Update_m3313231814 ();
@@ -10869,6 +10887,17 @@ extern "C" void firstSceneBulletCollisionScript__ctor_m1092820501 ();
 extern "C" void firstSceneBulletCollisionScript_Start_m2865665621 ();
 extern "C" void firstSceneBulletCollisionScript_Update_m424318019 ();
 extern "C" void firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682 ();
+extern "C" void FirstSceneMenu__ctor_m1218201128 ();
+extern "C" void FirstSceneMenu_get_IsOpen_m1082871449 ();
+extern "C" void FirstSceneMenu_set_IsOpen_m3587087006 ();
+extern "C" void FirstSceneMenu_Awake_m3267330763 ();
+extern "C" void FirstSceneMenu_Update_m3298586964 ();
+extern "C" void FirstSceneMenuManager__ctor_m2083930156 ();
+extern "C" void FirstSceneMenuManager_Start_m3975300080 ();
+extern "C" void FirstSceneMenuManager_ShowMenu_m1263469196 ();
+extern "C" void FirstSceneSound__ctor_m1484591253 ();
+extern "C" void FirstSceneSound_Start_m3743861115 ();
+extern "C" void FirstSceneSound_Update_m4132268467 ();
 extern "C" void mainCameraScipt__ctor_m63351000 ();
 extern "C" void mainCameraScipt_Start_m735070828 ();
 extern "C" void mainCameraScipt_OnButtonDown_m3286132977 ();
@@ -11213,7 +11242,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11194] = 
+extern const Il2CppMethodPointer g_MethodPointers[11223] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -19482,6 +19511,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	Time_get_deltaTime_m372706562,
 	Time_get_unscaledTime_m3457564332,
 	Time_get_unscaledDeltaTime_m4270080131,
+	Time_get_timeScale_m701790074,
 	Time_get_frameCount_m1220035214,
 	Time_get_realtimeSinceStartup_m3141794964,
 	TooltipAttribute__ctor_m534364555,
@@ -19773,9 +19803,16 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	AnimatorControllerPlayable_Equals_m3421642688_AdjustorThunk,
 	AnimatorControllerPlayable__cctor_m3439442711,
 	AnimationState__ctor_m1160185825,
+	Animator_GetBool_m2865822416,
+	Animator_SetBool_m234840832,
 	Animator_SetTrigger_m2134052629,
 	Animator_ResetTrigger_m2321267720,
+	Animator_GetAnimatorStateInfo_m2045721220,
+	Animator_GetCurrentAnimatorStateInfo_m18694920,
 	Animator_get_hasBoundPlayables_m2940726619,
+	Animator_StringToHash_m1666053228,
+	Animator_SetBoolString_m1913721706,
+	Animator_GetBoolString_m4261382084,
 	Animator_SetTriggerString_m2612407758,
 	Animator_ResetTriggerString_m394341254,
 	AnimatorOverrideController_OnInvalidateOverrideController_m3380737075,
@@ -19783,11 +19820,13 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	OnOverrideControllerDirtyCallback_Invoke_m764065723,
 	OnOverrideControllerDirtyCallback_BeginInvoke_m3152352859,
 	OnOverrideControllerDirtyCallback_EndInvoke_m2432606376,
+	AnimatorStateInfo_IsName_m3393819976_AdjustorThunk,
 	AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk,
 	AudioClipPlayable_Equals_m3705880618_AdjustorThunk,
 	AudioMixerPlayable_GetHandle_m57919556_AdjustorThunk,
 	AudioMixerPlayable_Equals_m1649866213_AdjustorThunk,
 	AudioClip__ctor_m1211547677,
+	AudioClip_get_length_m4269890037,
 	AudioClip_get_ambisonic_m3815052287,
 	AudioClip_InvokePCMReaderCallback_Internal_m224395634,
 	AudioClip_InvokePCMSetPositionCallback_Internal_m3097960898,
@@ -19836,11 +19875,16 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	AudioConfigurationChangeHandler_Invoke_m1233557945,
 	AudioConfigurationChangeHandler_BeginInvoke_m4104069447,
 	AudioConfigurationChangeHandler_EndInvoke_m4175380841,
+	AudioSource_set_volume_m1273312851,
 	AudioSource_get_clip_m1234340632,
 	AudioSource_set_clip_m31653938,
 	AudioSource_Play_m3389845180,
 	AudioSource_Play_m48294159,
 	AudioSource_get_isPlaying_m1896551654,
+	AudioSource_PlayClipAtPoint_m3293894611,
+	AudioSource_PlayClipAtPoint_m3985620478,
+	AudioSource_set_loop_m3659884460,
+	AudioSource_set_spatialBlend_m3924907960,
 	AudioSource_get_spatializeInternal_m2117549793,
 	AudioSource_get_spatialize_m3609701298,
 	AudioSource_GetNumExtensionProperties_m1231815209,
@@ -20309,7 +20353,9 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	CanvasGroup_get_alpha_m2918269489,
 	CanvasGroup_set_alpha_m4032573,
 	CanvasGroup_get_interactable_m1362547832,
+	CanvasGroup_set_interactable_m1698617177,
 	CanvasGroup_get_blocksRaycasts_m1805542303,
+	CanvasGroup_set_blocksRaycasts_m3675023212,
 	CanvasGroup_get_ignoreParentGroups_m865591534,
 	CanvasGroup_IsRaycastLocationValid_m2128397950,
 	CanvasRenderer_SetColor_m3072996306,
@@ -22051,6 +22097,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	collisionScript_Start_m3702951863,
 	collisionScript_Update_m1042092368,
 	collisionScript_OnTriggerEnter_m3054314804,
+	collisionScript__cctor_m854787679,
 	enemyScript__ctor_m1749966647,
 	enemyScript_Start_m2832459671,
 	enemyScript_Update_m3313231814,
@@ -22065,6 +22112,17 @@ extern const Il2CppMethodPointer g_MethodPointers[11194] =
 	firstSceneBulletCollisionScript_Start_m2865665621,
 	firstSceneBulletCollisionScript_Update_m424318019,
 	firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682,
+	FirstSceneMenu__ctor_m1218201128,
+	FirstSceneMenu_get_IsOpen_m1082871449,
+	FirstSceneMenu_set_IsOpen_m3587087006,
+	FirstSceneMenu_Awake_m3267330763,
+	FirstSceneMenu_Update_m3298586964,
+	FirstSceneMenuManager__ctor_m2083930156,
+	FirstSceneMenuManager_Start_m3975300080,
+	FirstSceneMenuManager_ShowMenu_m1263469196,
+	FirstSceneSound__ctor_m1484591253,
+	FirstSceneSound_Start_m3743861115,
+	FirstSceneSound_Update_m4132268467,
 	mainCameraScipt__ctor_m63351000,
 	mainCameraScipt_Start_m735070828,
 	mainCameraScipt_OnButtonDown_m3286132977,

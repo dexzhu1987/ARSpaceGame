@@ -215,8 +215,8 @@ class LightProbes; template <> void RegisterClass<LightProbes>(const char*);
 class Material; template <> void RegisterClass<Material>(const char*);
 class ProceduralMaterial; 
 class Mesh; template <> void RegisterClass<Mesh>(const char*);
-class Motion; 
-class AnimationClip; 
+class Motion; template <> void RegisterClass<Motion>(const char*);
+class AnimationClip; template <> void RegisterClass<AnimationClip>(const char*);
 class PreviewAnimationClip; 
 class NavMeshData; 
 class OcclusionCullingData; 
@@ -224,7 +224,7 @@ class PhysicMaterial;
 class PhysicsMaterial2D; 
 class PreloadData; template <> void RegisterClass<PreloadData>(const char*);
 class RuntimeAnimatorController; template <> void RegisterClass<RuntimeAnimatorController>(const char*);
-class AnimatorController; 
+class AnimatorController; template <> void RegisterClass<AnimatorController>(const char*);
 class AnimatorOverrideController; template <> void RegisterClass<AnimatorOverrideController>(const char*);
 class SampleClip; template <> void RegisterClass<SampleClip>(const char*);
 class AudioClip; template <> void RegisterClass<AudioClip>(const char*);
@@ -289,7 +289,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 81 non stripped classes
+	//Total: 84 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>("Core");
 	//1. Unity::Component
@@ -438,19 +438,25 @@ RegisterBuiltinTypes();
 	RegisterClass<UnityAnalyticsManager>("UnityAnalytics");
 	//73. UnityConnectSettings
 	RegisterClass<UnityConnectSettings>("UnityConnect");
-	//74. BoxCollider
+	//74. Motion
+	RegisterClass<Motion>("Animation");
+	//75. AnimationClip
+	RegisterClass<AnimationClip>("Animation");
+	//76. AnimatorController
+	RegisterClass<AnimatorController>("Animation");
+	//77. BoxCollider
 	RegisterClass<BoxCollider>("Physics");
-	//75. FlareLayer
+	//78. FlareLayer
 	RegisterClass<FlareLayer>("Core");
-	//76. LightProbes
+	//79. LightProbes
 	RegisterClass<LightProbes>("Core");
-	//77. RenderSettings
+	//80. RenderSettings
 	RegisterClass<RenderSettings>("Core");
-	//78. LevelGameManager
+	//81. LevelGameManager
 	RegisterClass<LevelGameManager>("Core");
-	//79. LightmapSettings
+	//82. LightmapSettings
 	RegisterClass<LightmapSettings>("Core");
-	//80. MeshCollider
+	//83. MeshCollider
 	RegisterClass<MeshCollider>("Physics");
 
 }
