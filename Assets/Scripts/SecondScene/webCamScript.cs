@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class webCamScript : MonoBehaviour {
 
     public GameObject webCameraPlane;
-    public Button fireButton; 
-
+    public Button fireButton;
+    public Text timer;
+    public Text mKilledLabel;
+    float totalTime = 60f; //2 minutes
 	// Use this for initialization
 	void Start () {
 
@@ -49,5 +52,31 @@ public class webCamScript : MonoBehaviour {
 	void Update () {
         Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
         this.transform.localRotation = cameraRotation;
+  
+        totalTime -= Time.deltaTime;
+        if (totalTime > 0) {
+            UpdateLevelTimer(totalTime);
+        }
+
+        if (totalTime < 0) {
+            SceneManager.LoadScene("FirstScene");
+        }
+        mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
 	}
+
+    public void UpdateLevelTimer(float totalSeconds)
+    {
+        int minutes = Mathf.FloorToInt(totalSeconds / 60f);
+        int seconds = Mathf.RoundToInt(totalSeconds % 60f);
+
+        string formatedSeconds = seconds.ToString();
+
+        if (seconds == 60)
+        {
+            seconds = 0;
+            minutes += 1;
+        }
+
+        timer.text = minutes.ToString("00") + ":" + seconds.ToString("00"); 
+    }
 }

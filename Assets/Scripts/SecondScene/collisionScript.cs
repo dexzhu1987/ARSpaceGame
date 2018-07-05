@@ -3,10 +3,12 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+
 public class collisionScript : MonoBehaviour
 {
-
+   
     public static int count = 3;
+    public static int ememiesKilled;
 
     // Use this for initialization
     void Start()
@@ -30,6 +32,7 @@ public class collisionScript : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(explosion, 2);
             Destroy(gameObject);
+            ememiesKilled++;
         }
 
 
@@ -42,16 +45,14 @@ public class collisionScript : MonoBehaviour
             GameObject enemy2 = Instantiate(Resources.Load("enemy2", typeof(GameObject))) as GameObject;
             GameObject enemy3 = Instantiate(Resources.Load("enemy3", typeof(GameObject))) as GameObject;
 
-            print("count is: " + count);
             count--;
 
         }
 
-        if (count == 0) 
+        if (count == 0)
         {
             SceneManager.LoadScene("FirstScene");
         }
-      
 
 
     }

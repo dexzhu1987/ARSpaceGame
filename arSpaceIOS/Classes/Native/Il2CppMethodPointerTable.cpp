@@ -10898,6 +10898,7 @@ extern "C" void FirstSceneMenuManager_ShowMenu_m1263469196 ();
 extern "C" void FirstSceneSound__ctor_m1484591253 ();
 extern "C" void FirstSceneSound_Start_m3743861115 ();
 extern "C" void FirstSceneSound_Update_m4132268467 ();
+extern "C" void FirstSceneSound_ChangeOnClicked_m2412861827 ();
 extern "C" void mainCameraScipt__ctor_m63351000 ();
 extern "C" void mainCameraScipt_Start_m735070828 ();
 extern "C" void mainCameraScipt_OnButtonDown_m3286132977 ();
@@ -10908,6 +10909,7 @@ extern "C" void webCamScript__ctor_m4109342415 ();
 extern "C" void webCamScript_Start_m2600668231 ();
 extern "C" void webCamScript_OnButtonDown_m320040433 ();
 extern "C" void webCamScript_Update_m4223067181 ();
+extern "C" void webCamScript_UpdateLevelTimer_m2472818325 ();
 extern "C" void AlphaButtonClickMask__ctor_m1159171375 ();
 extern "C" void AlphaButtonClickMask_Start_m1273203541 ();
 extern "C" void AlphaButtonClickMask_IsRaycastLocationValid_m2637434344 ();
@@ -11242,7 +11244,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11223] = 
+extern const Il2CppMethodPointer g_MethodPointers[11225] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -22123,6 +22125,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11223] =
 	FirstSceneSound__ctor_m1484591253,
 	FirstSceneSound_Start_m3743861115,
 	FirstSceneSound_Update_m4132268467,
+	FirstSceneSound_ChangeOnClicked_m2412861827,
 	mainCameraScipt__ctor_m63351000,
 	mainCameraScipt_Start_m735070828,
 	mainCameraScipt_OnButtonDown_m3286132977,
@@ -22133,6 +22136,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11223] =
 	webCamScript_Start_m2600668231,
 	webCamScript_OnButtonDown_m320040433,
 	webCamScript_Update_m4223067181,
+	webCamScript_UpdateLevelTimer_m2472818325,
 	AlphaButtonClickMask__ctor_m1159171375,
 	AlphaButtonClickMask_Start_m1273203541,
 	AlphaButtonClickMask_IsRaycastLocationValid_m2637434344,

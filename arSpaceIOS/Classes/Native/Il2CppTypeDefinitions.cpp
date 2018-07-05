@@ -7367,6 +7367,7 @@ extern const RuntimeType Text_t1901882714_0_0_0 = { (void*)1932, 0, IL2CPP_TYPE_
 extern const RuntimeType Text_t1901882714_0_0_1 = { (void*)1932, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType Text_t1901882714_0_0_4 = { (void*)1932, 4, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType Text_t1901882714_1_0_0 = { (void*)1932, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const RuntimeType Text_t1901882714_0_0_6 = { (void*)1932, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
 Il2CppGenericClass IEnumerator_1_t2463613991_GenericClass = { 25, { &GenInst_Link_t2031043523_0_0_0, NULL }, NULL };
 extern const RuntimeType IEnumerator_1_t2463613991_0_0_0 = { &IEnumerator_1_t2463613991_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
@@ -17523,7 +17524,7 @@ extern const RuntimeType TimeSpanU5BU5D_t4291357516_0_0_0 = { (void*)&TimeSpan_t
 extern const RuntimeType TypeTagU5BU5D_t1563918664_0_0_0 = { (void*)&TypeTag_t3541821701_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const RuntimeType ITrackingHandlerU5BU5D_t3758023570_0_0_0 = { (void*)&ITrackingHandler_t1244553475_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const RuntimeType* const  g_Il2CppTypeTable[9068] = 
+extern const RuntimeType* const  g_Il2CppTypeTable[9069] = 
 {
 	&IEnumerator_1_t3512676632_0_0_0,
 	&RuntimeObject_0_0_0,
@@ -26297,6 +26298,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[9068] =
 	&enemyScript_t1788219133_0_0_3,
 	&webCamScript_t4220051822_0_0_0,
 	&webCamScript_t4220051822_1_0_0,
+	&Text_t1901882714_0_0_6,
 	&U3CModuleU3E_t692745548_0_0_0,
 	&U3CModuleU3E_t692745548_1_0_0,
 	&AxisTouchButton_t3522881333_1_0_0,

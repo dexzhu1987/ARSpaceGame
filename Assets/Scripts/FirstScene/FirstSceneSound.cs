@@ -7,19 +7,24 @@ public class FirstSceneSound : MonoBehaviour {
 
     public AudioSource mAudio;
     public AudioClip bcgMusic;
-    public AudioClip annoucer; 
+    public AudioClip annoucer;
+    public AudioClip laser;
 	// Use this for initialization
 	void Start () {
         mAudio.loop = true;
         mAudio.clip = bcgMusic;
         mAudio.volume = 0.5f;
         mAudio.Play();
-
+      
         AudioSource.PlayClipAtPoint(annoucer, transform.position);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
+
+    public void ChangeOnClicked(){
+        AudioSource.PlayClipAtPoint(laser, transform.position);
+    }
 }

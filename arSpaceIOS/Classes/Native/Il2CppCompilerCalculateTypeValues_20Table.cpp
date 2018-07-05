@@ -130,6 +130,8 @@ struct ParticleSystem_t1800779281;
 struct VirtualAxis_t4087348596;
 // UnityEngine.UI.Button
 struct Button_t4055032469;
+// UnityEngine.UI.Text
+struct Text_t1901882714;
 // UnityStandardAssets.CrossPlatformInput.TiltInput/AxisMapping
 struct AxisMapping_t3982445645;
 // UnityEngine.AudioSource
@@ -158,8 +160,6 @@ struct ReplacementList_t1887104210;
 struct AudioClipU5BU5D_t143221404;
 // UnityEngine.Renderer
 struct Renderer_t2627027031;
-// UnityEngine.UI.Text
-struct Text_t1901882714;
 // System.Collections.Generic.Dictionary`2<System.String,System.Object>
 struct Dictionary_2_t2865362463;
 // UnityEngine.Analytics.TrackableProperty
@@ -4975,6 +4975,12 @@ public:
 	GameObject_t1113636619 * ___webCameraPlane_2;
 	// UnityEngine.UI.Button webCamScript::fireButton
 	Button_t4055032469 * ___fireButton_3;
+	// UnityEngine.UI.Text webCamScript::timer
+	Text_t1901882714 * ___timer_4;
+	// UnityEngine.UI.Text webCamScript::mKilledLabel
+	Text_t1901882714 * ___mKilledLabel_5;
+	// System.Single webCamScript::totalTime
+	float ___totalTime_6;
 
 public:
 	inline static int32_t get_offset_of_webCameraPlane_2() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___webCameraPlane_2)); }
@@ -4993,6 +4999,32 @@ public:
 	{
 		___fireButton_3 = value;
 		Il2CppCodeGenWriteBarrier((&___fireButton_3), value);
+	}
+
+	inline static int32_t get_offset_of_timer_4() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___timer_4)); }
+	inline Text_t1901882714 * get_timer_4() const { return ___timer_4; }
+	inline Text_t1901882714 ** get_address_of_timer_4() { return &___timer_4; }
+	inline void set_timer_4(Text_t1901882714 * value)
+	{
+		___timer_4 = value;
+		Il2CppCodeGenWriteBarrier((&___timer_4), value);
+	}
+
+	inline static int32_t get_offset_of_mKilledLabel_5() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___mKilledLabel_5)); }
+	inline Text_t1901882714 * get_mKilledLabel_5() const { return ___mKilledLabel_5; }
+	inline Text_t1901882714 ** get_address_of_mKilledLabel_5() { return &___mKilledLabel_5; }
+	inline void set_mKilledLabel_5(Text_t1901882714 * value)
+	{
+		___mKilledLabel_5 = value;
+		Il2CppCodeGenWriteBarrier((&___mKilledLabel_5), value);
+	}
+
+	inline static int32_t get_offset_of_totalTime_6() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___totalTime_6)); }
+	inline float get_totalTime_6() const { return ___totalTime_6; }
+	inline float* get_address_of_totalTime_6() { return &___totalTime_6; }
+	inline void set_totalTime_6(float value)
+	{
+		___totalTime_6 = value;
 	}
 };
 
@@ -5168,6 +5200,8 @@ public:
 	AudioClip_t3680889665 * ___bcgMusic_3;
 	// UnityEngine.AudioClip FirstSceneSound::annoucer
 	AudioClip_t3680889665 * ___annoucer_4;
+	// UnityEngine.AudioClip FirstSceneSound::laser
+	AudioClip_t3680889665 * ___laser_5;
 
 public:
 	inline static int32_t get_offset_of_mAudio_2() { return static_cast<int32_t>(offsetof(FirstSceneSound_t3106853371, ___mAudio_2)); }
@@ -5195,6 +5229,15 @@ public:
 	{
 		___annoucer_4 = value;
 		Il2CppCodeGenWriteBarrier((&___annoucer_4), value);
+	}
+
+	inline static int32_t get_offset_of_laser_5() { return static_cast<int32_t>(offsetof(FirstSceneSound_t3106853371, ___laser_5)); }
+	inline AudioClip_t3680889665 * get_laser_5() const { return ___laser_5; }
+	inline AudioClip_t3680889665 ** get_address_of_laser_5() { return &___laser_5; }
+	inline void set_laser_5(AudioClip_t3680889665 * value)
+	{
+		___laser_5 = value;
+		Il2CppCodeGenWriteBarrier((&___laser_5), value);
 	}
 };
 
@@ -5314,6 +5357,8 @@ struct collisionScript_t2453821997_StaticFields
 public:
 	// System.Int32 collisionScript::count
 	int32_t ___count_2;
+	// System.Int32 collisionScript::ememiesKilled
+	int32_t ___ememiesKilled_3;
 
 public:
 	inline static int32_t get_offset_of_count_2() { return static_cast<int32_t>(offsetof(collisionScript_t2453821997_StaticFields, ___count_2)); }
@@ -5322,6 +5367,14 @@ public:
 	inline void set_count_2(int32_t value)
 	{
 		___count_2 = value;
+	}
+
+	inline static int32_t get_offset_of_ememiesKilled_3() { return static_cast<int32_t>(offsetof(collisionScript_t2453821997_StaticFields, ___ememiesKilled_3)); }
+	inline int32_t get_ememiesKilled_3() const { return ___ememiesKilled_3; }
+	inline int32_t* get_address_of_ememiesKilled_3() { return &___ememiesKilled_3; }
+	inline void set_ememiesKilled_3(int32_t value)
+	{
+		___ememiesKilled_3 = value;
 	}
 };
 
@@ -6710,11 +6763,12 @@ extern const int32_t g_FieldOffsetTable2017[1] =
 	FirstSceneMenuManager_t3447978503::get_offset_of_CurrentMenu_2(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2018 = { sizeof (FirstSceneSound_t3106853371), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2018[3] = 
+extern const int32_t g_FieldOffsetTable2018[4] = 
 {
 	FirstSceneSound_t3106853371::get_offset_of_mAudio_2(),
 	FirstSceneSound_t3106853371::get_offset_of_bcgMusic_3(),
 	FirstSceneSound_t3106853371::get_offset_of_annoucer_4(),
+	FirstSceneSound_t3106853371::get_offset_of_laser_5(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2019 = { sizeof (mainCameraScipt_t3134709952), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable2019[1] = 
@@ -6727,9 +6781,10 @@ extern const int32_t g_FieldOffsetTable2020[1] =
 	spin_t2228728164::get_offset_of_speed_2(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2021 = { sizeof (collisionScript_t2453821997), -1, sizeof(collisionScript_t2453821997_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable2021[1] = 
+extern const int32_t g_FieldOffsetTable2021[2] = 
 {
 	collisionScript_t2453821997_StaticFields::get_offset_of_count_2(),
+	collisionScript_t2453821997_StaticFields::get_offset_of_ememiesKilled_3(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2022 = { sizeof (enemyScript_t1788219133), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2023 = { sizeof (U3CMoveU3Ec__Iterator0_t2035340597), -1, 0, 0 };
@@ -6741,10 +6796,13 @@ extern const int32_t g_FieldOffsetTable2023[4] =
 	U3CMoveU3Ec__Iterator0_t2035340597::get_offset_of_U24PC_3(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2024 = { sizeof (webCamScript_t4220051822), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2024[2] = 
+extern const int32_t g_FieldOffsetTable2024[5] = 
 {
 	webCamScript_t4220051822::get_offset_of_webCameraPlane_2(),
 	webCamScript_t4220051822::get_offset_of_fireButton_3(),
+	webCamScript_t4220051822::get_offset_of_timer_4(),
+	webCamScript_t4220051822::get_offset_of_mKilledLabel_5(),
+	webCamScript_t4220051822::get_offset_of_totalTime_6(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2025 = { sizeof (U3CModuleU3E_t692745548), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2026 = { sizeof (AxisTouchButton_t3522881333), -1, 0, 0 };
