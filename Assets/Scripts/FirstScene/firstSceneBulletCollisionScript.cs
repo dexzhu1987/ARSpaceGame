@@ -26,7 +26,7 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
             Destroy(explosion, 2);
             Destroy(gameObject);
             SceneManager.LoadScene("ARTextScene");
-          
+            collisionScript.ememiesKilled = 0;
         }
 
 

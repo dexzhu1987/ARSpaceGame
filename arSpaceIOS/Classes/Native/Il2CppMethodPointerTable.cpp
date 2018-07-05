@@ -10872,7 +10872,10 @@ extern "C" void collisionScript__ctor_m2261690481 ();
 extern "C" void collisionScript_Start_m3702951863 ();
 extern "C" void collisionScript_Update_m1042092368 ();
 extern "C" void collisionScript_OnTriggerEnter_m3054314804 ();
-extern "C" void collisionScript__cctor_m854787679 ();
+extern "C" void EnemiesController__ctor_m2499192745 ();
+extern "C" void EnemiesController_Start_m3437122097 ();
+extern "C" void EnemiesController_spawnEnemies_m2372598876 ();
+extern "C" void EnemiesController_Update_m4001369363 ();
 extern "C" void enemyScript__ctor_m1749966647 ();
 extern "C" void enemyScript_Start_m2832459671 ();
 extern "C" void enemyScript_Update_m3313231814 ();
@@ -11244,7 +11247,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11225] = 
+extern const Il2CppMethodPointer g_MethodPointers[11228] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -22099,7 +22102,10 @@ extern const Il2CppMethodPointer g_MethodPointers[11225] =
 	collisionScript_Start_m3702951863,
 	collisionScript_Update_m1042092368,
 	collisionScript_OnTriggerEnter_m3054314804,
-	collisionScript__cctor_m854787679,
+	EnemiesController__ctor_m2499192745,
+	EnemiesController_Start_m3437122097,
+	EnemiesController_spawnEnemies_m2372598876,
+	EnemiesController_Update_m4001369363,
 	enemyScript__ctor_m1749966647,
 	enemyScript_Start_m2832459671,
 	enemyScript_Update_m3313231814,

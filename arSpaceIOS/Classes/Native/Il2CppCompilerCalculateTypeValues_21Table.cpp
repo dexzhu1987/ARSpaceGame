@@ -20,12 +20,14 @@
 #include "il2cpp-object-internals.h"
 
 
+// UnityStandardAssets.Utility.WaypointCircuit
+struct WaypointCircuit_t445075330;
+// UnityEngine.Transform[]
+struct TransformU5BU5D_t807237628;
 // System.Char[]
 struct CharU5BU5D_t3528271667;
 // System.Void
 struct Void_t1185182177;
-// UnityStandardAssets.Utility.WaypointCircuit
-struct WaypointCircuit_t445075330;
 // UnityEngine.Transform
 struct Transform_t3600365921;
 
@@ -46,6 +48,47 @@ struct Transform_t3600365921;
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
+#ifndef WAYPOINTLIST_T2584574554_H
+#define WAYPOINTLIST_T2584574554_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityStandardAssets.Utility.WaypointCircuit/WaypointList
+struct  WaypointList_t2584574554  : public RuntimeObject
+{
+public:
+	// UnityStandardAssets.Utility.WaypointCircuit UnityStandardAssets.Utility.WaypointCircuit/WaypointList::circuit
+	WaypointCircuit_t445075330 * ___circuit_0;
+	// UnityEngine.Transform[] UnityStandardAssets.Utility.WaypointCircuit/WaypointList::items
+	TransformU5BU5D_t807237628* ___items_1;
+
+public:
+	inline static int32_t get_offset_of_circuit_0() { return static_cast<int32_t>(offsetof(WaypointList_t2584574554, ___circuit_0)); }
+	inline WaypointCircuit_t445075330 * get_circuit_0() const { return ___circuit_0; }
+	inline WaypointCircuit_t445075330 ** get_address_of_circuit_0() { return &___circuit_0; }
+	inline void set_circuit_0(WaypointCircuit_t445075330 * value)
+	{
+		___circuit_0 = value;
+		Il2CppCodeGenWriteBarrier((&___circuit_0), value);
+	}
+
+	inline static int32_t get_offset_of_items_1() { return static_cast<int32_t>(offsetof(WaypointList_t2584574554, ___items_1)); }
+	inline TransformU5BU5D_t807237628* get_items_1() const { return ___items_1; }
+	inline TransformU5BU5D_t807237628** get_address_of_items_1() { return &___items_1; }
+	inline void set_items_1(TransformU5BU5D_t807237628* value)
+	{
+		___items_1 = value;
+		Il2CppCodeGenWriteBarrier((&___items_1), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // WAYPOINTLIST_T2584574554_H
 #ifndef VALUETYPE_T3640485471_H
 #define VALUETYPE_T3640485471_H
 #ifdef __clang__
@@ -683,14 +726,20 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2100 = { sizeof (RoutePoint_t3880028948)+ sizeof (RuntimeObject), sizeof(RoutePoint_t3880028948 ), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2100 = { sizeof (WaypointList_t2584574554), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable2100[2] = 
+{
+	WaypointList_t2584574554::get_offset_of_circuit_0(),
+	WaypointList_t2584574554::get_offset_of_items_1(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2101 = { sizeof (RoutePoint_t3880028948)+ sizeof (RuntimeObject), sizeof(RoutePoint_t3880028948 ), 0, 0 };
+extern const int32_t g_FieldOffsetTable2101[2] = 
 {
 	RoutePoint_t3880028948::get_offset_of_position_0() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	RoutePoint_t3880028948::get_offset_of_direction_1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2101 = { sizeof (WaypointProgressTracker_t1841386251), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2101[15] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2102 = { sizeof (WaypointProgressTracker_t1841386251), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable2102[15] = 
 {
 	WaypointProgressTracker_t1841386251::get_offset_of_circuit_2(),
 	WaypointProgressTracker_t1841386251::get_offset_of_lookAheadForTargetOffset_3(),
@@ -708,8 +757,8 @@ extern const int32_t g_FieldOffsetTable2101[15] =
 	WaypointProgressTracker_t1841386251::get_offset_of_lastPosition_15(),
 	WaypointProgressTracker_t1841386251::get_offset_of_speed_16(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2102 = { sizeof (ProgressStyle_t3254572979)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable2102[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2103 = { sizeof (ProgressStyle_t3254572979)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable2103[3] = 
 {
 	ProgressStyle_t3254572979::get_offset_of_value___1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,

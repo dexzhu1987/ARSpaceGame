@@ -8,6 +8,7 @@ public class webCamScript : MonoBehaviour {
 
     public GameObject webCameraPlane;
     public Button fireButton;
+    public Toggle arToggle;
     public Text timer;
     public Text mKilledLabel;
     float totalTime = 60f; //2 minutes
@@ -25,12 +26,14 @@ public class webCamScript : MonoBehaviour {
         Input.gyro.enabled = true;
 
 
-        WebCamTexture webCameraTexture = new WebCamTexture();
-        webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
-        webCameraTexture.Play();
+        //WebCamTexture webCameraTexture = new WebCamTexture();
+        //webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
+        //webCameraTexture.Play();
 
         fireButton.onClick.AddListener(OnButtonDown);
-		
+        arToggle.onValueChanged.AddListener(delegate {
+            ToggleValueChanged(arToggle);
+        });
 	}
 	
     void OnButtonDown()
@@ -46,6 +49,17 @@ public class webCamScript : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 
 
+    }
+
+    void ToggleValueChanged(Toggle change)
+    {
+        if (arToggle.isOn){
+            WebCamTexture webCameraTexture = new WebCamTexture();
+            webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
+            webCameraTexture.Play();
+        }else if (!arToggle.isOn){
+            Destroy(webCameraPlane);
+        }
     }
 
 	// Update is called once per frame

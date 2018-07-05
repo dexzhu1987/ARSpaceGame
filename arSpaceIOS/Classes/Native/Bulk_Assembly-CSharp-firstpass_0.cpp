@@ -665,7 +665,7 @@ extern const RuntimeMethod* Component_GetComponent_TisRigidbody_t3916780224_m404
 extern String_t* _stringLiteral3489794435;
 extern const uint32_t WaterHoseParticles_OnParticleCollision_m3246988744_MetadataUsageId;
 extern RuntimeClass* Behaviour_t1437897464_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* Object_Instantiate_TisGameObject_t1113636619_m2517112845_RuntimeMethod_var;
+extern const RuntimeMethod* Object_Instantiate_TisGameObject_t1113636619_m3006960551_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisAnimation_t3648466861_m4035734369_RuntimeMethod_var;
 extern String_t* _stringLiteral865230867;
 extern const uint32_t ActivateTrigger_DoActivateTrigger_m3469673119_MetadataUsageId;
@@ -11906,7 +11906,7 @@ extern "C"  void List_1_Add_m3338814081_gshared (List_1_t257213610 * __this, Run
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Object,System.Object>::Remove(!0)
 extern "C"  bool Dictionary_2_Remove_m1786738978_gshared (Dictionary_2_t132545152 * __this, RuntimeObject * p0, const RuntimeMethod* method);
 // !!0 UnityEngine.Object::Instantiate<System.Object>(!!0,UnityEngine.Vector3,UnityEngine.Quaternion)
-extern "C"  RuntimeObject * Object_Instantiate_TisRuntimeObject_m3141366230_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, Vector3_t3722313464  p1, Quaternion_t2301928331  p2, const RuntimeMethod* method);
+extern "C"  RuntimeObject * Object_Instantiate_TisRuntimeObject_m1135049463_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, Vector3_t3722313464  p1, Quaternion_t2301928331  p2, const RuntimeMethod* method);
 // System.Boolean System.Collections.Generic.List`1<System.Object>::Contains(!0)
 extern "C"  bool List_1_Contains_m2654125393_gshared (List_1_t257213610 * __this, RuntimeObject * p0, const RuntimeMethod* method);
 // System.Collections.Generic.List`1/Enumerator<!0> System.Collections.Generic.List`1<System.Object>::GetEnumerator()
@@ -12275,7 +12275,7 @@ extern "C"  void U3CStartU3Ec__Iterator0__ctor_m4058749065 (U3CStartU3Ec__Iterat
 // UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
 extern "C"  Quaternion_t2301928331  Quaternion_get_identity_m3722672781 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Object::Instantiate<UnityEngine.Transform>(!!0,UnityEngine.Vector3,UnityEngine.Quaternion)
-#define Object_Instantiate_TisTransform_t3600365921_m3253087558(__this /* static, unused */, p0, p1, p2, method) ((  Transform_t3600365921 * (*) (RuntimeObject * /* static, unused */, Transform_t3600365921 *, Vector3_t3722313464 , Quaternion_t2301928331 , const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m3141366230_gshared)(__this /* static, unused */, p0, p1, p2, method)
+#define Object_Instantiate_TisTransform_t3600365921_m3253087558(__this /* static, unused */, p0, p1, p2, method) ((  Transform_t3600365921 * (*) (RuntimeObject * /* static, unused */, Transform_t3600365921 *, Vector3_t3722313464 , Quaternion_t2301928331 , const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m1135049463_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
 extern "C"  void Transform_set_parent_m786917804 (Transform_t3600365921 * __this, Transform_t3600365921 * p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityStandardAssets.Effects.ParticleSystemMultiplier>()
@@ -12423,7 +12423,7 @@ extern "C"  void GameObject_BroadcastMessage_m217296818 (GameObject_t1113636619 
 // UnityEngine.Transform UnityEngine.GameObject::get_transform()
 extern "C"  Transform_t3600365921 * GameObject_get_transform_m1369836730 (GameObject_t1113636619 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Object::Instantiate<UnityEngine.GameObject>(!!0,UnityEngine.Vector3,UnityEngine.Quaternion)
-#define Object_Instantiate_TisGameObject_t1113636619_m2517112845(__this /* static, unused */, p0, p1, p2, method) ((  GameObject_t1113636619 * (*) (RuntimeObject * /* static, unused */, GameObject_t1113636619 *, Vector3_t3722313464 , Quaternion_t2301928331 , const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m3141366230_gshared)(__this /* static, unused */, p0, p1, p2, method)
+#define Object_Instantiate_TisGameObject_t1113636619_m3006960551(__this /* static, unused */, p0, p1, p2, method) ((  GameObject_t1113636619 * (*) (RuntimeObject * /* static, unused */, GameObject_t1113636619 *, Vector3_t3722313464 , Quaternion_t2301928331 , const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m1135049463_gshared)(__this /* static, unused */, p0, p1, p2, method)
 // System.Void UnityEngine.Object::DestroyObject(UnityEngine.Object)
 extern "C"  void Object_DestroyObject_m1406874517 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.Animation>()
@@ -18579,7 +18579,7 @@ IL_009f:
 		NullCheck(L_26);
 		Quaternion_t2301928331  L_27 = Transform_get_rotation_m3502953881(L_26, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		Object_Instantiate_TisGameObject_t1113636619_m2517112845(NULL /*static, unused*/, L_21, L_24, L_27, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m2517112845_RuntimeMethod_var);
+		Object_Instantiate_TisGameObject_t1113636619_m3006960551(NULL /*static, unused*/, L_21, L_24, L_27, /*hidden argument*/Object_Instantiate_TisGameObject_t1113636619_m3006960551_RuntimeMethod_var);
 		GameObject_t1113636619 * L_28 = V_2;
 		Object_DestroyObject_m1406874517(NULL /*static, unused*/, L_28, /*hidden argument*/NULL);
 	}

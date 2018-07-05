@@ -278,7 +278,7 @@ extern const uint32_t GameObject_GetComponent_TisRuntimeObject_m2049753423_Metad
 extern const uint32_t GameObject_GetComponentInChildren_TisRuntimeObject_m1310240902_MetadataUsageId;
 extern RuntimeClass* Object_t631007953_il2cpp_TypeInfo_var;
 extern const uint32_t Object_FindObjectOfType_TisRuntimeObject_m4191481190_MetadataUsageId;
-extern const uint32_t Object_Instantiate_TisRuntimeObject_m3141366230_MetadataUsageId;
+extern const uint32_t Object_Instantiate_TisRuntimeObject_m1135049463_MetadataUsageId;
 extern String_t* _stringLiteral2475671027;
 extern const uint32_t Object_Instantiate_TisRuntimeObject_m2446893047_MetadataUsageId;
 extern const uint32_t Resources_GetBuiltinResource_TisRuntimeObject_m3352626831_MetadataUsageId;
@@ -6441,12 +6441,12 @@ IL_001b:
 	}
 }
 // T UnityEngine.Object::Instantiate<System.Object>(T,UnityEngine.Vector3,UnityEngine.Quaternion)
-extern "C"  RuntimeObject * Object_Instantiate_TisRuntimeObject_m3141366230_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * ___original0, Vector3_t3722313464  ___position1, Quaternion_t2301928331  ___rotation2, const RuntimeMethod* method)
+extern "C"  RuntimeObject * Object_Instantiate_TisRuntimeObject_m1135049463_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject * ___original0, Vector3_t3722313464  ___position1, Quaternion_t2301928331  ___rotation2, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (Object_Instantiate_TisRuntimeObject_m3141366230_MetadataUsageId);
+		il2cpp_codegen_initialize_method (Object_Instantiate_TisRuntimeObject_m1135049463_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	RuntimeObject * V_0 = NULL;

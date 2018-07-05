@@ -523,7 +523,7 @@ extern "C" void Mesh_SetListForChannel_TisRuntimeObject_m1409743534_gshared ();
 extern "C" void Mesh_SetUvsImpl_TisRuntimeObject_m2275316106_gshared ();
 extern "C" void ScriptableObject_CreateInstance_TisRuntimeObject_m1552711675_gshared ();
 extern "C" void Object_Instantiate_TisRuntimeObject_m2446893047_gshared ();
-extern "C" void Object_Instantiate_TisRuntimeObject_m3141366230_gshared ();
+extern "C" void Object_Instantiate_TisRuntimeObject_m1135049463_gshared ();
 extern "C" void Object_FindObjectsOfType_TisRuntimeObject_m1831438261_gshared ();
 extern "C" void Object_FindObjectOfType_TisRuntimeObject_m4191481190_gshared ();
 extern "C" void BaseInvokableCall_ThrowOnInvalidArg_TisRuntimeObject_m2266633109_gshared ();
@@ -5243,7 +5243,7 @@ extern const Il2CppMethodPointer g_Il2CppGenericMethodPointers[4718] =
 	(Il2CppMethodPointer)&Mesh_SetUvsImpl_TisRuntimeObject_m2275316106_gshared/* 495*/,
 	(Il2CppMethodPointer)&ScriptableObject_CreateInstance_TisRuntimeObject_m1552711675_gshared/* 496*/,
 	(Il2CppMethodPointer)&Object_Instantiate_TisRuntimeObject_m2446893047_gshared/* 497*/,
-	(Il2CppMethodPointer)&Object_Instantiate_TisRuntimeObject_m3141366230_gshared/* 498*/,
+	(Il2CppMethodPointer)&Object_Instantiate_TisRuntimeObject_m1135049463_gshared/* 498*/,
 	(Il2CppMethodPointer)&Object_FindObjectsOfType_TisRuntimeObject_m1831438261_gshared/* 499*/,
 	(Il2CppMethodPointer)&Object_FindObjectOfType_TisRuntimeObject_m4191481190_gshared/* 500*/,
 	(Il2CppMethodPointer)&BaseInvokableCall_ThrowOnInvalidArg_TisRuntimeObject_m2266633109_gshared/* 501*/,
