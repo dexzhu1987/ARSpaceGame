@@ -813,8 +813,8 @@ extern "C" void List_1_Add_m2996644200_gshared ();
 extern "C" void List_1__ctor_m3376109328_gshared ();
 extern "C" void List_1_Add_m1433969578_gshared ();
 extern "C" void List_1_Contains_m2779132831_gshared ();
-extern "C" void List_1__ctor_m2823999785_gshared ();
-extern "C" void List_1_get_Item_m1711230533_gshared ();
+extern "C" void List_1__ctor_m1069176951_gshared ();
+extern "C" void List_1_get_Item_m1979445881_gshared ();
 extern "C" void Array_get_swapper_TisBoolean_t97287965_m1876432270_gshared ();
 extern "C" void Array_get_swapper_TisInt32_t2950945753_m2372143757_gshared ();
 extern "C" void Array_get_swapper_TisCustomAttributeNamedArgument_t287865710_m4254011335_gshared ();
@@ -5533,8 +5533,8 @@ extern const Il2CppMethodPointer g_Il2CppGenericMethodPointers[4718] =
 	(Il2CppMethodPointer)&List_1__ctor_m3376109328_gshared/* 785*/,
 	(Il2CppMethodPointer)&List_1_Add_m1433969578_gshared/* 786*/,
 	(Il2CppMethodPointer)&List_1_Contains_m2779132831_gshared/* 787*/,
-	(Il2CppMethodPointer)&List_1__ctor_m2823999785_gshared/* 788*/,
-	(Il2CppMethodPointer)&List_1_get_Item_m1711230533_gshared/* 789*/,
+	(Il2CppMethodPointer)&List_1__ctor_m1069176951_gshared/* 788*/,
+	(Il2CppMethodPointer)&List_1_get_Item_m1979445881_gshared/* 789*/,
 	(Il2CppMethodPointer)&Array_get_swapper_TisBoolean_t97287965_m1876432270_gshared/* 790*/,
 	(Il2CppMethodPointer)&Array_get_swapper_TisInt32_t2950945753_m2372143757_gshared/* 791*/,
 	(Il2CppMethodPointer)&Array_get_swapper_TisCustomAttributeNamedArgument_t287865710_m4254011335_gshared/* 792*/,

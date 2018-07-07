@@ -20,7 +20,7 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
 
         if (col.tag == "StartGame")
         {
-            GameObject explosion = Instantiate(Resources.Load("FlareMobile", typeof(GameObject))) as GameObject;
+            GameObject explosion = Instantiate(Resources.Load("SmallExplosionEffect", typeof(GameObject))) as GameObject;
             explosion.transform.position = transform.position;
             Destroy(col.gameObject);
             Destroy(explosion, 2);

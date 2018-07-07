@@ -17923,6 +17923,8 @@ extern "C"  void Behaviour__ctor_m346897018 (Behaviour_t1437897464 * __this, con
 extern "C"  void Camera_get_pixelRect_Injected_m2326986893 (Camera_t4157153871 * __this, Rect_t2360479859 * ___ret0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Camera::WorldToScreenPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 extern "C"  void Camera_WorldToScreenPoint_Injected_m188645034 (Camera_t4157153871 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Camera::ScreenToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
+extern "C"  void Camera_ScreenToWorldPoint_Injected_m2012031693 (Camera_t4157153871 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Camera::ScreenToViewportPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 extern "C"  void Camera_ScreenToViewportPoint_Injected_m1670374446 (Camera_t4157153871 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Camera::ScreenPointToRay_Injected(UnityEngine.Vector2&,UnityEngine.Ray&)
@@ -21751,6 +21753,17 @@ extern "C"  Vector3_t3722313464  Camera_WorldToScreenPoint_m3726311023 (Camera_t
 		return L_0;
 	}
 }
+// UnityEngine.Vector3 UnityEngine.Camera::ScreenToWorldPoint(UnityEngine.Vector3)
+extern "C"  Vector3_t3722313464  Camera_ScreenToWorldPoint_m3978588570 (Camera_t4157153871 * __this, Vector3_t3722313464  ___position0, const RuntimeMethod* method)
+{
+	Vector3_t3722313464  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Camera_ScreenToWorldPoint_Injected_m2012031693(__this, (Vector3_t3722313464 *)(&___position0), (Vector3_t3722313464 *)(&V_0), /*hidden argument*/NULL);
+		Vector3_t3722313464  L_0 = V_0;
+		return L_0;
+	}
+}
 // UnityEngine.Vector3 UnityEngine.Camera::ScreenToViewportPoint(UnityEngine.Vector3)
 extern "C"  Vector3_t3722313464  Camera_ScreenToViewportPoint_m3569032523 (Camera_t4157153871 * __this, Vector3_t3722313464  ___position0, const RuntimeMethod* method)
 {
@@ -21929,6 +21942,15 @@ extern "C"  void Camera_WorldToScreenPoint_Injected_m188645034 (Camera_t41571538
 	static Camera_WorldToScreenPoint_Injected_m188645034_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Camera_WorldToScreenPoint_Injected_m188645034_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::WorldToScreenPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)");
+	_il2cpp_icall_func(__this, ___position0, ___ret1);
+}
+// System.Void UnityEngine.Camera::ScreenToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
+extern "C"  void Camera_ScreenToWorldPoint_Injected_m2012031693 (Camera_t4157153871 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method)
+{
+	typedef void (*Camera_ScreenToWorldPoint_Injected_m2012031693_ftn) (Camera_t4157153871 *, Vector3_t3722313464 *, Vector3_t3722313464 *);
+	static Camera_ScreenToWorldPoint_Injected_m2012031693_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Camera_ScreenToWorldPoint_Injected_m2012031693_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::ScreenToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)");
 	_il2cpp_icall_func(__this, ___position0, ___ret1);
 }
 // System.Void UnityEngine.Camera::ScreenToViewportPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
@@ -44791,6 +44813,16 @@ extern "C"  int32_t SystemInfo_GetDeviceType_m803381061 (RuntimeObject * __this 
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void UnityEngine.TextAreaAttribute::.ctor()
+extern "C"  void TextAreaAttribute__ctor_m2309583297 (TextAreaAttribute_t3326046611 * __this, const RuntimeMethod* method)
+{
+	{
+		PropertyAttribute__ctor_m1017741868(__this, /*hidden argument*/NULL);
+		__this->set_minLines_0(3);
+		__this->set_maxLines_1(3);
+		return;
+	}
+}
 // System.Void UnityEngine.TextAreaAttribute::.ctor(System.Int32,System.Int32)
 extern "C"  void TextAreaAttribute__ctor_m2173231689 (TextAreaAttribute_t3326046611 * __this, int32_t ___minLines0, int32_t ___maxLines1, const RuntimeMethod* method)
 {

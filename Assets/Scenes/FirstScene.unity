@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.118469186, g: 0.15405905, b: 0.1177453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -674,7 +674,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ae35598340bb646c3ace4125b3baaa67, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78653d8f2da81424daee9562ebe3eac1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   mAudio: {fileID: 2008428979}
   bcgMusic: {fileID: 8300000, guid: 51c0cf78e8af9439aa8fd71a08af03d1, type: 3}
   annoucer: {fileID: 8300000, guid: 26400f887a4944ab88b79e91b0b8394b, type: 3}
-  laser: {fileID: 8300000, guid: 83e1419e4fca14164ae0d9f8d577d2ab, type: 3}
+  laser: {fileID: 8300000, guid: da55b1d711dd245a4aeed9eef8c46265, type: 3}
 --- !u!4 &1178155509
 Transform:
   m_ObjectHideFlags: 0

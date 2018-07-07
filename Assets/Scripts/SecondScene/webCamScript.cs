@@ -25,10 +25,11 @@ public class webCamScript : MonoBehaviour {
 
         Input.gyro.enabled = true;
 
-
-        //WebCamTexture webCameraTexture = new WebCamTexture();
-        //webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
-        //webCameraTexture.Play();
+        WebCamTexture webCameraTexture = new WebCamTexture();
+        webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
+        webCameraTexture.Play();
+       
+    
 
         fireButton.onClick.AddListener(OnButtonDown);
         arToggle.onValueChanged.AddListener(delegate {
@@ -46,19 +47,14 @@ public class webCamScript : MonoBehaviour {
         rb.AddForce(Camera.main.transform.forward * 500f);
         Destroy(bullet, 3);
 
-        GetComponent<AudioSource>().Play();
-
-
     }
 
     void ToggleValueChanged(Toggle change)
     {
         if (arToggle.isOn){
-            WebCamTexture webCameraTexture = new WebCamTexture();
-            webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
-            webCameraTexture.Play();
+            webCameraPlane.SetActive(true);
         }else if (!arToggle.isOn){
-            Destroy(webCameraPlane);
+            webCameraPlane.SetActive(false);
         }
     }
 

@@ -330,6 +330,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_ScreenToViewportPoint_Injected();
 		Register_UnityEngine_Camera_ScreenToViewportPoint_Injected();
 
+		//System.Void UnityEngine.Camera::ScreenToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
+		void Register_UnityEngine_Camera_ScreenToWorldPoint_Injected();
+		Register_UnityEngine_Camera_ScreenToWorldPoint_Injected();
+
 		//System.Void UnityEngine.Camera::WorldToScreenPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Camera_WorldToScreenPoint_Injected();
 		Register_UnityEngine_Camera_WorldToScreenPoint_Injected();
@@ -569,6 +573,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Collider::INTERNAL_CALL_Internal_Raycast(UnityEngine.Collider,UnityEngine.Ray&,UnityEngine.RaycastHit&,System.Single)
 		void Register_UnityEngine_Collider_INTERNAL_CALL_Internal_Raycast();
 		Register_UnityEngine_Collider_INTERNAL_CALL_Internal_Raycast();
+
+		//UnityEngine.PhysicMaterial UnityEngine.Collider::get_sharedMaterial()
+		void Register_UnityEngine_Collider_get_sharedMaterial();
+		Register_UnityEngine_Collider_get_sharedMaterial();
 
 		//UnityEngine.Rigidbody UnityEngine.Collider::get_attachedRigidbody()
 		void Register_UnityEngine_Collider_get_attachedRigidbody();
@@ -1354,6 +1362,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Play();
 		Register_UnityEngine_ParticleSystem_Play();
 
+		//System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)
+		void Register_UnityEngine_ParticleSystem_Stop();
+		Register_UnityEngine_ParticleSystem_Stop();
+
+		//System.Void UnityEngine.ParticleSystem::set_time(System.Single)
+		void Register_UnityEngine_ParticleSystem_set_time();
+		Register_UnityEngine_ParticleSystem_set_time();
+
 	//End Registrations for type : UnityEngine.ParticleSystem
 
 	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
@@ -1407,6 +1423,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_ParticleSystemExtensionsImpl_GetCollisionEvents();
 
 	//End Registrations for type : UnityEngine.ParticleSystemExtensionsImpl
+
+	//Start Registrations for type : UnityEngine.PhysicMaterial
+
+		//System.Void UnityEngine.PhysicMaterial::Internal_CreateDynamicsMaterial(UnityEngine.PhysicMaterial,System.String)
+		void Register_UnityEngine_PhysicMaterial_Internal_CreateDynamicsMaterial();
+		Register_UnityEngine_PhysicMaterial_Internal_CreateDynamicsMaterial();
+
+	//End Registrations for type : UnityEngine.PhysicMaterial
 
 	//Start Registrations for type : UnityEngine.Physics
 

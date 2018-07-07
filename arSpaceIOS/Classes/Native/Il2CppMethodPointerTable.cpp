@@ -7480,6 +7480,7 @@ extern "C" void Camera_get_clearFlags_m992534691 ();
 extern "C" void Camera_get_pixelRect_m2283183456 ();
 extern "C" void Camera_get_targetTexture_m2278634983 ();
 extern "C" void Camera_WorldToScreenPoint_m3726311023 ();
+extern "C" void Camera_ScreenToWorldPoint_m3978588570 ();
 extern "C" void Camera_ScreenToViewportPoint_m3569032523 ();
 extern "C" void Camera_ScreenPointToRay_m2198551247 ();
 extern "C" void Camera_ScreenPointToRay_m3764635188 ();
@@ -7491,6 +7492,7 @@ extern "C" void Camera_FireOnPreRender_m3450823610 ();
 extern "C" void Camera_FireOnPostRender_m1456255957 ();
 extern "C" void Camera_get_pixelRect_Injected_m2326986893 ();
 extern "C" void Camera_WorldToScreenPoint_Injected_m188645034 ();
+extern "C" void Camera_ScreenToWorldPoint_Injected_m2012031693 ();
 extern "C" void Camera_ScreenToViewportPoint_Injected_m1670374446 ();
 extern "C" void Camera_ScreenPointToRay_Injected_m1570307069 ();
 extern "C" void Camera_RaycastTry_Injected_m3801956476 ();
@@ -8261,6 +8263,7 @@ extern "C" void SystemInfo_get_operatingSystemFamily_m4256884728 ();
 extern "C" void SystemInfo_get_deviceType_m3742504744 ();
 extern "C" void SystemInfo_GetOperatingSystemFamily_m1440411909 ();
 extern "C" void SystemInfo_GetDeviceType_m803381061 ();
+extern "C" void TextAreaAttribute__ctor_m2309583297 ();
 extern "C" void TextAreaAttribute__ctor_m2173231689 ();
 extern "C" void Texture__ctor_m3554519797 ();
 extern "C" void Texture_GetDataWidth_m2906817031 ();
@@ -8986,10 +8989,13 @@ extern "C" void ParticleCollisionEvent_get_velocity_m1941659151_AdjustorThunk ()
 extern "C" void ParticleCollisionEvent_get_colliderComponent_m1489433520_AdjustorThunk ();
 extern "C" void ParticleCollisionEvent_InstanceIDToColliderComponent_m3582923694 ();
 extern "C" void ParticlePhysicsExtensions_GetCollisionEvents_m1108737549 ();
+extern "C" void ParticleSystem_set_time_m2501131202 ();
 extern "C" void ParticleSystem_get_main_m3006917117 ();
 extern "C" void ParticleSystem_get_emission_m1034302947 ();
 extern "C" void ParticleSystem_Play_m163824593 ();
 extern "C" void ParticleSystem_Play_m882713458 ();
+extern "C" void ParticleSystem_Stop_m3396581118 ();
+extern "C" void ParticleSystem_Stop_m3125854227 ();
 extern "C" void ParticleSystem_Clear_m2603704560 ();
 extern "C" void ParticleSystem_Clear_m381529807 ();
 extern "C" void EmissionModule__ctor_m3908790904_AdjustorThunk ();
@@ -9023,6 +9029,7 @@ extern "C" void RaycastHit2D_get_distance_m382898860_AdjustorThunk ();
 extern "C" void RaycastHit2D_get_collider_m1549426026_AdjustorThunk ();
 extern "C" void Collider__ctor_m1632031523 ();
 extern "C" void Collider_get_attachedRigidbody_m135494519 ();
+extern "C" void Collider_get_sharedMaterial_m2016666527 ();
 extern "C" void Collider_Internal_Raycast_m2175318952 ();
 extern "C" void Collider_INTERNAL_CALL_Internal_Raycast_m1864235715 ();
 extern "C" void Collider_Raycast_m2876906360 ();
@@ -9034,6 +9041,8 @@ extern "C" void Joint_get_connectedBody_m826805471 ();
 extern "C" void Joint_set_connectedBody_m3457616993 ();
 extern "C" void Joint_set_anchor_m3102426751 ();
 extern "C" void Joint_INTERNAL_set_anchor_m762722954 ();
+extern "C" void PhysicMaterial__ctor_m1658318133 ();
+extern "C" void PhysicMaterial_Internal_CreateDynamicsMaterial_m1064353702 ();
 extern "C" void Physics_Raycast_m234523501 ();
 extern "C" void Physics_Raycast_m1896872038 ();
 extern "C" void Physics_Raycast_m952690504 ();
@@ -10872,6 +10881,15 @@ extern "C" void collisionScript__ctor_m2261690481 ();
 extern "C" void collisionScript_Start_m3702951863 ();
 extern "C" void collisionScript_Update_m1042092368 ();
 extern "C" void collisionScript_OnTriggerEnter_m3054314804 ();
+extern "C" void collisionScript_FireButtonClicked_m567438054 ();
+extern "C" void DecalDestroyer__ctor_m64185944 ();
+extern "C" void DecalDestroyer_Start_m4068496280 ();
+extern "C" void U3CStartU3Ec__Iterator0__ctor_m1789964581 ();
+extern "C" void U3CStartU3Ec__Iterator0_MoveNext_m1801159999 ();
+extern "C" void U3CStartU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1971114183 ();
+extern "C" void U3CStartU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m3093432561 ();
+extern "C" void U3CStartU3Ec__Iterator0_Dispose_m2578430802 ();
+extern "C" void U3CStartU3Ec__Iterator0_Reset_m3970558608 ();
 extern "C" void EnemiesController__ctor_m2499192745 ();
 extern "C" void EnemiesController_Start_m3437122097 ();
 extern "C" void EnemiesController_spawnEnemies_m2372598876 ();
@@ -10886,6 +10904,23 @@ extern "C" void U3CMoveU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3C
 extern "C" void U3CMoveU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2738024937 ();
 extern "C" void U3CMoveU3Ec__Iterator0_Dispose_m3814727502 ();
 extern "C" void U3CMoveU3Ec__Iterator0_Reset_m4033852029 ();
+extern "C" void ExtinguishableFire__ctor_m1033397467 ();
+extern "C" void ExtinguishableFire_Start_m826667603 ();
+extern "C" void ExtinguishableFire_Extinguish_m3347552591 ();
+extern "C" void ExtinguishableFire_Extinguishing_m4140475815 ();
+extern "C" void ExtinguishableFire_StartingFire_m2256498164 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0__ctor_m1560645612 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0_MoveNext_m2542307519 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3265799791 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2693874969 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0_Dispose_m2493914000 ();
+extern "C" void U3CExtinguishingU3Ec__Iterator0_Reset_m3218691107 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1__ctor_m2870069621 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1_MoveNext_m2047778020 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1570649445 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m3326295456 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1_Dispose_m861174471 ();
+extern "C" void U3CStartingFireU3Ec__Iterator1_Reset_m1478579917 ();
 extern "C" void firstSceneBulletCollisionScript__ctor_m1092820501 ();
 extern "C" void firstSceneBulletCollisionScript_Start_m2865665621 ();
 extern "C" void firstSceneBulletCollisionScript_Update_m424318019 ();
@@ -10902,17 +10937,35 @@ extern "C" void FirstSceneSound__ctor_m1484591253 ();
 extern "C" void FirstSceneSound_Start_m3743861115 ();
 extern "C" void FirstSceneSound_Update_m4132268467 ();
 extern "C" void FirstSceneSound_ChangeOnClicked_m2412861827 ();
+extern "C" void GunAim__ctor_m1523559689 ();
+extern "C" void GunAim_Start_m4166687677 ();
+extern "C" void GunAim_Update_m1326161523 ();
+extern "C" void GunAim_GetIsOutOfBounds_m938029467 ();
+extern "C" void GunShoot__ctor_m3138933339 ();
+extern "C" void GunShoot_Start_m908179585 ();
+extern "C" void GunShoot_Update_m2729522759 ();
+extern "C" void GunShoot_HandleHit_m2751777149 ();
+extern "C" void GunShoot_SpawnDecal_m3331414376 ();
 extern "C" void mainCameraScipt__ctor_m63351000 ();
 extern "C" void mainCameraScipt_Start_m735070828 ();
 extern "C" void mainCameraScipt_OnButtonDown_m3286132977 ();
 extern "C" void mainCameraScipt_Update_m2502302330 ();
+extern "C" void ParticleCollision__ctor_m4118077300 ();
+extern "C" void ParticleCollision_Start_m656598176 ();
+extern "C" void ParticleCollision_OnParticleCollision_m1925620210 ();
+extern "C" void ParticleExamples__ctor_m4185915252 ();
+extern "C" void ParticleMenu__ctor_m2060732129 ();
+extern "C" void ParticleMenu_Start_m2456041001 ();
+extern "C" void ParticleMenu_Navigate_m1672272913 ();
 extern "C" void spin__ctor_m1306856874 ();
 extern "C" void spin_Update_m1355771218 ();
 extern "C" void webCamScript__ctor_m4109342415 ();
 extern "C" void webCamScript_Start_m2600668231 ();
 extern "C" void webCamScript_OnButtonDown_m320040433 ();
+extern "C" void webCamScript_ToggleValueChanged_m3690979357 ();
 extern "C" void webCamScript_Update_m4223067181 ();
 extern "C" void webCamScript_UpdateLevelTimer_m2472818325 ();
+extern "C" void webCamScript_U3CStartU3Em__0_m2455209964 ();
 extern "C" void AlphaButtonClickMask__ctor_m1159171375 ();
 extern "C" void AlphaButtonClickMask_Start_m1273203541 ();
 extern "C" void AlphaButtonClickMask_IsRaycastLocationValid_m2637434344 ();
@@ -11247,7 +11300,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11228] = 
+extern const Il2CppMethodPointer g_MethodPointers[11281] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -18710,6 +18763,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	Camera_get_pixelRect_m2283183456,
 	Camera_get_targetTexture_m2278634983,
 	Camera_WorldToScreenPoint_m3726311023,
+	Camera_ScreenToWorldPoint_m3978588570,
 	Camera_ScreenToViewportPoint_m3569032523,
 	Camera_ScreenPointToRay_m2198551247,
 	Camera_ScreenPointToRay_m3764635188,
@@ -18721,6 +18775,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	Camera_FireOnPostRender_m1456255957,
 	Camera_get_pixelRect_Injected_m2326986893,
 	Camera_WorldToScreenPoint_Injected_m188645034,
+	Camera_ScreenToWorldPoint_Injected_m2012031693,
 	Camera_ScreenToViewportPoint_Injected_m1670374446,
 	Camera_ScreenPointToRay_Injected_m1570307069,
 	Camera_RaycastTry_Injected_m3801956476,
@@ -19491,6 +19546,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	SystemInfo_get_deviceType_m3742504744,
 	SystemInfo_GetOperatingSystemFamily_m1440411909,
 	SystemInfo_GetDeviceType_m803381061,
+	TextAreaAttribute__ctor_m2309583297,
 	TextAreaAttribute__ctor_m2173231689,
 	Texture__ctor_m3554519797,
 	Texture_GetDataWidth_m2906817031,
@@ -20216,10 +20272,13 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	ParticleCollisionEvent_get_colliderComponent_m1489433520_AdjustorThunk,
 	ParticleCollisionEvent_InstanceIDToColliderComponent_m3582923694,
 	ParticlePhysicsExtensions_GetCollisionEvents_m1108737549,
+	ParticleSystem_set_time_m2501131202,
 	ParticleSystem_get_main_m3006917117,
 	ParticleSystem_get_emission_m1034302947,
 	ParticleSystem_Play_m163824593,
 	ParticleSystem_Play_m882713458,
+	ParticleSystem_Stop_m3396581118,
+	ParticleSystem_Stop_m3125854227,
 	ParticleSystem_Clear_m2603704560,
 	ParticleSystem_Clear_m381529807,
 	EmissionModule__ctor_m3908790904_AdjustorThunk,
@@ -20253,6 +20312,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	RaycastHit2D_get_collider_m1549426026_AdjustorThunk,
 	Collider__ctor_m1632031523,
 	Collider_get_attachedRigidbody_m135494519,
+	Collider_get_sharedMaterial_m2016666527,
 	Collider_Internal_Raycast_m2175318952,
 	Collider_INTERNAL_CALL_Internal_Raycast_m1864235715,
 	Collider_Raycast_m2876906360,
@@ -20264,6 +20324,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	Joint_set_connectedBody_m3457616993,
 	Joint_set_anchor_m3102426751,
 	Joint_INTERNAL_set_anchor_m762722954,
+	PhysicMaterial__ctor_m1658318133,
+	PhysicMaterial_Internal_CreateDynamicsMaterial_m1064353702,
 	Physics_Raycast_m234523501,
 	Physics_Raycast_m1896872038,
 	Physics_Raycast_m952690504,
@@ -22102,6 +22164,15 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	collisionScript_Start_m3702951863,
 	collisionScript_Update_m1042092368,
 	collisionScript_OnTriggerEnter_m3054314804,
+	collisionScript_FireButtonClicked_m567438054,
+	DecalDestroyer__ctor_m64185944,
+	DecalDestroyer_Start_m4068496280,
+	U3CStartU3Ec__Iterator0__ctor_m1789964581,
+	U3CStartU3Ec__Iterator0_MoveNext_m1801159999,
+	U3CStartU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1971114183,
+	U3CStartU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m3093432561,
+	U3CStartU3Ec__Iterator0_Dispose_m2578430802,
+	U3CStartU3Ec__Iterator0_Reset_m3970558608,
 	EnemiesController__ctor_m2499192745,
 	EnemiesController_Start_m3437122097,
 	EnemiesController_spawnEnemies_m2372598876,
@@ -22116,6 +22187,23 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	U3CMoveU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2738024937,
 	U3CMoveU3Ec__Iterator0_Dispose_m3814727502,
 	U3CMoveU3Ec__Iterator0_Reset_m4033852029,
+	ExtinguishableFire__ctor_m1033397467,
+	ExtinguishableFire_Start_m826667603,
+	ExtinguishableFire_Extinguish_m3347552591,
+	ExtinguishableFire_Extinguishing_m4140475815,
+	ExtinguishableFire_StartingFire_m2256498164,
+	U3CExtinguishingU3Ec__Iterator0__ctor_m1560645612,
+	U3CExtinguishingU3Ec__Iterator0_MoveNext_m2542307519,
+	U3CExtinguishingU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3265799791,
+	U3CExtinguishingU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2693874969,
+	U3CExtinguishingU3Ec__Iterator0_Dispose_m2493914000,
+	U3CExtinguishingU3Ec__Iterator0_Reset_m3218691107,
+	U3CStartingFireU3Ec__Iterator1__ctor_m2870069621,
+	U3CStartingFireU3Ec__Iterator1_MoveNext_m2047778020,
+	U3CStartingFireU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1570649445,
+	U3CStartingFireU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m3326295456,
+	U3CStartingFireU3Ec__Iterator1_Dispose_m861174471,
+	U3CStartingFireU3Ec__Iterator1_Reset_m1478579917,
 	firstSceneBulletCollisionScript__ctor_m1092820501,
 	firstSceneBulletCollisionScript_Start_m2865665621,
 	firstSceneBulletCollisionScript_Update_m424318019,
@@ -22132,17 +22220,35 @@ extern const Il2CppMethodPointer g_MethodPointers[11228] =
 	FirstSceneSound_Start_m3743861115,
 	FirstSceneSound_Update_m4132268467,
 	FirstSceneSound_ChangeOnClicked_m2412861827,
+	GunAim__ctor_m1523559689,
+	GunAim_Start_m4166687677,
+	GunAim_Update_m1326161523,
+	GunAim_GetIsOutOfBounds_m938029467,
+	GunShoot__ctor_m3138933339,
+	GunShoot_Start_m908179585,
+	GunShoot_Update_m2729522759,
+	GunShoot_HandleHit_m2751777149,
+	GunShoot_SpawnDecal_m3331414376,
 	mainCameraScipt__ctor_m63351000,
 	mainCameraScipt_Start_m735070828,
 	mainCameraScipt_OnButtonDown_m3286132977,
 	mainCameraScipt_Update_m2502302330,
+	ParticleCollision__ctor_m4118077300,
+	ParticleCollision_Start_m656598176,
+	ParticleCollision_OnParticleCollision_m1925620210,
+	ParticleExamples__ctor_m4185915252,
+	ParticleMenu__ctor_m2060732129,
+	ParticleMenu_Start_m2456041001,
+	ParticleMenu_Navigate_m1672272913,
 	spin__ctor_m1306856874,
 	spin_Update_m1355771218,
 	webCamScript__ctor_m4109342415,
 	webCamScript_Start_m2600668231,
 	webCamScript_OnButtonDown_m320040433,
+	webCamScript_ToggleValueChanged_m3690979357,
 	webCamScript_Update_m4223067181,
 	webCamScript_UpdateLevelTimer_m2472818325,
+	webCamScript_U3CStartU3Em__0_m2455209964,
 	AlphaButtonClickMask__ctor_m1159171375,
 	AlphaButtonClickMask_Start_m1273203541,
 	AlphaButtonClickMask_IsRaycastLocationValid_m2637434344,

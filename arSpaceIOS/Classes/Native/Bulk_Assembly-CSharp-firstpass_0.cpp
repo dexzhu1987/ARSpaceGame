@@ -655,12 +655,12 @@ extern const uint32_t ParticleSystemMultiplier_Start_m1947444609_MetadataUsageId
 extern const RuntimeMethod* Component_GetComponent_TisAudioSource_t3935305588_m1977431131_RuntimeMethod_var;
 extern const uint32_t SmokeParticles_Start_m1365038171_MetadataUsageId;
 extern RuntimeClass* List_1_t1232140387_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* List_1__ctor_m2823999785_RuntimeMethod_var;
+extern const RuntimeMethod* List_1__ctor_m1069176951_RuntimeMethod_var;
 extern const uint32_t WaterHoseParticles__ctor_m3456900009_MetadataUsageId;
-extern const RuntimeMethod* Component_GetComponent_TisParticleSystem_t1800779281_m2212756850_RuntimeMethod_var;
+extern const RuntimeMethod* Component_GetComponent_TisParticleSystem_t1800779281_m3884485303_RuntimeMethod_var;
 extern const uint32_t WaterHoseParticles_Start_m1169804003_MetadataUsageId;
 extern RuntimeClass* WaterHoseParticles_t1340502520_il2cpp_TypeInfo_var;
-extern const RuntimeMethod* List_1_get_Item_m1711230533_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_get_Item_m1979445881_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisRigidbody_t3916780224_m4049400462_RuntimeMethod_var;
 extern String_t* _stringLiteral3489794435;
 extern const uint32_t WaterHoseParticles_OnParticleCollision_m3246988744_MetadataUsageId;
@@ -11920,9 +11920,9 @@ extern "C"  void Enumerator_Dispose_m3007748546_gshared (Enumerator_t2146457487 
 // !!0[] UnityEngine.Component::GetComponentsInChildren<System.Object>()
 extern "C"  ObjectU5BU5D_t2843939325* Component_GetComponentsInChildren_TisRuntimeObject_m2385061347_gshared (Component_t1923634451 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::.ctor()
-extern "C"  void List_1__ctor_m2823999785_gshared (List_1_t1232140387 * __this, const RuntimeMethod* method);
+extern "C"  void List_1__ctor_m1069176951_gshared (List_1_t1232140387 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::get_Item(System.Int32)
-extern "C"  ParticleCollisionEvent_t4055032941  List_1_get_Item_m1711230533_gshared (List_1_t1232140387 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C"  ParticleCollisionEvent_t4055032941  List_1_get_Item_m1979445881_gshared (List_1_t1232140387 * __this, int32_t p0, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C"  RuntimeObject * GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // !!0[] UnityEngine.Object::FindObjectsOfType<System.Object>()
@@ -12401,13 +12401,13 @@ extern "C"  void AudioSource_set_clip_m31653938 (AudioSource_t3935305588 * __thi
 // System.Void UnityEngine.AudioSource::Play()
 extern "C"  void AudioSource_Play_m48294159 (AudioSource_t3935305588 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::.ctor()
-#define List_1__ctor_m2823999785(__this, method) ((  void (*) (List_1_t1232140387 *, const RuntimeMethod*))List_1__ctor_m2823999785_gshared)(__this, method)
+#define List_1__ctor_m1069176951(__this, method) ((  void (*) (List_1_t1232140387 *, const RuntimeMethod*))List_1__ctor_m1069176951_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.ParticleSystem>()
-#define Component_GetComponent_TisParticleSystem_t1800779281_m2212756850(__this, method) ((  ParticleSystem_t1800779281 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method)
+#define Component_GetComponent_TisParticleSystem_t1800779281_m3884485303(__this, method) ((  ParticleSystem_t1800779281 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method)
 // System.Int32 UnityEngine.ParticlePhysicsExtensions::GetCollisionEvents(UnityEngine.ParticleSystem,UnityEngine.GameObject,System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>)
 extern "C"  int32_t ParticlePhysicsExtensions_GetCollisionEvents_m1108737549 (RuntimeObject * __this /* static, unused */, ParticleSystem_t1800779281 * p0, GameObject_t1113636619 * p1, List_1_t1232140387 * p2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !0 System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::get_Item(System.Int32)
-#define List_1_get_Item_m1711230533(__this, p0, method) ((  ParticleCollisionEvent_t4055032941  (*) (List_1_t1232140387 *, int32_t, const RuntimeMethod*))List_1_get_Item_m1711230533_gshared)(__this, p0, method)
+#define List_1_get_Item_m1979445881(__this, p0, method) ((  ParticleCollisionEvent_t4055032941  (*) (List_1_t1232140387 *, int32_t, const RuntimeMethod*))List_1_get_Item_m1979445881_gshared)(__this, p0, method)
 // UnityEngine.Component UnityEngine.ParticleCollisionEvent::get_colliderComponent()
 extern "C"  Component_t1923634451 * ParticleCollisionEvent_get_colliderComponent_m1489433520 (ParticleCollisionEvent_t4055032941 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Rigidbody>()
@@ -18277,7 +18277,7 @@ extern "C"  void WaterHoseParticles__ctor_m3456900009 (WaterHoseParticles_t13405
 	{
 		__this->set_force_3((1.0f));
 		List_1_t1232140387 * L_0 = (List_1_t1232140387 *)il2cpp_codegen_object_new(List_1_t1232140387_il2cpp_TypeInfo_var);
-		List_1__ctor_m2823999785(L_0, /*hidden argument*/List_1__ctor_m2823999785_RuntimeMethod_var);
+		List_1__ctor_m1069176951(L_0, /*hidden argument*/List_1__ctor_m1069176951_RuntimeMethod_var);
 		__this->set_m_CollisionEvents_4(L_0);
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
@@ -18293,7 +18293,7 @@ extern "C"  void WaterHoseParticles_Start_m1169804003 (WaterHoseParticles_t13405
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		ParticleSystem_t1800779281 * L_0 = Component_GetComponent_TisParticleSystem_t1800779281_m2212756850(__this, /*hidden argument*/Component_GetComponent_TisParticleSystem_t1800779281_m2212756850_RuntimeMethod_var);
+		ParticleSystem_t1800779281 * L_0 = Component_GetComponent_TisParticleSystem_t1800779281_m3884485303(__this, /*hidden argument*/Component_GetComponent_TisParticleSystem_t1800779281_m3884485303_RuntimeMethod_var);
 		__this->set_m_ParticleSystem_5(L_0);
 		return;
 	}
@@ -18346,7 +18346,7 @@ IL_0039:
 		List_1_t1232140387 * L_7 = __this->get_m_CollisionEvents_4();
 		int32_t L_8 = V_1;
 		NullCheck(L_7);
-		ParticleCollisionEvent_t4055032941  L_9 = List_1_get_Item_m1711230533(L_7, L_8, /*hidden argument*/List_1_get_Item_m1711230533_RuntimeMethod_var);
+		ParticleCollisionEvent_t4055032941  L_9 = List_1_get_Item_m1979445881(L_7, L_8, /*hidden argument*/List_1_get_Item_m1979445881_RuntimeMethod_var);
 		V_3 = L_9;
 		Component_t1923634451 * L_10 = ParticleCollisionEvent_get_colliderComponent_m1489433520((ParticleCollisionEvent_t4055032941 *)(&V_3), /*hidden argument*/NULL);
 		V_2 = L_10;
@@ -18366,7 +18366,7 @@ IL_0039:
 		List_1_t1232140387 * L_15 = __this->get_m_CollisionEvents_4();
 		int32_t L_16 = V_1;
 		NullCheck(L_15);
-		ParticleCollisionEvent_t4055032941  L_17 = List_1_get_Item_m1711230533(L_15, L_16, /*hidden argument*/List_1_get_Item_m1711230533_RuntimeMethod_var);
+		ParticleCollisionEvent_t4055032941  L_17 = List_1_get_Item_m1979445881(L_15, L_16, /*hidden argument*/List_1_get_Item_m1979445881_RuntimeMethod_var);
 		V_6 = L_17;
 		Vector3_t3722313464  L_18 = ParticleCollisionEvent_get_velocity_m1941659151((ParticleCollisionEvent_t4055032941 *)(&V_6), /*hidden argument*/NULL);
 		V_5 = L_18;

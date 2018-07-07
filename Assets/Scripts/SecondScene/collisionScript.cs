@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class collisionScript : MonoBehaviour
 {
-
-  
+    private const float VOLUME = 0.7f;
+    public AudioClip explosionSound;
     public static int ememiesKilled;
+    public AudioClip laser;
 
     // Use this for initialization
     void Start()
@@ -26,8 +27,10 @@ public class collisionScript : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         
+        
         if (col.tag == "Player"){
-            GameObject explosion = Instantiate(Resources.Load("FlareMobile", typeof(GameObject))) as GameObject;
+            GameObject explosion = Instantiate(Resources.Load("SmallExplosionEffect", typeof(GameObject))) as GameObject;
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
             explosion.transform.position = transform.position;
             Destroy(col.gameObject);
             Destroy(explosion, 2);
@@ -49,7 +52,14 @@ public class collisionScript : MonoBehaviour
 
         }
 
+     
        
     }
+
+    public void FireButtonClicked()
+    {
+        AudioSource.PlayClipAtPoint(laser, transform.position, VOLUME);
+    }
+
 
 }

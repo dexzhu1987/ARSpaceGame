@@ -340,6 +340,7 @@ extern const Il2CppType List_1_t1569362707_0_0_0;
 extern const Il2CppType KeyValuePair_2_t3752291173_0_0_0;
 extern const Il2CppType FieldWithTarget_t3058750293_0_0_0;
 extern const Il2CppType TriggerRule_t1946298321_0_0_0;
+extern const Il2CppType ParticleExamples_t2082666202_0_0_0;
 extern const Il2CppType AxisTouchButton_t3522881333_0_0_0;
 extern const Il2CppType VirtualAxis_t4087348596_0_0_0;
 extern const Il2CppType KeyValuePair_2_t1975309766_0_0_0;
@@ -377,7 +378,9 @@ extern const Il2CppType RectOffset_t1369453676_0_0_0;
 extern const Il2CppType TextAnchor_t2035777396_0_0_0;
 extern const Il2CppType AnimationTriggers_t2532145056_0_0_0;
 extern const Il2CppType Animator_t434523843_0_0_0;
+extern const Il2CppType GunAim_t922399830_0_0_0;
 extern const Il2CppType AudioSource_t3935305588_0_0_0;
+extern const Il2CppType ExtinguishableFire_t550067409_0_0_0;
 extern const Il2CppType MeshRenderer_t587009260_0_0_0;
 extern const Il2CppType StandaloneInputModule_t2760469101_0_0_0;
 extern const Il2CppType ParticleSystemMultiplier_t2770350653_0_0_0;
@@ -1302,6 +1305,8 @@ static const RuntimeType* GenInst_FieldWithTarget_t3058750293_0_0_0_Types[] = { 
 extern const Il2CppGenericInst GenInst_FieldWithTarget_t3058750293_0_0_0 = { 1, GenInst_FieldWithTarget_t3058750293_0_0_0_Types };
 static const RuntimeType* GenInst_TriggerRule_t1946298321_0_0_0_Types[] = { (&TriggerRule_t1946298321_0_0_0) };
 extern const Il2CppGenericInst GenInst_TriggerRule_t1946298321_0_0_0 = { 1, GenInst_TriggerRule_t1946298321_0_0_0_Types };
+static const RuntimeType* GenInst_ParticleExamples_t2082666202_0_0_0_Types[] = { (&ParticleExamples_t2082666202_0_0_0) };
+extern const Il2CppGenericInst GenInst_ParticleExamples_t2082666202_0_0_0 = { 1, GenInst_ParticleExamples_t2082666202_0_0_0_Types };
 static const RuntimeType* GenInst_AxisTouchButton_t3522881333_0_0_0_Types[] = { (&AxisTouchButton_t3522881333_0_0_0) };
 extern const Il2CppGenericInst GenInst_AxisTouchButton_t3522881333_0_0_0 = { 1, GenInst_AxisTouchButton_t3522881333_0_0_0_Types };
 static const RuntimeType* GenInst_String_t_0_0_0_VirtualAxis_t4087348596_0_0_0_Types[] = { (&String_t_0_0_0), (&VirtualAxis_t4087348596_0_0_0) };
@@ -1384,8 +1389,12 @@ static const RuntimeType* GenInst_AnimationTriggers_t2532145056_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_AnimationTriggers_t2532145056_0_0_0 = { 1, GenInst_AnimationTriggers_t2532145056_0_0_0_Types };
 static const RuntimeType* GenInst_Animator_t434523843_0_0_0_Types[] = { (&Animator_t434523843_0_0_0) };
 extern const Il2CppGenericInst GenInst_Animator_t434523843_0_0_0 = { 1, GenInst_Animator_t434523843_0_0_0_Types };
+static const RuntimeType* GenInst_GunAim_t922399830_0_0_0_Types[] = { (&GunAim_t922399830_0_0_0) };
+extern const Il2CppGenericInst GenInst_GunAim_t922399830_0_0_0 = { 1, GenInst_GunAim_t922399830_0_0_0_Types };
 static const RuntimeType* GenInst_AudioSource_t3935305588_0_0_0_Types[] = { (&AudioSource_t3935305588_0_0_0) };
 extern const Il2CppGenericInst GenInst_AudioSource_t3935305588_0_0_0 = { 1, GenInst_AudioSource_t3935305588_0_0_0_Types };
+static const RuntimeType* GenInst_ExtinguishableFire_t550067409_0_0_0_Types[] = { (&ExtinguishableFire_t550067409_0_0_0) };
+extern const Il2CppGenericInst GenInst_ExtinguishableFire_t550067409_0_0_0 = { 1, GenInst_ExtinguishableFire_t550067409_0_0_0_Types };
 static const RuntimeType* GenInst_MeshRenderer_t587009260_0_0_0_Types[] = { (&MeshRenderer_t587009260_0_0_0) };
 extern const Il2CppGenericInst GenInst_MeshRenderer_t587009260_0_0_0 = { 1, GenInst_MeshRenderer_t587009260_0_0_0_Types };
 static const RuntimeType* GenInst_StandaloneInputModule_t2760469101_0_0_0_Types[] = { (&StandaloneInputModule_t2760469101_0_0_0) };
@@ -1768,7 +1777,7 @@ static const RuntimeType* GenInst_List_1_t3009893961_0_0_0_Types[] = { (&List_1_
 extern const Il2CppGenericInst GenInst_List_1_t3009893961_0_0_0 = { 1, GenInst_List_1_t3009893961_0_0_0_Types };
 static const RuntimeType* GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types[] = { (&ObjectPool_1_t892185599_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_ObjectPool_1_t892185599_gp_0_0_0_0 = { 1, GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[613] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[616] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -2150,6 +2159,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[613] =
 	&GenInst_KeyValuePair_2_t3752291173_0_0_0,
 	&GenInst_FieldWithTarget_t3058750293_0_0_0,
 	&GenInst_TriggerRule_t1946298321_0_0_0,
+	&GenInst_ParticleExamples_t2082666202_0_0_0,
 	&GenInst_AxisTouchButton_t3522881333_0_0_0,
 	&GenInst_String_t_0_0_0_VirtualAxis_t4087348596_0_0_0,
 	&GenInst_VirtualAxis_t4087348596_0_0_0,
@@ -2191,7 +2201,9 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[613] =
 	&GenInst_TextAnchor_t2035777396_0_0_0,
 	&GenInst_AnimationTriggers_t2532145056_0_0_0,
 	&GenInst_Animator_t434523843_0_0_0,
+	&GenInst_GunAim_t922399830_0_0_0,
 	&GenInst_AudioSource_t3935305588_0_0_0,
+	&GenInst_ExtinguishableFire_t550067409_0_0_0,
 	&GenInst_MeshRenderer_t587009260_0_0_0,
 	&GenInst_StandaloneInputModule_t2760469101_0_0_0,
 	&GenInst_ParticleSystemMultiplier_t2770350653_0_0_0,

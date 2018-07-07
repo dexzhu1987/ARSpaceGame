@@ -9,6 +9,7 @@ public class FirstSceneSound : MonoBehaviour {
     public AudioClip bcgMusic;
     public AudioClip annoucer;
     public AudioClip laser;
+    private const float VOLUME = 0.7f;
 	// Use this for initialization
 	void Start () {
         mAudio.loop = true;
@@ -25,6 +26,7 @@ public class FirstSceneSound : MonoBehaviour {
 	}
 
     public void ChangeOnClicked(){
-        AudioSource.PlayClipAtPoint(laser, transform.position);
+       
+        AudioSource.PlayClipAtPoint(laser, transform.position,VOLUME);
     }
 }

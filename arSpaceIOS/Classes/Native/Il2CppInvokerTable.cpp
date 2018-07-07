@@ -24949,6 +24949,20 @@ void* RuntimeInvoker_Boolean_t97287965_Double_t594665363_Double_t594665363 (Il2C
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
 }
 
+void* RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, RaycastHit_t1056001966  p1, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((RaycastHit_t1056001966 *)args[0]), methodMetadata);
+	return NULL;
+}
+
+void* RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966_RuntimeObject (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, RaycastHit_t1056001966  p1, RuntimeObject * p2, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((RaycastHit_t1056001966 *)args[0]), (RuntimeObject *)args[1], methodMetadata);
+	return NULL;
+}
+
 void* RuntimeInvoker_Single_t1397266774_RuntimeObject_SByte_t1669577662 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef float (*Func)(void* obj, RuntimeObject * p1, int8_t p2, const RuntimeMethod* method);
@@ -26493,13 +26507,6 @@ void* RuntimeInvoker_Void_t1185182177_PlayableBinding_t354260709 (Il2CppMethodPo
 {
 	typedef void (*Func)(void* obj, PlayableBinding_t354260709  p1, const RuntimeMethod* method);
 	((Func)methodPointer)(obj, *((PlayableBinding_t354260709 *)args[0]), methodMetadata);
-	return NULL;
-}
-
-void* RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
-{
-	typedef void (*Func)(void* obj, RaycastHit_t1056001966  p1, const RuntimeMethod* method);
-	((Func)methodPointer)(obj, *((RaycastHit_t1056001966 *)args[0]), methodMetadata);
 	return NULL;
 }
 
@@ -28344,7 +28351,7 @@ void* RuntimeInvoker_RuntimeObject_FloatTween_t1274330004 (Il2CppMethodPointer m
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[1686] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[1687] = 
 {
 	RuntimeInvoker_Void_t1185182177,
 	RuntimeInvoker_Boolean_t97287965_RuntimeObject,
@@ -29547,6 +29554,8 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1686] =
 	RuntimeInvoker_TriggerLifecycleEvent_t3193146760,
 	RuntimeInvoker_Boolean_t97287965_BooleanU26_t4125257963_StringU26_t181565287,
 	RuntimeInvoker_Boolean_t97287965_Double_t594665363_Double_t594665363,
+	RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966,
+	RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966_RuntimeObject,
 	RuntimeInvoker_Single_t1397266774_RuntimeObject_SByte_t1669577662,
 	RuntimeInvoker_Void_t1185182177_RuntimeObject_Vector3_t3722313464_Vector3_t3722313464,
 	RuntimeInvoker_Void_t1185182177_RuntimeObject_RuntimeObject_Vector3_t3722313464,
@@ -29768,7 +29777,6 @@ extern const InvokerMethod g_Il2CppInvokerPointers[1686] =
 	RuntimeInvoker_Void_t1185182177_Keyframe_t4206410242,
 	RuntimeInvoker_Void_t1185182177_ParticleCollisionEvent_t4055032941,
 	RuntimeInvoker_Void_t1185182177_PlayableBinding_t354260709,
-	RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966,
 	RuntimeInvoker_Void_t1185182177_RaycastHit2D_t2279581989,
 	RuntimeInvoker_Void_t1185182177_HitInfo_t3229609740,
 	RuntimeInvoker_Void_t1185182177_GcAchievementData_t675222246,

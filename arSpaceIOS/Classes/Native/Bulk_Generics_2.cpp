@@ -654,8 +654,8 @@ extern const RuntimeMethod* List_1_RemoveAt_m2722643686_RuntimeMethod_var;
 extern const uint32_t List_1_RemoveAt_m2722643686_MetadataUsageId;
 extern const RuntimeMethod* List_1_set_Capacity_m2072281877_RuntimeMethod_var;
 extern const uint32_t List_1_set_Capacity_m2072281877_MetadataUsageId;
-extern const RuntimeMethod* List_1_get_Item_m1711230533_RuntimeMethod_var;
-extern const uint32_t List_1_get_Item_m1711230533_MetadataUsageId;
+extern const RuntimeMethod* List_1_get_Item_m1979445881_RuntimeMethod_var;
+extern const uint32_t List_1_get_Item_m1979445881_MetadataUsageId;
 extern const RuntimeMethod* List_1_set_Item_m132096158_RuntimeMethod_var;
 extern const uint32_t List_1_set_Item_m132096158_MetadataUsageId;
 extern const RuntimeMethod* List_1__ctor_m808270210_RuntimeMethod_var;
@@ -21030,7 +21030,7 @@ IL_001e:
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // System.Void System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::.ctor()
-extern "C"  void List_1__ctor_m2823999785_gshared (List_1_t1232140387 * __this, const RuntimeMethod* method)
+extern "C"  void List_1__ctor_m1069176951_gshared (List_1_t1232140387 * __this, const RuntimeMethod* method)
 {
 	{
 		NullCheck((RuntimeObject *)__this);
@@ -22501,12 +22501,12 @@ extern "C"  int32_t List_1_get_Count_m2755375755_gshared (List_1_t1232140387 * _
 	}
 }
 // T System.Collections.Generic.List`1<UnityEngine.ParticleCollisionEvent>::get_Item(System.Int32)
-extern "C"  ParticleCollisionEvent_t4055032941  List_1_get_Item_m1711230533_gshared (List_1_t1232140387 * __this, int32_t ___index0, const RuntimeMethod* method)
+extern "C"  ParticleCollisionEvent_t4055032941  List_1_get_Item_m1979445881_gshared (List_1_t1232140387 * __this, int32_t ___index0, const RuntimeMethod* method)
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_method (List_1_get_Item_m1711230533_MetadataUsageId);
+		il2cpp_codegen_initialize_method (List_1_get_Item_m1979445881_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -22520,7 +22520,7 @@ extern "C"  ParticleCollisionEvent_t4055032941  List_1_get_Item_m1711230533_gsha
 	{
 		ArgumentOutOfRangeException_t777629997 * L_2 = (ArgumentOutOfRangeException_t777629997 *)il2cpp_codegen_object_new(ArgumentOutOfRangeException_t777629997_il2cpp_TypeInfo_var);
 		ArgumentOutOfRangeException__ctor_m3628145864(L_2, (String_t*)_stringLiteral797640427, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, NULL, List_1_get_Item_m1711230533_RuntimeMethod_var);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_2, NULL, List_1_get_Item_m1979445881_RuntimeMethod_var);
 	}
 
 IL_0017:
