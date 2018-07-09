@@ -10959,11 +10959,21 @@ extern "C" void ParticleMenu_Start_m2456041001 ();
 extern "C" void ParticleMenu_Navigate_m1672272913 ();
 extern "C" void spin__ctor_m1306856874 ();
 extern "C" void spin_Update_m1355771218 ();
+extern "C" void VirtualJoyceStick__ctor_m301406260 ();
+extern "C" void VirtualJoyceStick_Start_m556748936 ();
+extern "C" void VirtualJoyceStick_Update_m966124290 ();
+extern "C" void VirtualJoyceStick_OnPointerDown_m3104497345 ();
+extern "C" void VirtualJoyceStick_OnPointerUp_m1362705237 ();
+extern "C" void VirtualJoyceStick_OnDrag_m2422216155 ();
+extern "C" void VirtualJoyceStick_Horizontal_m2941747332 ();
+extern "C" void VirtualJoyceStick_Vertical_m221505737 ();
 extern "C" void webCamScript__ctor_m4109342415 ();
 extern "C" void webCamScript_Start_m2600668231 ();
 extern "C" void webCamScript_OnButtonDown_m320040433 ();
 extern "C" void webCamScript_ToggleValueChanged_m3690979357 ();
 extern "C" void webCamScript_Update_m4223067181 ();
+extern "C" void webCamScript_HandleCamera_m1263492610 ();
+extern "C" void webCamScript_HandleTime_m1725458896 ();
 extern "C" void webCamScript_UpdateLevelTimer_m2472818325 ();
 extern "C" void webCamScript_U3CStartU3Em__0_m2455209964 ();
 extern "C" void AlphaButtonClickMask__ctor_m1159171375 ();
@@ -11300,7 +11310,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11281] = 
+extern const Il2CppMethodPointer g_MethodPointers[11291] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -22242,11 +22252,21 @@ extern const Il2CppMethodPointer g_MethodPointers[11281] =
 	ParticleMenu_Navigate_m1672272913,
 	spin__ctor_m1306856874,
 	spin_Update_m1355771218,
+	VirtualJoyceStick__ctor_m301406260,
+	VirtualJoyceStick_Start_m556748936,
+	VirtualJoyceStick_Update_m966124290,
+	VirtualJoyceStick_OnPointerDown_m3104497345,
+	VirtualJoyceStick_OnPointerUp_m1362705237,
+	VirtualJoyceStick_OnDrag_m2422216155,
+	VirtualJoyceStick_Horizontal_m2941747332,
+	VirtualJoyceStick_Vertical_m221505737,
 	webCamScript__ctor_m4109342415,
 	webCamScript_Start_m2600668231,
 	webCamScript_OnButtonDown_m320040433,
 	webCamScript_ToggleValueChanged_m3690979357,
 	webCamScript_Update_m4223067181,
+	webCamScript_HandleCamera_m1263492610,
+	webCamScript_HandleTime_m1725458896,
 	webCamScript_UpdateLevelTimer_m2472818325,
 	webCamScript_U3CStartU3Em__0_m2455209964,
 	AlphaButtonClickMask__ctor_m1159171375,

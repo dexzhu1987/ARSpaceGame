@@ -9,11 +9,12 @@ public class webCamScript : MonoBehaviour {
     public GameObject webCameraPlane;
     public Button fireButton;
     public Toggle arToggle;
+    public VirtualJoyceStick joyceStick;
     public Text timer;
     public Text mKilledLabel;
     float totalTime = 60f; //2 minutes
 	// Use this for initialization
-	void Start () {
+	protected void Start () {
 
         if (Application.isMobilePlatform)
         {
@@ -29,12 +30,13 @@ public class webCamScript : MonoBehaviour {
         webCameraPlane.GetComponent<MeshRenderer>().material.mainTexture = webCameraTexture;
         webCameraTexture.Play();
        
-    
-
         fireButton.onClick.AddListener(OnButtonDown);
         arToggle.onValueChanged.AddListener(delegate {
             ToggleValueChanged(arToggle);
         });
+
+
+
 	}
 	
     void OnButtonDown()
@@ -53,26 +55,44 @@ public class webCamScript : MonoBehaviour {
     {
         if (arToggle.isOn){
             webCameraPlane.SetActive(true);
+
         }else if (!arToggle.isOn){
             webCameraPlane.SetActive(false);
         }
     }
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        HandleCamera();
+        HandleTime();
+        mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
+    }
+
+    private void HandleCamera()
+    {
         Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
         this.transform.localRotation = cameraRotation;
-  
+        if (!arToggle.isOn){
+            Vector3 cameraPosition = new Vector3(joyceStick.Horizontal(),joyceStick.Horizontal(), joyceStick.Vertical());
+            transform.position = cameraPosition;
+
+        }
+    }
+     
+    private void HandleTime()
+    {
         totalTime -= Time.deltaTime;
-        if (totalTime > 0) {
+        if (totalTime > 0)
+        {
             UpdateLevelTimer(totalTime);
         }
 
-        if (totalTime < 0) {
+        if (totalTime < 0)
+        {
             SceneManager.LoadScene("FirstScene");
         }
-        mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
-	}
+    }
 
     public void UpdateLevelTimer(float totalSeconds)
     {
