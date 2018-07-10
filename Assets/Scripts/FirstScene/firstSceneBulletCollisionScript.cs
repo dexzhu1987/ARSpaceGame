@@ -24,15 +24,18 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
             explosion.transform.position = transform.position;
             Destroy(col.gameObject);
             Destroy(explosion, 2);
-            Destroy(gameObject);
-            SceneManager.LoadScene("ARTextScene");
+            StartCoroutine(WaitForIt(2f));
             collisionScript.ememiesKilled = 0;
+
+           
         }
 
-
-
-
-
-
     }
+
+    IEnumerator WaitForIt(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene("ARTextScene");
+    }
+
 }

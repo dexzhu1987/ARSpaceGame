@@ -10925,6 +10925,13 @@ extern "C" void firstSceneBulletCollisionScript__ctor_m1092820501 ();
 extern "C" void firstSceneBulletCollisionScript_Start_m2865665621 ();
 extern "C" void firstSceneBulletCollisionScript_Update_m424318019 ();
 extern "C" void firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682 ();
+extern "C" void firstSceneBulletCollisionScript_WaitForIt_m3314672950 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0__ctor_m3983260851 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0_MoveNext_m3558511447 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1893902867 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2115964160 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0_Dispose_m2771628496 ();
+extern "C" void U3CWaitForItU3Ec__Iterator0_Reset_m2846665911 ();
 extern "C" void FirstSceneMenu__ctor_m1218201128 ();
 extern "C" void FirstSceneMenu_get_IsOpen_m1082871449 ();
 extern "C" void FirstSceneMenu_set_IsOpen_m3587087006 ();
@@ -10975,6 +10982,7 @@ extern "C" void webCamScript_Update_m4223067181 ();
 extern "C" void webCamScript_HandleCamera_m1263492610 ();
 extern "C" void webCamScript_HandleTime_m1725458896 ();
 extern "C" void webCamScript_UpdateLevelTimer_m2472818325 ();
+extern "C" void webCamScript_OnTriggerEnter_m1708050193 ();
 extern "C" void webCamScript_U3CStartU3Em__0_m2455209964 ();
 extern "C" void AlphaButtonClickMask__ctor_m1159171375 ();
 extern "C" void AlphaButtonClickMask_Start_m1273203541 ();
@@ -11310,7 +11318,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11291] = 
+extern const Il2CppMethodPointer g_MethodPointers[11299] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -22218,6 +22226,13 @@ extern const Il2CppMethodPointer g_MethodPointers[11291] =
 	firstSceneBulletCollisionScript_Start_m2865665621,
 	firstSceneBulletCollisionScript_Update_m424318019,
 	firstSceneBulletCollisionScript_OnTriggerEnter_m4076313682,
+	firstSceneBulletCollisionScript_WaitForIt_m3314672950,
+	U3CWaitForItU3Ec__Iterator0__ctor_m3983260851,
+	U3CWaitForItU3Ec__Iterator0_MoveNext_m3558511447,
+	U3CWaitForItU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1893902867,
+	U3CWaitForItU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2115964160,
+	U3CWaitForItU3Ec__Iterator0_Dispose_m2771628496,
+	U3CWaitForItU3Ec__Iterator0_Reset_m2846665911,
 	FirstSceneMenu__ctor_m1218201128,
 	FirstSceneMenu_get_IsOpen_m1082871449,
 	FirstSceneMenu_set_IsOpen_m3587087006,
@@ -22268,6 +22283,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11291] =
 	webCamScript_HandleCamera_m1263492610,
 	webCamScript_HandleTime_m1725458896,
 	webCamScript_UpdateLevelTimer_m2472818325,
+	webCamScript_OnTriggerEnter_m1708050193,
 	webCamScript_U3CStartU3Em__0_m2455209964,
 	AlphaButtonClickMask__ctor_m1159171375,
 	AlphaButtonClickMask_Start_m1273203541,

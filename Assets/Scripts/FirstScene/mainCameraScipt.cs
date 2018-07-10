@@ -31,7 +31,7 @@ public class mainCameraScipt : MonoBehaviour {
         bullet.transform.rotation = Camera.main.transform.rotation;
         bullet.transform.position = Camera.main.transform.position;
         rb.AddForce(Camera.main.transform.forward * 500f);
-        Destroy(bullet, 3);
+        Destroy(bullet, 5);
 
         GetComponent<AudioSource>().Play();
   

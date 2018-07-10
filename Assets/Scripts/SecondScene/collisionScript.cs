@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class collisionScript : MonoBehaviour
 {
-    private const float VOLUME = 0.7f;
+    private const float VOLUME = 0.8f;
     public AudioClip explosionSound;
     public static int ememiesKilled;
     public AudioClip laser;

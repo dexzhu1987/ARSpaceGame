@@ -9,11 +9,23 @@ public class webCamScript : MonoBehaviour {
     public GameObject webCameraPlane;
     public Button fireButton;
     public Toggle arToggle;
-    public VirtualJoyceStick joyceStick;
+    public VirtualJoyceStick leftJoyceStick;
+    public VirtualJoyceStick rightJoyceStick;
+    public Image lifeImage1;
+    public Image lifeImage2;
+    public Image lifeImage3;
+
+    float totalTime = 60f; //2 minutes
     public Text timer;
     public Text mKilledLabel;
-    float totalTime = 60f; //2 minutes
-	// Use this for initialization
+
+    public Vector3 center;
+    public Vector3 size;
+    public int lifies = 3;
+    public List<Image> lifiesList = new List<Image>();
+
+    public AudioClip warning;
+
 	protected void Start () {
 
         if (Application.isMobilePlatform)
@@ -36,7 +48,9 @@ public class webCamScript : MonoBehaviour {
         });
 
 
-
+        lifiesList.Add(lifeImage1);
+        lifiesList.Add(lifeImage2);
+        lifiesList.Add(lifeImage3);
 	}
 	
     void OnButtonDown()
@@ -73,11 +87,27 @@ public class webCamScript : MonoBehaviour {
     {
         Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
         this.transform.localRotation = cameraRotation;
+  
+        float xMaxRange = center.x + size.x / 2 + 1;
+        float xMinRange = center.x - size.x / 2 - 1;
+        float yMaxRange = center.y + size.y / 2 + 1;
+        float yMinRange = center.y - size.y / 2 - 1;
+        float zMaxRange = center.z + size.z / 2 + 1;
+        float zMinRange = center.z - size.z / 2 - 1;
         if (!arToggle.isOn){
-            Vector3 cameraPosition = new Vector3(joyceStick.Horizontal(),joyceStick.Horizontal(), joyceStick.Vertical());
-            transform.position = cameraPosition;
-
+            Vector3 movePostion = new Vector3(leftJoyceStick.Horizontal(), leftJoyceStick.Vertical(),rightJoyceStick.Vertical());
+            Vector3 newPosition = transform.position + movePostion / 3;
+            if (newPosition.x < xMaxRange && newPosition.x > xMinRange 
+                && newPosition.y < yMaxRange && newPosition.y > yMinRange 
+                && newPosition.z < zMaxRange && newPosition.z > zMinRange)
+            {
+                transform.position = newPosition;
+            } 
+        } else {
+            transform.position = Vector3.zero;
         }
+
+       
     }
      
     private void HandleTime()
@@ -108,5 +138,27 @@ public class webCamScript : MonoBehaviour {
         }
 
         timer.text = minutes.ToString("00") + ":" + seconds.ToString("00"); 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            AudioSource.PlayClipAtPoint(warning, transform.position);
+
+            if (lifiesList.Count > 0) {
+                Destroy(lifiesList[0]);
+                lifiesList.RemoveAt(0);
+            }
+
+            lifies--;
+
+          
+        } 
+
+        if (lifies == 0 ){
+            SceneManager.LoadScene("FirstScene");
+        }
+
     }
 }
