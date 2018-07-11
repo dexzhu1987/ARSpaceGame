@@ -7,8 +7,7 @@ public class EnemiesController : MonoBehaviour {
     public GameObject enemy;
     public Vector3  center;
     public Vector3 size;
-    public float RateOfSpawn = 1;
-    private const float SPAWNGAP = 2f;
+    private const float SPAWNGAP = 0.8f; //1 sec
     private float mNextSpawnTime;
 	// Use this for initialization
 	void Start () {

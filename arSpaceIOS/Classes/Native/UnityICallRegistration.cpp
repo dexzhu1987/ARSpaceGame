@@ -980,6 +980,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.Gyroscope
 
+	//Start Registrations for type : UnityEngine.Handheld
+
+		//System.Void UnityEngine.Handheld::Vibrate()
+		void Register_UnityEngine_Handheld_Vibrate();
+		Register_UnityEngine_Handheld_Vibrate();
+
+	//End Registrations for type : UnityEngine.Handheld
+
 	//Start Registrations for type : UnityEngine.Input
 
 		//System.Boolean UnityEngine.Input::GetButton(System.String)

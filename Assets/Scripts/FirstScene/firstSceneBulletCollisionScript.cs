@@ -24,7 +24,7 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
             explosion.transform.position = transform.position;
             Destroy(col.gameObject);
             Destroy(explosion, 2);
-            StartCoroutine(WaitForIt(2f));
+            StartCoroutine(WaitForIt(1f));
             collisionScript.ememiesKilled = 0;
 
            

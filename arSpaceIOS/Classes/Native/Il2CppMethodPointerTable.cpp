@@ -7722,6 +7722,7 @@ extern "C" void Gyroscope_INTERNAL_CALL_attitude_Internal_m3310652042 ();
 extern "C" void Gyroscope_setEnabled_Internal_m356308130 ();
 extern "C" void Gyroscope_get_attitude_m1331166065 ();
 extern "C" void Gyroscope_set_enabled_m3781734411 ();
+extern "C" void Handheld_Vibrate_m3594839834 ();
 extern "C" void HideInInspector__ctor_m1179782685 ();
 extern "C" void Input_mainGyroIndex_Internal_m2311215879 ();
 extern "C" void Input_GetKeyDownInt_m3509480073 ();
@@ -10944,6 +10945,16 @@ extern "C" void FirstSceneSound__ctor_m1484591253 ();
 extern "C" void FirstSceneSound_Start_m3743861115 ();
 extern "C" void FirstSceneSound_Update_m4132268467 ();
 extern "C" void FirstSceneSound_ChangeOnClicked_m2412861827 ();
+extern "C" void flashAnimationScript__ctor_m3172306471 ();
+extern "C" void flashAnimationScript_Start_m2895758217 ();
+extern "C" void flashAnimationScript_Update_m3681346911 ();
+extern "C" void flashAnimationScript_SetBack_m548528676 ();
+extern "C" void U3CSetBackU3Ec__Iterator0__ctor_m3349398040 ();
+extern "C" void U3CSetBackU3Ec__Iterator0_MoveNext_m3574583532 ();
+extern "C" void U3CSetBackU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m964186190 ();
+extern "C" void U3CSetBackU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2320818744 ();
+extern "C" void U3CSetBackU3Ec__Iterator0_Dispose_m4084774913 ();
+extern "C" void U3CSetBackU3Ec__Iterator0_Reset_m2459366323 ();
 extern "C" void GunAim__ctor_m1523559689 ();
 extern "C" void GunAim_Start_m4166687677 ();
 extern "C" void GunAim_Update_m1326161523 ();
@@ -11318,7 +11329,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11299] = 
+extern const Il2CppMethodPointer g_MethodPointers[11310] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -19023,6 +19034,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11299] =
 	Gyroscope_setEnabled_Internal_m356308130,
 	Gyroscope_get_attitude_m1331166065,
 	Gyroscope_set_enabled_m3781734411,
+	Handheld_Vibrate_m3594839834,
 	HideInInspector__ctor_m1179782685,
 	Input_mainGyroIndex_Internal_m2311215879,
 	Input_GetKeyDownInt_m3509480073,
@@ -22245,6 +22257,16 @@ extern const Il2CppMethodPointer g_MethodPointers[11299] =
 	FirstSceneSound_Start_m3743861115,
 	FirstSceneSound_Update_m4132268467,
 	FirstSceneSound_ChangeOnClicked_m2412861827,
+	flashAnimationScript__ctor_m3172306471,
+	flashAnimationScript_Start_m2895758217,
+	flashAnimationScript_Update_m3681346911,
+	flashAnimationScript_SetBack_m548528676,
+	U3CSetBackU3Ec__Iterator0__ctor_m3349398040,
+	U3CSetBackU3Ec__Iterator0_MoveNext_m3574583532,
+	U3CSetBackU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m964186190,
+	U3CSetBackU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2320818744,
+	U3CSetBackU3Ec__Iterator0_Dispose_m4084774913,
+	U3CSetBackU3Ec__Iterator0_Reset_m2459366323,
 	GunAim__ctor_m1523559689,
 	GunAim_Start_m4166687677,
 	GunAim_Update_m1326161523,

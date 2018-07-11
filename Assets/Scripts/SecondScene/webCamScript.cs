@@ -14,6 +14,7 @@ public class webCamScript : MonoBehaviour {
     public Image lifeImage1;
     public Image lifeImage2;
     public Image lifeImage3;
+  
 
     float totalTime = 60f; //2 minutes
     public Text timer;
@@ -25,6 +26,8 @@ public class webCamScript : MonoBehaviour {
     public List<Image> lifiesList = new List<Image>();
 
     public AudioClip warning;
+    private const float VOLUME = 0.5f;
+    public AudioClip laser;
 
 	protected void Start () {
 
@@ -61,7 +64,10 @@ public class webCamScript : MonoBehaviour {
         bullet.transform.rotation = Camera.main.transform.rotation;
         bullet.transform.position = Camera.main.transform.position;
         rb.AddForce(Camera.main.transform.forward * 500f);
-        Destroy(bullet, 3);
+        Destroy(bullet, 1.5f);
+        AudioSource.PlayClipAtPoint(laser, transform.position, VOLUME);
+      
+
 
     }
 
@@ -144,15 +150,16 @@ public class webCamScript : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
+            print("got hit");
             AudioSource.PlayClipAtPoint(warning, transform.position);
 
             if (lifiesList.Count > 0) {
                 Destroy(lifiesList[0]);
                 lifiesList.RemoveAt(0);
             }
-
+            Handheld.Vibrate();
             lifies--;
-
+            flashAnimationScript.isHit = true;
           
         } 
 
@@ -161,4 +168,7 @@ public class webCamScript : MonoBehaviour {
         }
 
     }
+
+
+
 }
