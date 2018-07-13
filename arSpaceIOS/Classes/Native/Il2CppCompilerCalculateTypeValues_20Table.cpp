@@ -136,12 +136,10 @@ struct Button_t4055032469;
 struct Toggle_t2735377061;
 // VirtualJoyceStick
 struct VirtualJoyceStick_t4060354715;
-// UnityEngine.UI.Image
-struct Image_t2670269651;
-// System.Collections.Generic.List`1<UnityEngine.UI.Image>
-struct List_1_t4142344393;
 // UnityEngine.AudioClip
 struct AudioClip_t3680889665;
+// UnityEngine.UI.Image
+struct Image_t2670269651;
 // UnityEngine.SphereCollider
 struct SphereCollider_t2077223608;
 // UnityEngine.Transform[]
@@ -5312,12 +5310,12 @@ public:
 	VirtualJoyceStick_t4060354715 * ___leftJoyceStick_5;
 	// VirtualJoyceStick webCamScript::rightJoyceStick
 	VirtualJoyceStick_t4060354715 * ___rightJoyceStick_6;
-	// UnityEngine.UI.Image webCamScript::lifeImage1
-	Image_t2670269651 * ___lifeImage1_7;
-	// UnityEngine.UI.Image webCamScript::lifeImage2
-	Image_t2670269651 * ___lifeImage2_8;
-	// UnityEngine.UI.Image webCamScript::lifeImage3
-	Image_t2670269651 * ___lifeImage3_9;
+	// UnityEngine.GameObject webCamScript::lifeImage1
+	GameObject_t1113636619 * ___lifeImage1_7;
+	// UnityEngine.GameObject webCamScript::lifeImage2
+	GameObject_t1113636619 * ___lifeImage2_8;
+	// UnityEngine.GameObject webCamScript::lifeImage3
+	GameObject_t1113636619 * ___lifeImage3_9;
 	// System.Single webCamScript::totalTime
 	float ___totalTime_10;
 	// UnityEngine.UI.Text webCamScript::timer
@@ -5328,12 +5326,14 @@ public:
 	Vector3_t3722313464  ___center_13;
 	// UnityEngine.Vector3 webCamScript::size
 	Vector3_t3722313464  ___size_14;
+	// System.Int32 webCamScript::bulletsPerHit
+	int32_t ___bulletsPerHit_15;
 	// System.Int32 webCamScript::lifies
-	int32_t ___lifies_15;
-	// System.Collections.Generic.List`1<UnityEngine.UI.Image> webCamScript::lifiesList
-	List_1_t4142344393 * ___lifiesList_16;
+	int32_t ___lifies_16;
 	// UnityEngine.AudioClip webCamScript::warning
 	AudioClip_t3680889665 * ___warning_17;
+	// UnityEngine.AudioClip webCamScript::laser
+	AudioClip_t3680889665 * ___laser_19;
 
 public:
 	inline static int32_t get_offset_of_webCameraPlane_2() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___webCameraPlane_2)); }
@@ -5382,27 +5382,27 @@ public:
 	}
 
 	inline static int32_t get_offset_of_lifeImage1_7() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifeImage1_7)); }
-	inline Image_t2670269651 * get_lifeImage1_7() const { return ___lifeImage1_7; }
-	inline Image_t2670269651 ** get_address_of_lifeImage1_7() { return &___lifeImage1_7; }
-	inline void set_lifeImage1_7(Image_t2670269651 * value)
+	inline GameObject_t1113636619 * get_lifeImage1_7() const { return ___lifeImage1_7; }
+	inline GameObject_t1113636619 ** get_address_of_lifeImage1_7() { return &___lifeImage1_7; }
+	inline void set_lifeImage1_7(GameObject_t1113636619 * value)
 	{
 		___lifeImage1_7 = value;
 		Il2CppCodeGenWriteBarrier((&___lifeImage1_7), value);
 	}
 
 	inline static int32_t get_offset_of_lifeImage2_8() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifeImage2_8)); }
-	inline Image_t2670269651 * get_lifeImage2_8() const { return ___lifeImage2_8; }
-	inline Image_t2670269651 ** get_address_of_lifeImage2_8() { return &___lifeImage2_8; }
-	inline void set_lifeImage2_8(Image_t2670269651 * value)
+	inline GameObject_t1113636619 * get_lifeImage2_8() const { return ___lifeImage2_8; }
+	inline GameObject_t1113636619 ** get_address_of_lifeImage2_8() { return &___lifeImage2_8; }
+	inline void set_lifeImage2_8(GameObject_t1113636619 * value)
 	{
 		___lifeImage2_8 = value;
 		Il2CppCodeGenWriteBarrier((&___lifeImage2_8), value);
 	}
 
 	inline static int32_t get_offset_of_lifeImage3_9() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifeImage3_9)); }
-	inline Image_t2670269651 * get_lifeImage3_9() const { return ___lifeImage3_9; }
-	inline Image_t2670269651 ** get_address_of_lifeImage3_9() { return &___lifeImage3_9; }
-	inline void set_lifeImage3_9(Image_t2670269651 * value)
+	inline GameObject_t1113636619 * get_lifeImage3_9() const { return ___lifeImage3_9; }
+	inline GameObject_t1113636619 ** get_address_of_lifeImage3_9() { return &___lifeImage3_9; }
+	inline void set_lifeImage3_9(GameObject_t1113636619 * value)
 	{
 		___lifeImage3_9 = value;
 		Il2CppCodeGenWriteBarrier((&___lifeImage3_9), value);
@@ -5450,21 +5450,20 @@ public:
 		___size_14 = value;
 	}
 
-	inline static int32_t get_offset_of_lifies_15() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifies_15)); }
-	inline int32_t get_lifies_15() const { return ___lifies_15; }
-	inline int32_t* get_address_of_lifies_15() { return &___lifies_15; }
-	inline void set_lifies_15(int32_t value)
+	inline static int32_t get_offset_of_bulletsPerHit_15() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___bulletsPerHit_15)); }
+	inline int32_t get_bulletsPerHit_15() const { return ___bulletsPerHit_15; }
+	inline int32_t* get_address_of_bulletsPerHit_15() { return &___bulletsPerHit_15; }
+	inline void set_bulletsPerHit_15(int32_t value)
 	{
-		___lifies_15 = value;
+		___bulletsPerHit_15 = value;
 	}
 
-	inline static int32_t get_offset_of_lifiesList_16() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifiesList_16)); }
-	inline List_1_t4142344393 * get_lifiesList_16() const { return ___lifiesList_16; }
-	inline List_1_t4142344393 ** get_address_of_lifiesList_16() { return &___lifiesList_16; }
-	inline void set_lifiesList_16(List_1_t4142344393 * value)
+	inline static int32_t get_offset_of_lifies_16() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___lifies_16)); }
+	inline int32_t get_lifies_16() const { return ___lifies_16; }
+	inline int32_t* get_address_of_lifies_16() { return &___lifies_16; }
+	inline void set_lifies_16(int32_t value)
 	{
-		___lifiesList_16 = value;
-		Il2CppCodeGenWriteBarrier((&___lifiesList_16), value);
+		___lifies_16 = value;
 	}
 
 	inline static int32_t get_offset_of_warning_17() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___warning_17)); }
@@ -5474,6 +5473,15 @@ public:
 	{
 		___warning_17 = value;
 		Il2CppCodeGenWriteBarrier((&___warning_17), value);
+	}
+
+	inline static int32_t get_offset_of_laser_19() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___laser_19)); }
+	inline AudioClip_t3680889665 * get_laser_19() const { return ___laser_19; }
+	inline AudioClip_t3680889665 ** get_address_of_laser_19() { return &___laser_19; }
+	inline void set_laser_19(AudioClip_t3680889665 * value)
+	{
+		___laser_19 = value;
+		Il2CppCodeGenWriteBarrier((&___laser_19), value);
 	}
 };
 
@@ -5816,12 +5824,20 @@ struct  EnemiesController_t2039733875  : public MonoBehaviour_t3962482529
 public:
 	// UnityEngine.GameObject EnemiesController::enemy
 	GameObject_t1113636619 * ___enemy_2;
+	// UnityEngine.GameObject EnemiesController::supply1
+	GameObject_t1113636619 * ___supply1_3;
+	// UnityEngine.GameObject EnemiesController::supply2
+	GameObject_t1113636619 * ___supply2_4;
+	// UnityEngine.GameObject EnemiesController::supply3
+	GameObject_t1113636619 * ___supply3_5;
 	// UnityEngine.Vector3 EnemiesController::center
-	Vector3_t3722313464  ___center_3;
+	Vector3_t3722313464  ___center_6;
 	// UnityEngine.Vector3 EnemiesController::size
-	Vector3_t3722313464  ___size_4;
+	Vector3_t3722313464  ___size_7;
 	// System.Single EnemiesController::mNextSpawnTime
-	float ___mNextSpawnTime_6;
+	float ___mNextSpawnTime_9;
+	// System.Single EnemiesController::mNextSupplySpawnTime
+	float ___mNextSupplySpawnTime_11;
 
 public:
 	inline static int32_t get_offset_of_enemy_2() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___enemy_2)); }
@@ -5833,28 +5849,63 @@ public:
 		Il2CppCodeGenWriteBarrier((&___enemy_2), value);
 	}
 
-	inline static int32_t get_offset_of_center_3() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___center_3)); }
-	inline Vector3_t3722313464  get_center_3() const { return ___center_3; }
-	inline Vector3_t3722313464 * get_address_of_center_3() { return &___center_3; }
-	inline void set_center_3(Vector3_t3722313464  value)
+	inline static int32_t get_offset_of_supply1_3() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply1_3)); }
+	inline GameObject_t1113636619 * get_supply1_3() const { return ___supply1_3; }
+	inline GameObject_t1113636619 ** get_address_of_supply1_3() { return &___supply1_3; }
+	inline void set_supply1_3(GameObject_t1113636619 * value)
 	{
-		___center_3 = value;
+		___supply1_3 = value;
+		Il2CppCodeGenWriteBarrier((&___supply1_3), value);
 	}
 
-	inline static int32_t get_offset_of_size_4() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___size_4)); }
-	inline Vector3_t3722313464  get_size_4() const { return ___size_4; }
-	inline Vector3_t3722313464 * get_address_of_size_4() { return &___size_4; }
-	inline void set_size_4(Vector3_t3722313464  value)
+	inline static int32_t get_offset_of_supply2_4() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply2_4)); }
+	inline GameObject_t1113636619 * get_supply2_4() const { return ___supply2_4; }
+	inline GameObject_t1113636619 ** get_address_of_supply2_4() { return &___supply2_4; }
+	inline void set_supply2_4(GameObject_t1113636619 * value)
 	{
-		___size_4 = value;
+		___supply2_4 = value;
+		Il2CppCodeGenWriteBarrier((&___supply2_4), value);
 	}
 
-	inline static int32_t get_offset_of_mNextSpawnTime_6() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___mNextSpawnTime_6)); }
-	inline float get_mNextSpawnTime_6() const { return ___mNextSpawnTime_6; }
-	inline float* get_address_of_mNextSpawnTime_6() { return &___mNextSpawnTime_6; }
-	inline void set_mNextSpawnTime_6(float value)
+	inline static int32_t get_offset_of_supply3_5() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply3_5)); }
+	inline GameObject_t1113636619 * get_supply3_5() const { return ___supply3_5; }
+	inline GameObject_t1113636619 ** get_address_of_supply3_5() { return &___supply3_5; }
+	inline void set_supply3_5(GameObject_t1113636619 * value)
 	{
-		___mNextSpawnTime_6 = value;
+		___supply3_5 = value;
+		Il2CppCodeGenWriteBarrier((&___supply3_5), value);
+	}
+
+	inline static int32_t get_offset_of_center_6() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___center_6)); }
+	inline Vector3_t3722313464  get_center_6() const { return ___center_6; }
+	inline Vector3_t3722313464 * get_address_of_center_6() { return &___center_6; }
+	inline void set_center_6(Vector3_t3722313464  value)
+	{
+		___center_6 = value;
+	}
+
+	inline static int32_t get_offset_of_size_7() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___size_7)); }
+	inline Vector3_t3722313464  get_size_7() const { return ___size_7; }
+	inline Vector3_t3722313464 * get_address_of_size_7() { return &___size_7; }
+	inline void set_size_7(Vector3_t3722313464  value)
+	{
+		___size_7 = value;
+	}
+
+	inline static int32_t get_offset_of_mNextSpawnTime_9() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___mNextSpawnTime_9)); }
+	inline float get_mNextSpawnTime_9() const { return ___mNextSpawnTime_9; }
+	inline float* get_address_of_mNextSpawnTime_9() { return &___mNextSpawnTime_9; }
+	inline void set_mNextSpawnTime_9(float value)
+	{
+		___mNextSpawnTime_9 = value;
+	}
+
+	inline static int32_t get_offset_of_mNextSupplySpawnTime_11() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___mNextSupplySpawnTime_11)); }
+	inline float get_mNextSupplySpawnTime_11() const { return ___mNextSupplySpawnTime_11; }
+	inline float* get_address_of_mNextSupplySpawnTime_11() { return &___mNextSupplySpawnTime_11; }
+	inline void set_mNextSupplySpawnTime_11(float value)
+	{
+		___mNextSupplySpawnTime_11 = value;
 	}
 };
 
@@ -5876,8 +5927,6 @@ struct  collisionScript_t2453821997  : public MonoBehaviour_t3962482529
 public:
 	// UnityEngine.AudioClip collisionScript::explosionSound
 	AudioClip_t3680889665 * ___explosionSound_3;
-	// UnityEngine.AudioClip collisionScript::laser
-	AudioClip_t3680889665 * ___laser_5;
 
 public:
 	inline static int32_t get_offset_of_explosionSound_3() { return static_cast<int32_t>(offsetof(collisionScript_t2453821997, ___explosionSound_3)); }
@@ -5887,15 +5936,6 @@ public:
 	{
 		___explosionSound_3 = value;
 		Il2CppCodeGenWriteBarrier((&___explosionSound_3), value);
-	}
-
-	inline static int32_t get_offset_of_laser_5() { return static_cast<int32_t>(offsetof(collisionScript_t2453821997, ___laser_5)); }
-	inline AudioClip_t3680889665 * get_laser_5() const { return ___laser_5; }
-	inline AudioClip_t3680889665 ** get_address_of_laser_5() { return &___laser_5; }
-	inline void set_laser_5(AudioClip_t3680889665 * value)
-	{
-		___laser_5 = value;
-		Il2CppCodeGenWriteBarrier((&___laser_5), value);
 	}
 };
 
@@ -7148,21 +7188,25 @@ extern const int32_t g_FieldOffsetTable2034[1] =
 	spin_t2228728164::get_offset_of_speed_2(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2035 = { sizeof (collisionScript_t2453821997), -1, sizeof(collisionScript_t2453821997_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable2035[4] = 
+extern const int32_t g_FieldOffsetTable2035[3] = 
 {
 	0,
 	collisionScript_t2453821997::get_offset_of_explosionSound_3(),
 	collisionScript_t2453821997_StaticFields::get_offset_of_ememiesKilled_4(),
-	collisionScript_t2453821997::get_offset_of_laser_5(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2036 = { sizeof (EnemiesController_t2039733875), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2036[5] = 
+extern const int32_t g_FieldOffsetTable2036[10] = 
 {
 	EnemiesController_t2039733875::get_offset_of_enemy_2(),
-	EnemiesController_t2039733875::get_offset_of_center_3(),
-	EnemiesController_t2039733875::get_offset_of_size_4(),
+	EnemiesController_t2039733875::get_offset_of_supply1_3(),
+	EnemiesController_t2039733875::get_offset_of_supply2_4(),
+	EnemiesController_t2039733875::get_offset_of_supply3_5(),
+	EnemiesController_t2039733875::get_offset_of_center_6(),
+	EnemiesController_t2039733875::get_offset_of_size_7(),
 	0,
-	EnemiesController_t2039733875::get_offset_of_mNextSpawnTime_6(),
+	EnemiesController_t2039733875::get_offset_of_mNextSpawnTime_9(),
+	0,
+	EnemiesController_t2039733875::get_offset_of_mNextSupplySpawnTime_11(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2037 = { sizeof (enemyScript_t1788219133), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2038 = { sizeof (U3CMoveU3Ec__Iterator0_t2035340597), -1, 0, 0 };
@@ -7195,7 +7239,7 @@ extern const int32_t g_FieldOffsetTable2041[3] =
 	VirtualJoyceStick_t4060354715::get_offset_of_inputVector_4(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2042 = { sizeof (webCamScript_t4220051822), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2042[16] = 
+extern const int32_t g_FieldOffsetTable2042[18] = 
 {
 	webCamScript_t4220051822::get_offset_of_webCameraPlane_2(),
 	webCamScript_t4220051822::get_offset_of_fireButton_3(),
@@ -7210,9 +7254,11 @@ extern const int32_t g_FieldOffsetTable2042[16] =
 	webCamScript_t4220051822::get_offset_of_mKilledLabel_12(),
 	webCamScript_t4220051822::get_offset_of_center_13(),
 	webCamScript_t4220051822::get_offset_of_size_14(),
-	webCamScript_t4220051822::get_offset_of_lifies_15(),
-	webCamScript_t4220051822::get_offset_of_lifiesList_16(),
+	webCamScript_t4220051822::get_offset_of_bulletsPerHit_15(),
+	webCamScript_t4220051822::get_offset_of_lifies_16(),
 	webCamScript_t4220051822::get_offset_of_warning_17(),
+	0,
+	webCamScript_t4220051822::get_offset_of_laser_19(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2043 = { sizeof (U3CModuleU3E_t692745548), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2044 = { sizeof (AxisTouchButton_t3522881333), -1, 0, 0 };

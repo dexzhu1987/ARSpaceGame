@@ -9,7 +9,7 @@ public class FirstSceneSound : MonoBehaviour {
     public AudioClip bcgMusic;
     public AudioClip annoucer;
     public AudioClip laser;
-    private const float VOLUME = 0.7f;
+    private const float VOLUME = 0.5f;
 	// Use this for initialization
 	void Start () {
         mAudio.loop = true;

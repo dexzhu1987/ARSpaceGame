@@ -592,8 +592,6 @@ extern const Il2CppGenericInst GenInst_KeyValuePair_2_t3752291173_0_0_0;
 extern const Il2CppGenericInst GenInst_FieldWithTarget_t3058750293_0_0_0;
 extern const Il2CppGenericInst GenInst_TriggerRule_t1946298321_0_0_0;
 extern const Il2CppGenericInst GenInst_ParticleExamples_t2082666202_0_0_0;
-extern const Il2CppGenericInst GenInst_Image_t2670269651_0_0_0;
-extern const Il2CppGenericInst GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0;
 extern const Il2CppGenericInst GenInst_AxisTouchButton_t3522881333_0_0_0;
 extern const Il2CppGenericInst GenInst_String_t_0_0_0_VirtualAxis_t4087348596_0_0_0;
 extern const Il2CppGenericInst GenInst_VirtualAxis_t4087348596_0_0_0;
@@ -9024,61 +9022,6 @@ extern const RuntimeType ICollection_1_t615851140_0_0_0 = { &ICollection_1_t6158
 Il2CppGenericClass IEnumerable_1_t1062519091_GenericClass = { 29, { &GenInst_ParticleExamples_t2082666202_0_0_0, NULL }, NULL };
 extern const RuntimeType IEnumerable_1_t1062519091_0_0_0 = { &IEnumerable_1_t1062519091_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
-Il2CppGenericClass List_1_t4142344393_GenericClass = { 175, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType List_1_t4142344393_0_0_0 = { &List_1_t4142344393_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-extern const RuntimeType List_1_t4142344393_0_0_6 = { &List_1_t4142344393_GenericClass, 6, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const RuntimeType Image_t2670269651_0_0_0 = { (void*)1885, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType Image_t2670269651_0_0_1 = { (void*)1885, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType Image_t2670269651_1_0_0 = { (void*)1885, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-extern const RuntimeType Image_t2670269651_0_0_6 = { (void*)1885, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType Image_t2670269651_0_0_4 = { (void*)1885, 4, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerator_1_t3102840119_GenericClass = { 25, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerator_1_t3102840119_0_0_0 = { &IEnumerator_1_t3102840119_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass InternalEnumerator_1_t3577333768_GenericClass = { 41, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType InternalEnumerator_1_t3577333768_0_0_0 = { &InternalEnumerator_1_t3577333768_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IList_1_t190622138_GenericClass = { 48, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType IList_1_t190622138_0_0_0 = { &IList_1_t190622138_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ICollection_1_t1203454589_GenericClass = { 49, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType ICollection_1_t1203454589_0_0_0 = { &ICollection_1_t1203454589_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerable_1_t1650122540_GenericClass = { 29, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerable_1_t1650122540_0_0_0 = { &IEnumerable_1_t1650122540_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IList_1_t4179260936_GenericClass = { 48, { &GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0, NULL }, NULL };
-extern const RuntimeType IList_1_t4179260936_0_0_0 = { &IList_1_t4179260936_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-extern const RuntimeType ISerializationCallbackReceiver_t2363941153_0_0_0 = { (void*)1514, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
-extern const RuntimeType ISerializationCallbackReceiver_t2363941153_1_0_0 = { (void*)1514, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
-
-Il2CppGenericClass IEnumerator_1_t2796511621_GenericClass = { 25, { &GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerator_1_t2796511621_0_0_0 = { &IEnumerator_1_t2796511621_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass InternalEnumerator_1_t3271005270_GenericClass = { 41, { &GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0, NULL }, NULL };
-extern const RuntimeType InternalEnumerator_1_t3271005270_0_0_0 = { &InternalEnumerator_1_t3271005270_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ICollection_1_t897126091_GenericClass = { 49, { &GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0, NULL }, NULL };
-extern const RuntimeType ICollection_1_t897126091_0_0_0 = { &ICollection_1_t897126091_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass IEnumerable_1_t1343794042_GenericClass = { 29, { &GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0, NULL }, NULL };
-extern const RuntimeType IEnumerable_1_t1343794042_0_0_0 = { &IEnumerable_1_t1343794042_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass ReadOnlyCollection_1_t3882845938_GenericClass = { 178, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType ReadOnlyCollection_1_t3882845938_0_0_0 = { &ReadOnlyCollection_1_t3882845938_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass Predicate_1_t3495563775_GenericClass = { 880, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType Predicate_1_t3495563775_0_0_0 = { &Predicate_1_t3495563775_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass Enumerator_t1736620974_GenericClass = { 176, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType Enumerator_t1736620974_0_0_0 = { &Enumerator_t1736620974_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
-Il2CppGenericClass Comparison_1_t2445200830_GenericClass = { 877, { &GenInst_Image_t2670269651_0_0_0, NULL }, NULL };
-extern const RuntimeType Comparison_1_t2445200830_0_0_0 = { &Comparison_1_t2445200830_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
-
 Il2CppGenericClass IEnumerator_1_t3955451801_GenericClass = { 25, { &GenInst_AxisTouchButton_t3522881333_0_0_0, NULL }, NULL };
 extern const RuntimeType IEnumerator_1_t3955451801_0_0_0 = { &IEnumerator_1_t3955451801_GenericClass, 0, IL2CPP_TYPE_GENERICINST, 0, 0, 0 };
 
@@ -9674,6 +9617,12 @@ extern const RuntimeType AxisEventData_t2331243652_0_0_1 = { (void*)1835, 1, IL2
 
 extern const RuntimeType SpriteRenderer_t3235626157_0_0_0 = { (void*)1290, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType SpriteRenderer_t3235626157_1_0_0 = { (void*)1290, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
+extern const RuntimeType Image_t2670269651_0_0_0 = { (void*)1885, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType Image_t2670269651_0_0_1 = { (void*)1885, 1, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType Image_t2670269651_1_0_0 = { (void*)1885, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+extern const RuntimeType Image_t2670269651_0_0_6 = { (void*)1885, 6, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType Image_t2670269651_0_0_4 = { (void*)1885, 4, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 
 extern const RuntimeType Button_t4055032469_0_0_0 = { (void*)1862, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType Button_t4055032469_1_0_0 = { (void*)1862, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
@@ -15828,6 +15777,9 @@ extern const RuntimeType SerializeField_t3286833614_1_0_0 = { (void*)1512, 0, IL
 extern const RuntimeType PreferBinarySerialization_t2906007930_0_0_0 = { (void*)1513, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType PreferBinarySerialization_t2906007930_1_0_0 = { (void*)1513, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
+extern const RuntimeType ISerializationCallbackReceiver_t2363941153_0_0_0 = { (void*)1514, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
+extern const RuntimeType ISerializationCallbackReceiver_t2363941153_1_0_0 = { (void*)1514, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
+
 extern const RuntimeType StackTraceUtility_t3465565809_0_0_0 = { (void*)1515, 0, IL2CPP_TYPE_CLASS, 0, 0, 0 };
 extern const RuntimeType StackTraceUtility_t3465565809_1_0_0 = { (void*)1515, 0, IL2CPP_TYPE_CLASS, 0, 1, 0 };
 
@@ -17655,7 +17607,7 @@ extern const RuntimeType TimeSpanU5BU5D_t4291357516_0_0_0 = { (void*)&TimeSpan_t
 extern const RuntimeType TypeTagU5BU5D_t1563918664_0_0_0 = { (void*)&TypeTag_t3541821701_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
 
 extern const RuntimeType ITrackingHandlerU5BU5D_t3758023570_0_0_0 = { (void*)&ITrackingHandler_t1244553475_0_0_0, 0, IL2CPP_TYPE_SZARRAY, 0, 0, 0 };
-extern const RuntimeType* const  g_Il2CppTypeTable[9137] = 
+extern const RuntimeType* const  g_Il2CppTypeTable[9121] = 
 {
 	&IEnumerator_1_t3512676632_0_0_0,
 	&RuntimeObject_0_0_0,
@@ -20221,23 +20173,6 @@ extern const RuntimeType* const  g_Il2CppTypeTable[9137] =
 	&IList_1_t3897985985_0_0_0,
 	&ICollection_1_t615851140_0_0_0,
 	&IEnumerable_1_t1062519091_0_0_0,
-	&List_1_t4142344393_0_0_0,
-	&Image_t2670269651_0_0_0,
-	&IEnumerator_1_t3102840119_0_0_0,
-	&InternalEnumerator_1_t3577333768_0_0_0,
-	&IList_1_t190622138_0_0_0,
-	&ICollection_1_t1203454589_0_0_0,
-	&IEnumerable_1_t1650122540_0_0_0,
-	&IList_1_t4179260936_0_0_0,
-	&ISerializationCallbackReceiver_t2363941153_0_0_0,
-	&IEnumerator_1_t2796511621_0_0_0,
-	&InternalEnumerator_1_t3271005270_0_0_0,
-	&ICollection_1_t897126091_0_0_0,
-	&IEnumerable_1_t1343794042_0_0_0,
-	&ReadOnlyCollection_1_t3882845938_0_0_0,
-	&Predicate_1_t3495563775_0_0_0,
-	&Enumerator_t1736620974_0_0_0,
-	&Comparison_1_t2445200830_0_0_0,
 	&IEnumerator_1_t3955451801_0_0_0,
 	&AxisTouchButton_t3522881333_0_0_0,
 	&InternalEnumerator_1_t134978154_0_0_0,
@@ -20406,6 +20341,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[9137] =
 	&GUITargetAttribute_t25796337_0_0_0,
 	&AxisEventData_t2331243652_0_0_0,
 	&SpriteRenderer_t3235626157_0_0_0,
+	&Image_t2670269651_0_0_0,
 	&Button_t4055032469_0_0_0,
 	&RawImage_t3182918964_0_0_0,
 	&Slider_t3903728902_0_0_0,
@@ -24897,6 +24833,7 @@ extern const RuntimeType* const  g_Il2CppTypeTable[9137] =
 	&SerializeField_t3286833614_1_0_0,
 	&PreferBinarySerialization_t2906007930_0_0_0,
 	&PreferBinarySerialization_t2906007930_1_0_0,
+	&ISerializationCallbackReceiver_t2363941153_0_0_0,
 	&ISerializationCallbackReceiver_t2363941153_1_0_0,
 	&StackTraceUtility_t3465565809_0_0_0,
 	&StackTraceUtility_t3465565809_1_0_0,
@@ -26501,7 +26438,6 @@ extern const RuntimeType* const  g_Il2CppTypeTable[9137] =
 	&webCamScript_t4220051822_1_0_0,
 	&Toggle_t2735377061_0_0_6,
 	&VirtualJoyceStick_t4060354715_0_0_6,
-	&List_1_t4142344393_0_0_6,
 	&U3CModuleU3E_t692745548_0_0_0,
 	&U3CModuleU3E_t692745548_1_0_0,
 	&AxisTouchButton_t3522881333_1_0_0,

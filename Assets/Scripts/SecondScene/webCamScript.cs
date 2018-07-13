@@ -11,9 +11,9 @@ public class webCamScript : MonoBehaviour {
     public Toggle arToggle;
     public VirtualJoyceStick leftJoyceStick;
     public VirtualJoyceStick rightJoyceStick;
-    public Image lifeImage1;
-    public Image lifeImage2;
-    public Image lifeImage3;
+    public GameObject lifeImage1;
+    public GameObject lifeImage2;
+    public GameObject lifeImage3;
   
 
     float totalTime = 60f; //2 minutes
@@ -22,8 +22,10 @@ public class webCamScript : MonoBehaviour {
 
     public Vector3 center;
     public Vector3 size;
-    public int lifies = 3;
-    public List<Image> lifiesList = new List<Image>();
+
+    public int bulletsPerHit;
+    public int lifies;
+
 
     public AudioClip warning;
     private const float VOLUME = 0.5f;
@@ -50,25 +52,66 @@ public class webCamScript : MonoBehaviour {
             ToggleValueChanged(arToggle);
         });
 
+        bulletsPerHit = 1;
+        lifies = 3;
 
-        lifiesList.Add(lifeImage1);
-        lifiesList.Add(lifeImage2);
-        lifiesList.Add(lifeImage3);
+
 	}
 	
     void OnButtonDown()
     {
+        
+            GameObject bullet = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            bullet.transform.rotation = Camera.main.transform.rotation;
+            bullet.transform.position = Camera.main.transform.position;
+            rb.AddForce(Camera.main.transform.forward * 500f);
+            Destroy(bullet, 1.5f);
+            AudioSource.PlayClipAtPoint(laser, transform.position, VOLUME);
 
-        GameObject bullet = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        bullet.transform.rotation = Camera.main.transform.rotation;
-        bullet.transform.position = Camera.main.transform.position;
-        rb.AddForce(Camera.main.transform.forward * 500f);
-        Destroy(bullet, 1.5f);
-        AudioSource.PlayClipAtPoint(laser, transform.position, VOLUME);
-      
+         if (bulletsPerHit == 2)
+        {
+            Spawn15DegreeBullets();
+        } else if (bulletsPerHit > 2) {
+            Spawn15DegreeBullets();
+            Spawn30DegreeBullets();
+        }
 
 
+    }
+
+    private static void Spawn15DegreeBullets()
+    {
+
+        GameObject bullet1 = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+        GameObject bullet2 = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+        Rigidbody rb1 = bullet1.GetComponent<Rigidbody>();
+        Rigidbody rb2 = bullet2.GetComponent<Rigidbody>();
+        bullet1.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.x, Camera.main.transform.rotation.y + 15, Camera.main.transform.rotation.z);
+        bullet1.transform.position = Camera.main.transform.position;
+        bullet2.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.x, Camera.main.transform.rotation.y - 15, Camera.main.transform.rotation.z);
+        bullet2.transform.position = Camera.main.transform.position;
+        rb1.AddForce(bullet1.transform.forward * 500f);
+        rb2.AddForce(bullet2.transform.forward * 500f);
+        Destroy(bullet1, 1.5f);
+        Destroy(bullet2, 1.5f);
+    }
+
+    private static void Spawn30DegreeBullets()
+    {
+          
+        GameObject bullet1 = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+        GameObject bullet2 = Instantiate(Resources.Load("bullet", typeof(GameObject))) as GameObject;
+        Rigidbody rb1 = bullet1.GetComponent<Rigidbody>();
+        Rigidbody rb2 = bullet2.GetComponent<Rigidbody>();
+        bullet1.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.x, Camera.main.transform.rotation.y + 30, Camera.main.transform.rotation.z);
+        bullet1.transform.position = Camera.main.transform.position;
+        bullet2.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.x, Camera.main.transform.rotation.y - 30, Camera.main.transform.rotation.z);
+        bullet2.transform.position = Camera.main.transform.position;
+        rb1.AddForce(bullet1.transform.forward * 500f);
+        rb2.AddForce(bullet2.transform.forward * 500f);
+        Destroy(bullet1, 1.5f);
+        Destroy(bullet2, 1.5f);
     }
 
     void ToggleValueChanged(Toggle change)
@@ -148,20 +191,54 @@ public class webCamScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Player")
         {
-            print("got hit");
+           
+
+
             AudioSource.PlayClipAtPoint(warning, transform.position);
 
-            if (lifiesList.Count > 0) {
-                Destroy(lifiesList[0]);
-                lifiesList.RemoveAt(0);
+            if (lifies  == 3) {
+                lifeImage3.SetActive(false);
+            } else if (lifies == 2)
+            {
+                lifeImage2.SetActive(false);
+            } else if (lifies == 1) {
+                lifeImage1.SetActive(false);
             }
             Handheld.Vibrate();
             lifies--;
             flashAnimationScript.isHit = true;
-          
+        
         } 
+
+        if (other.tag == "Supply1") {
+            bulletsPerHit++;
+            Destroy(other.gameObject);
+        }
+
+        if (other.tag == "Supply2")
+        {
+            totalTime += 10f;
+            Destroy(other.gameObject);
+        }
+
+        if (other.tag == "Supply3")
+        {
+            
+            if (lifies == 2) {
+                lifies++;
+                lifeImage3.SetActive(true);
+
+            } else if (lifies == 1) {
+                lifies++;
+                lifeImage2.SetActive(true);
+             
+            }
+            Destroy(other.gameObject);
+           
+        }
 
         if (lifies == 0 ){
             SceneManager.LoadScene("FirstScene");

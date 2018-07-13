@@ -10882,7 +10882,6 @@ extern "C" void collisionScript__ctor_m2261690481 ();
 extern "C" void collisionScript_Start_m3702951863 ();
 extern "C" void collisionScript_Update_m1042092368 ();
 extern "C" void collisionScript_OnTriggerEnter_m3054314804 ();
-extern "C" void collisionScript_FireButtonClicked_m567438054 ();
 extern "C" void DecalDestroyer__ctor_m64185944 ();
 extern "C" void DecalDestroyer_Start_m4068496280 ();
 extern "C" void U3CStartU3Ec__Iterator0__ctor_m1789964581 ();
@@ -10893,8 +10892,9 @@ extern "C" void U3CStartU3Ec__Iterator0_Dispose_m2578430802 ();
 extern "C" void U3CStartU3Ec__Iterator0_Reset_m3970558608 ();
 extern "C" void EnemiesController__ctor_m2499192745 ();
 extern "C" void EnemiesController_Start_m3437122097 ();
-extern "C" void EnemiesController_spawnEnemies_m2372598876 ();
 extern "C" void EnemiesController_Update_m4001369363 ();
+extern "C" void EnemiesController_spawnEnemies_m2372598876 ();
+extern "C" void EnemiesController_spawnSupplies_m902272872 ();
 extern "C" void enemyScript__ctor_m1749966647 ();
 extern "C" void enemyScript_Start_m2832459671 ();
 extern "C" void enemyScript_Update_m3313231814 ();
@@ -10988,6 +10988,8 @@ extern "C" void VirtualJoyceStick_Vertical_m221505737 ();
 extern "C" void webCamScript__ctor_m4109342415 ();
 extern "C" void webCamScript_Start_m2600668231 ();
 extern "C" void webCamScript_OnButtonDown_m320040433 ();
+extern "C" void webCamScript_Spawn15DegreeBullets_m985852455 ();
+extern "C" void webCamScript_Spawn30DegreeBullets_m3850022069 ();
 extern "C" void webCamScript_ToggleValueChanged_m3690979357 ();
 extern "C" void webCamScript_Update_m4223067181 ();
 extern "C" void webCamScript_HandleCamera_m1263492610 ();
@@ -11329,7 +11331,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11310] = 
+extern const Il2CppMethodPointer g_MethodPointers[11312] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -22194,7 +22196,6 @@ extern const Il2CppMethodPointer g_MethodPointers[11310] =
 	collisionScript_Start_m3702951863,
 	collisionScript_Update_m1042092368,
 	collisionScript_OnTriggerEnter_m3054314804,
-	collisionScript_FireButtonClicked_m567438054,
 	DecalDestroyer__ctor_m64185944,
 	DecalDestroyer_Start_m4068496280,
 	U3CStartU3Ec__Iterator0__ctor_m1789964581,
@@ -22205,8 +22206,9 @@ extern const Il2CppMethodPointer g_MethodPointers[11310] =
 	U3CStartU3Ec__Iterator0_Reset_m3970558608,
 	EnemiesController__ctor_m2499192745,
 	EnemiesController_Start_m3437122097,
-	EnemiesController_spawnEnemies_m2372598876,
 	EnemiesController_Update_m4001369363,
+	EnemiesController_spawnEnemies_m2372598876,
+	EnemiesController_spawnSupplies_m902272872,
 	enemyScript__ctor_m1749966647,
 	enemyScript_Start_m2832459671,
 	enemyScript_Update_m3313231814,
@@ -22300,6 +22302,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11310] =
 	webCamScript__ctor_m4109342415,
 	webCamScript_Start_m2600668231,
 	webCamScript_OnButtonDown_m320040433,
+	webCamScript_Spawn15DegreeBullets_m985852455,
+	webCamScript_Spawn30DegreeBullets_m3850022069,
 	webCamScript_ToggleValueChanged_m3690979357,
 	webCamScript_Update_m4223067181,
 	webCamScript_HandleCamera_m1263492610,

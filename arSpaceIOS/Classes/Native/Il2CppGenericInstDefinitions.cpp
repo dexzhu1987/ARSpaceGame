@@ -341,8 +341,6 @@ extern const Il2CppType KeyValuePair_2_t3752291173_0_0_0;
 extern const Il2CppType FieldWithTarget_t3058750293_0_0_0;
 extern const Il2CppType TriggerRule_t1946298321_0_0_0;
 extern const Il2CppType ParticleExamples_t2082666202_0_0_0;
-extern const Il2CppType Image_t2670269651_0_0_0;
-extern const Il2CppType ISerializationCallbackReceiver_t2363941153_0_0_0;
 extern const Il2CppType AxisTouchButton_t3522881333_0_0_0;
 extern const Il2CppType VirtualAxis_t4087348596_0_0_0;
 extern const Il2CppType KeyValuePair_2_t1975309766_0_0_0;
@@ -359,6 +357,7 @@ extern const Il2CppType PlayerConnection_t3081694049_0_0_0;
 extern const Il2CppType GUILayer_t2783472903_0_0_0;
 extern const Il2CppType AxisEventData_t2331243652_0_0_0;
 extern const Il2CppType SpriteRenderer_t3235626157_0_0_0;
+extern const Il2CppType Image_t2670269651_0_0_0;
 extern const Il2CppType Button_t4055032469_0_0_0;
 extern const Il2CppType RawImage_t3182918964_0_0_0;
 extern const Il2CppType Slider_t3903728902_0_0_0;
@@ -1308,10 +1307,6 @@ static const RuntimeType* GenInst_TriggerRule_t1946298321_0_0_0_Types[] = { (&Tr
 extern const Il2CppGenericInst GenInst_TriggerRule_t1946298321_0_0_0 = { 1, GenInst_TriggerRule_t1946298321_0_0_0_Types };
 static const RuntimeType* GenInst_ParticleExamples_t2082666202_0_0_0_Types[] = { (&ParticleExamples_t2082666202_0_0_0) };
 extern const Il2CppGenericInst GenInst_ParticleExamples_t2082666202_0_0_0 = { 1, GenInst_ParticleExamples_t2082666202_0_0_0_Types };
-static const RuntimeType* GenInst_Image_t2670269651_0_0_0_Types[] = { (&Image_t2670269651_0_0_0) };
-extern const Il2CppGenericInst GenInst_Image_t2670269651_0_0_0 = { 1, GenInst_Image_t2670269651_0_0_0_Types };
-static const RuntimeType* GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0_Types[] = { (&ISerializationCallbackReceiver_t2363941153_0_0_0) };
-extern const Il2CppGenericInst GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0 = { 1, GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0_Types };
 static const RuntimeType* GenInst_AxisTouchButton_t3522881333_0_0_0_Types[] = { (&AxisTouchButton_t3522881333_0_0_0) };
 extern const Il2CppGenericInst GenInst_AxisTouchButton_t3522881333_0_0_0 = { 1, GenInst_AxisTouchButton_t3522881333_0_0_0_Types };
 static const RuntimeType* GenInst_String_t_0_0_0_VirtualAxis_t4087348596_0_0_0_Types[] = { (&String_t_0_0_0), (&VirtualAxis_t4087348596_0_0_0) };
@@ -1352,6 +1347,8 @@ static const RuntimeType* GenInst_AxisEventData_t2331243652_0_0_0_Types[] = { (&
 extern const Il2CppGenericInst GenInst_AxisEventData_t2331243652_0_0_0 = { 1, GenInst_AxisEventData_t2331243652_0_0_0_Types };
 static const RuntimeType* GenInst_SpriteRenderer_t3235626157_0_0_0_Types[] = { (&SpriteRenderer_t3235626157_0_0_0) };
 extern const Il2CppGenericInst GenInst_SpriteRenderer_t3235626157_0_0_0 = { 1, GenInst_SpriteRenderer_t3235626157_0_0_0_Types };
+static const RuntimeType* GenInst_Image_t2670269651_0_0_0_Types[] = { (&Image_t2670269651_0_0_0) };
+extern const Il2CppGenericInst GenInst_Image_t2670269651_0_0_0 = { 1, GenInst_Image_t2670269651_0_0_0_Types };
 static const RuntimeType* GenInst_Button_t4055032469_0_0_0_Types[] = { (&Button_t4055032469_0_0_0) };
 extern const Il2CppGenericInst GenInst_Button_t4055032469_0_0_0 = { 1, GenInst_Button_t4055032469_0_0_0_Types };
 static const RuntimeType* GenInst_RawImage_t3182918964_0_0_0_Types[] = { (&RawImage_t3182918964_0_0_0) };
@@ -1780,7 +1777,7 @@ static const RuntimeType* GenInst_List_1_t3009893961_0_0_0_Types[] = { (&List_1_
 extern const Il2CppGenericInst GenInst_List_1_t3009893961_0_0_0 = { 1, GenInst_List_1_t3009893961_0_0_0_Types };
 static const RuntimeType* GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types[] = { (&ObjectPool_1_t892185599_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_ObjectPool_1_t892185599_gp_0_0_0_0 = { 1, GenInst_ObjectPool_1_t892185599_gp_0_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[617] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[616] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0,
@@ -2163,8 +2160,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[617] =
 	&GenInst_FieldWithTarget_t3058750293_0_0_0,
 	&GenInst_TriggerRule_t1946298321_0_0_0,
 	&GenInst_ParticleExamples_t2082666202_0_0_0,
-	&GenInst_Image_t2670269651_0_0_0,
-	&GenInst_ISerializationCallbackReceiver_t2363941153_0_0_0,
 	&GenInst_AxisTouchButton_t3522881333_0_0_0,
 	&GenInst_String_t_0_0_0_VirtualAxis_t4087348596_0_0_0,
 	&GenInst_VirtualAxis_t4087348596_0_0_0,
@@ -2185,6 +2180,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[617] =
 	&GenInst_GUILayer_t2783472903_0_0_0,
 	&GenInst_AxisEventData_t2331243652_0_0_0,
 	&GenInst_SpriteRenderer_t3235626157_0_0_0,
+	&GenInst_Image_t2670269651_0_0_0,
 	&GenInst_Button_t4055032469_0_0_0,
 	&GenInst_RawImage_t3182918964_0_0_0,
 	&GenInst_Slider_t3903728902_0_0_0,

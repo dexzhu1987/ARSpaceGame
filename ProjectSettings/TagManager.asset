@@ -6,6 +6,9 @@ TagManager:
   tags:
   - StartGame
   - bullet
+  - Supply1
+  - Supply2
+  - Supply3
   layers:
   - Default
   - TransparentFX
