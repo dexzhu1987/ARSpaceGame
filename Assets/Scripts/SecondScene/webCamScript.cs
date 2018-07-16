@@ -14,7 +14,6 @@ public class webCamScript : MonoBehaviour {
     public GameObject lifeImage1;
     public GameObject lifeImage2;
     public GameObject lifeImage3;
-  
 
     float totalTime = 60f; //2 minutes
     public Text timer;
@@ -26,10 +25,10 @@ public class webCamScript : MonoBehaviour {
     public int bulletsPerHit;
     public int lifies;
 
-
     public AudioClip warning;
     private const float VOLUME = 0.5f;
     public AudioClip laser;
+    public AudioClip getItem;
 
 	protected void Start () {
 
@@ -40,6 +39,7 @@ public class webCamScript : MonoBehaviour {
             this.transform.parent = cameraParent.transform;
             cameraParent.transform.Rotate(Vector3.right, 90);
         }
+      
 
         Input.gyro.enabled = true;
 
@@ -54,8 +54,7 @@ public class webCamScript : MonoBehaviour {
 
         bulletsPerHit = 1;
         lifies = 3;
-
-
+ 
 	}
 	
     void OnButtonDown()
@@ -134,16 +133,24 @@ public class webCamScript : MonoBehaviour {
 
     private void HandleCamera()
     {
-        Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
-        this.transform.localRotation = cameraRotation;
-  
+
         float xMaxRange = center.x + size.x / 2 + 1;
         float xMinRange = center.x - size.x / 2 - 1;
         float yMaxRange = center.y + size.y / 2 + 1;
         float yMinRange = center.y - size.y / 2 - 1;
         float zMaxRange = center.z + size.z / 2 + 1;
         float zMinRange = center.z - size.z / 2 - 1;
-        if (!arToggle.isOn){
+
+        if (arToggle.isOn){
+            transform.position = Vector3.zero;
+
+            Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
+            this.transform.localRotation = cameraRotation;
+
+       
+        } else {
+            this.transform.localRotation = Quaternion.identity;
+            this.transform.Rotate(-90, 0, 0);
             Vector3 movePostion = new Vector3(leftJoyceStick.Horizontal(), leftJoyceStick.Vertical(),rightJoyceStick.Vertical());
             Vector3 newPosition = transform.position + movePostion / 3;
             if (newPosition.x < xMaxRange && newPosition.x > xMinRange 
@@ -152,9 +159,8 @@ public class webCamScript : MonoBehaviour {
             {
                 transform.position = newPosition;
             } 
-        } else {
-            transform.position = Vector3.zero;
         }
+
 
        
     }
@@ -216,12 +222,14 @@ public class webCamScript : MonoBehaviour {
         if (other.tag == "Supply1") {
             bulletsPerHit++;
             Destroy(other.gameObject);
+            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
         }
 
         if (other.tag == "Supply2")
         {
             totalTime += 10f;
             Destroy(other.gameObject);
+            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
         }
 
         if (other.tag == "Supply3")
@@ -237,6 +245,7 @@ public class webCamScript : MonoBehaviour {
              
             }
             Destroy(other.gameObject);
+            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
            
         }
 

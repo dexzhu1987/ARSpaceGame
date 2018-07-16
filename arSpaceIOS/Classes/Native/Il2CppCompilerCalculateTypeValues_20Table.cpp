@@ -5334,6 +5334,8 @@ public:
 	AudioClip_t3680889665 * ___warning_17;
 	// UnityEngine.AudioClip webCamScript::laser
 	AudioClip_t3680889665 * ___laser_19;
+	// UnityEngine.AudioClip webCamScript::getItem
+	AudioClip_t3680889665 * ___getItem_20;
 
 public:
 	inline static int32_t get_offset_of_webCameraPlane_2() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___webCameraPlane_2)); }
@@ -5482,6 +5484,15 @@ public:
 	{
 		___laser_19 = value;
 		Il2CppCodeGenWriteBarrier((&___laser_19), value);
+	}
+
+	inline static int32_t get_offset_of_getItem_20() { return static_cast<int32_t>(offsetof(webCamScript_t4220051822, ___getItem_20)); }
+	inline AudioClip_t3680889665 * get_getItem_20() const { return ___getItem_20; }
+	inline AudioClip_t3680889665 ** get_address_of_getItem_20() { return &___getItem_20; }
+	inline void set_getItem_20(AudioClip_t3680889665 * value)
+	{
+		___getItem_20 = value;
+		Il2CppCodeGenWriteBarrier((&___getItem_20), value);
 	}
 };
 
@@ -5838,6 +5849,12 @@ public:
 	float ___mNextSpawnTime_9;
 	// System.Single EnemiesController::mNextSupplySpawnTime
 	float ___mNextSupplySpawnTime_11;
+	// System.Int32 EnemiesController::supply1R
+	int32_t ___supply1R_12;
+	// System.Int32 EnemiesController::supply2R
+	int32_t ___supply2R_13;
+	// System.Int32 EnemiesController::supply3R
+	int32_t ___supply3R_14;
 
 public:
 	inline static int32_t get_offset_of_enemy_2() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___enemy_2)); }
@@ -5906,6 +5923,30 @@ public:
 	inline void set_mNextSupplySpawnTime_11(float value)
 	{
 		___mNextSupplySpawnTime_11 = value;
+	}
+
+	inline static int32_t get_offset_of_supply1R_12() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply1R_12)); }
+	inline int32_t get_supply1R_12() const { return ___supply1R_12; }
+	inline int32_t* get_address_of_supply1R_12() { return &___supply1R_12; }
+	inline void set_supply1R_12(int32_t value)
+	{
+		___supply1R_12 = value;
+	}
+
+	inline static int32_t get_offset_of_supply2R_13() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply2R_13)); }
+	inline int32_t get_supply2R_13() const { return ___supply2R_13; }
+	inline int32_t* get_address_of_supply2R_13() { return &___supply2R_13; }
+	inline void set_supply2R_13(int32_t value)
+	{
+		___supply2R_13 = value;
+	}
+
+	inline static int32_t get_offset_of_supply3R_14() { return static_cast<int32_t>(offsetof(EnemiesController_t2039733875, ___supply3R_14)); }
+	inline int32_t get_supply3R_14() const { return ___supply3R_14; }
+	inline int32_t* get_address_of_supply3R_14() { return &___supply3R_14; }
+	inline void set_supply3R_14(int32_t value)
+	{
+		___supply3R_14 = value;
 	}
 };
 
@@ -7195,7 +7236,7 @@ extern const int32_t g_FieldOffsetTable2035[3] =
 	collisionScript_t2453821997_StaticFields::get_offset_of_ememiesKilled_4(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2036 = { sizeof (EnemiesController_t2039733875), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2036[10] = 
+extern const int32_t g_FieldOffsetTable2036[13] = 
 {
 	EnemiesController_t2039733875::get_offset_of_enemy_2(),
 	EnemiesController_t2039733875::get_offset_of_supply1_3(),
@@ -7207,6 +7248,9 @@ extern const int32_t g_FieldOffsetTable2036[10] =
 	EnemiesController_t2039733875::get_offset_of_mNextSpawnTime_9(),
 	0,
 	EnemiesController_t2039733875::get_offset_of_mNextSupplySpawnTime_11(),
+	EnemiesController_t2039733875::get_offset_of_supply1R_12(),
+	EnemiesController_t2039733875::get_offset_of_supply2R_13(),
+	EnemiesController_t2039733875::get_offset_of_supply3R_14(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2037 = { sizeof (enemyScript_t1788219133), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2038 = { sizeof (U3CMoveU3Ec__Iterator0_t2035340597), -1, 0, 0 };
@@ -7239,7 +7283,7 @@ extern const int32_t g_FieldOffsetTable2041[3] =
 	VirtualJoyceStick_t4060354715::get_offset_of_inputVector_4(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2042 = { sizeof (webCamScript_t4220051822), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable2042[18] = 
+extern const int32_t g_FieldOffsetTable2042[19] = 
 {
 	webCamScript_t4220051822::get_offset_of_webCameraPlane_2(),
 	webCamScript_t4220051822::get_offset_of_fireButton_3(),
@@ -7259,6 +7303,7 @@ extern const int32_t g_FieldOffsetTable2042[18] =
 	webCamScript_t4220051822::get_offset_of_warning_17(),
 	0,
 	webCamScript_t4220051822::get_offset_of_laser_19(),
+	webCamScript_t4220051822::get_offset_of_getItem_20(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2043 = { sizeof (U3CModuleU3E_t692745548), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize2044 = { sizeof (AxisTouchButton_t3522881333), -1, 0, 0 };

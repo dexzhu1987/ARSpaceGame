@@ -8358,6 +8358,8 @@ extern "C" void Transform_INTERNAL_get_localToWorldMatrix_m1917635696 ();
 extern "C" void Transform_Translate_m1810197270 ();
 extern "C" void Transform_Translate_m1990195114 ();
 extern "C" void Transform_Rotate_m1886816857 ();
+extern "C" void Transform_Rotate_m3172098886 ();
+extern "C" void Transform_Rotate_m1660364534 ();
 extern "C" void Transform_RotateAroundInternal_m1612579057 ();
 extern "C" void Transform_INTERNAL_CALL_RotateAroundInternal_m394670328 ();
 extern "C" void Transform_Rotate_m1749346957 ();
@@ -11331,7 +11333,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11312] = 
+extern const Il2CppMethodPointer g_MethodPointers[11314] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -19672,6 +19674,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11312] =
 	Transform_Translate_m1810197270,
 	Transform_Translate_m1990195114,
 	Transform_Rotate_m1886816857,
+	Transform_Rotate_m3172098886,
+	Transform_Rotate_m1660364534,
 	Transform_RotateAroundInternal_m1612579057,
 	Transform_INTERNAL_CALL_RotateAroundInternal_m394670328,
 	Transform_Rotate_m1749346957,

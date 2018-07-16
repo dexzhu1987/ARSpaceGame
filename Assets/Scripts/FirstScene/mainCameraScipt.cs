@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class mainCameraScipt : MonoBehaviour {
 
-  
+
     public Button fireButton; 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +40,8 @@ public class mainCameraScipt : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //Camera.main.transform.Rotate(0, -Input.gyro.rotationRateUnbiased.y, 0);
+
         Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
         this.transform.localRotation = cameraRotation;
 	}
