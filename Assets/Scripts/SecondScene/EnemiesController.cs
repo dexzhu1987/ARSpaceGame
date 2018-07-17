@@ -8,36 +8,48 @@ public class EnemiesController : MonoBehaviour {
     public GameObject supply1;
     public GameObject supply2;
     public GameObject supply3;
+    public GameObject initEnemy1;
+    public GameObject initEnemy2;
+    public GameObject initEnemy3;
     public Vector3  center;
     public Vector3 size;
     private const float SPAWNGAP = 0.8f; //0.8 sec
     private float mNextSpawnTime;
     private const float SUPPLYSPAWANGAP = 3f;
     private float mNextSupplySpawnTime;
+    public static List<GameObject> allEnemies;
+    public static List<GameObject> allSupplies;
+
 	// Use this for initialization
 	void Start () {
         mNextSpawnTime = SPAWNGAP;
         mNextSupplySpawnTime = SUPPLYSPAWANGAP;
-	}
+        allEnemies = new List<GameObject>();
+        allEnemies.Add(initEnemy1);
+        allEnemies.Add(initEnemy2);
+        allEnemies.Add(initEnemy3);
+        allSupplies = new List<GameObject>();
 
-    public int supply1R = 0;
-    public int supply2R = 0;
-    public int supply3R = 0;
+	}
 	
 	// Update is called once per frame
 	void Update () {
+ 
+        if (webCamScript.isGameOn){
+            mNextSpawnTime -= Time.deltaTime;
+            mNextSupplySpawnTime -= Time.deltaTime;
+            if (mNextSpawnTime < 0)
+            {
+                spawnEnemies();
+            }
+
+
+            if (mNextSupplySpawnTime < 0 && !webCamScript.isAROn)
+            {
+                spawnSupplies();
+            }
+        }
        
-        mNextSpawnTime -= Time.deltaTime;
-        mNextSupplySpawnTime  -= Time.deltaTime;
-           
-        if (mNextSpawnTime < 0){
-            spawnEnemies();
-        }
-           
-  
-        if (mNextSupplySpawnTime < 0) {
-            spawnSupplies();
-        }
 	}
 
     public void spawnEnemies()
@@ -47,7 +59,7 @@ public class EnemiesController : MonoBehaviour {
         GameObject en = Instantiate(enemy, pos, Quaternion.identity);
         float xSpin = Random.Range(0, 360);
         en.transform.rotation = Quaternion.Euler(0, xSpin, 0);
-
+        allEnemies.Add(en);
     }
 
     public void spawnSupplies(){
@@ -66,17 +78,7 @@ public class EnemiesController : MonoBehaviour {
         } while (supplyNumber == (gameObjects.Count-1) && needToReroll != 0); 
 
         GameObject su = Instantiate(gameObjects[supplyNumber], pos, Quaternion.identity);
-        if (supplyNumber == 0){
-            supply1R++;
-        }  else if (supplyNumber == 1)
-        {
-            supply2R++;
-        } else if (supplyNumber == 2)
-        {
-            supply3R++;
-        }
-        print(" supplyNumber: " + supplyNumber + " needToReroll: " + needToReroll);
-        print("supply1: " + supply1R + " supply2: " + supply2R + " supply3: " + supply3R + " supply All: " +  (supply1R + supply2R + supply3R)); 
+        allSupplies.Add(su);
     }
 
 

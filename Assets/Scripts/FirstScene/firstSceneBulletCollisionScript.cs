@@ -27,7 +27,6 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
             StartCoroutine(WaitForIt(1f));
             collisionScript.ememiesKilled = 0;
 
-           
         }
 
     }
@@ -36,6 +35,7 @@ public class firstSceneBulletCollisionScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(waitTime);
         SceneManager.LoadScene("ARTextScene");
+        webCamScript.isAROn = false;
     }
 
 }

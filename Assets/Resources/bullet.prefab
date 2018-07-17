@@ -39,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1517964192971650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.31, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionSound: {fileID: 8300000, guid: 78fdbcd9b24c649c8ac29266e7149c3e, type: 3}
-  laser: {fileID: 8300000, guid: 6b34cd46ad8514a5eabfe1dae50c4e1f, type: 3}
 --- !u!135 &135289140625152968
 SphereCollider:
   m_ObjectHideFlags: 1

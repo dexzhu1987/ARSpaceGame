@@ -5,9 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class webCamScript : MonoBehaviour {
+    
+    public static bool isAROn;
+    public static bool isGameOn;
 
     public GameObject webCameraPlane;
     public Button fireButton;
+    public GameObject restartButton;
+    public GameObject exitButton;
     public Toggle arToggle;
     public VirtualJoyceStick leftJoyceStick;
     public VirtualJoyceStick rightJoyceStick;
@@ -22,13 +27,15 @@ public class webCamScript : MonoBehaviour {
     public Vector3 center;
     public Vector3 size;
 
-    public int bulletsPerHit;
-    public int lifies;
-
-    public AudioClip warning;
     private const float VOLUME = 0.5f;
+    public AudioClip warning;
     public AudioClip laser;
     public AudioClip getItem;
+
+    private int bulletsPerHit;
+    private int lifies;
+    private bool isGameOver;
+
 
 	protected void Start () {
 
@@ -54,7 +61,14 @@ public class webCamScript : MonoBehaviour {
 
         bulletsPerHit = 1;
         lifies = 3;
- 
+
+        arToggle.isOn = isAROn;
+        isGameOn = true;
+        isGameOver = false;
+
+        restartButton.SetActive(false);
+        exitButton.SetActive(false);
+
 	}
 	
     void OnButtonDown()
@@ -117,9 +131,10 @@ public class webCamScript : MonoBehaviour {
     {
         if (arToggle.isOn){
             webCameraPlane.SetActive(true);
-
+            isAROn = true;
         }else if (!arToggle.isOn){
             webCameraPlane.SetActive(false);
+            isAROn = false;
         }
     }
 
@@ -127,8 +142,11 @@ public class webCamScript : MonoBehaviour {
 	void Update ()
     {
         HandleCamera();
-        HandleTime();
-        mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
+        if (isGameOn){
+           
+            HandleTime();
+            mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
+        } 
     }
 
     private void HandleCamera()
@@ -143,22 +161,24 @@ public class webCamScript : MonoBehaviour {
 
         if (arToggle.isOn){
             transform.position = Vector3.zero;
-
             Quaternion cameraRotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, -Input.gyro.attitude.z, -Input.gyro.attitude.w);
             this.transform.localRotation = cameraRotation;
-
-       
         } else {
             this.transform.localRotation = Quaternion.identity;
-            this.transform.Rotate(-90, 0, 0);
-            Vector3 movePostion = new Vector3(leftJoyceStick.Horizontal(), leftJoyceStick.Vertical(),rightJoyceStick.Vertical());
-            Vector3 newPosition = transform.position + movePostion / 3;
-            if (newPosition.x < xMaxRange && newPosition.x > xMinRange 
+            if (Application.isMobilePlatform){
+                this.transform.Rotate(-90, 0, 0);
+            }
+            if (isGameOn){
+                Vector3 movePostion = new Vector3(leftJoyceStick.Horizontal(), leftJoyceStick.Vertical(),rightJoyceStick.Vertical());
+                Vector3 newPosition = transform.position + movePostion / 3;
+                if (newPosition.x < xMaxRange && newPosition.x > xMinRange 
                 && newPosition.y < yMaxRange && newPosition.y > yMinRange 
                 && newPosition.z < zMaxRange && newPosition.z > zMinRange)
-            {
-                transform.position = newPosition;
-            } 
+                {
+                    transform.position = newPosition;
+                }   
+            }
+         
         }
 
 
@@ -175,7 +195,9 @@ public class webCamScript : MonoBehaviour {
 
         if (totalTime < 0)
         {
-            SceneManager.LoadScene("FirstScene");
+            //SceneManager.LoadScene("FirstScene");
+            isGameOn = false;
+            ClearGameScene();
         }
     }
 
@@ -200,9 +222,7 @@ public class webCamScript : MonoBehaviour {
         
         if (other.tag == "Player")
         {
-           
-
-
+          
             AudioSource.PlayClipAtPoint(warning, transform.position);
 
             if (lifies  == 3) {
@@ -249,12 +269,45 @@ public class webCamScript : MonoBehaviour {
            
         }
 
-        if (lifies == 0 ){
-            SceneManager.LoadScene("FirstScene");
+        if (lifies == 0 )
+        {
+            isGameOn = false;
+            //SceneManager.LoadScene("FirstScene");
+            ClearGameScene();
         }
 
     }
 
+    private void ClearGameScene()
+    {
+        foreach (GameObject en in EnemiesController.allEnemies)
+        {
+            Destroy(en);
+        }
+        foreach (GameObject su in EnemiesController.allSupplies)
+        {
+            Destroy(su);
+        }
+        EnemiesController.allEnemies.Clear();
+        EnemiesController.allSupplies.Clear();
+        if (!isGameOver){
+            GameObject gameover1 = Instantiate(Resources.Load("GameOver", typeof(GameObject))) as GameObject;
+            isGameOver = true;
+        }
+        bulletsPerHit = 1;
+        Camera.main.transform.position = Vector3.zero;
+        restartButton.SetActive(true);
+        exitButton.SetActive(true);
+    }
 
 
+    public void ReStartGame(){
+        SceneManager.LoadScene("ARTextScene");
+        webCamScript.isAROn = arToggle.isOn;
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene("FirstScene");
+    }
 }
