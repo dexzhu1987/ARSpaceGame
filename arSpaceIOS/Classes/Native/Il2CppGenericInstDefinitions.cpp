@@ -165,7 +165,6 @@ extern const Il2CppType Behaviour_t1437897464_0_0_0;
 extern const Il2CppType Component_t1923634451_0_0_0;
 extern const Il2CppType Object_t631007953_0_0_0;
 extern const Il2CppType Display_t1387065949_0_0_0;
-extern const Il2CppType GameObject_t1113636619_0_0_0;
 extern const Il2CppType Touch_t1921856868_0_0_0;
 extern const Il2CppType Keyframe_t4206410242_0_0_0;
 extern const Il2CppType Color32_t2600501292_0_0_0;
@@ -271,6 +270,7 @@ extern const Il2CppType IMoveHandler_t933334182_0_0_0;
 extern const Il2CppType ISubmitHandler_t2790798304_0_0_0;
 extern const Il2CppType ICancelHandler_t3974364820_0_0_0;
 extern const Il2CppType Transform_t3600365921_0_0_0;
+extern const Il2CppType GameObject_t1113636619_0_0_0;
 extern const Il2CppType BaseInput_t3630163547_0_0_0;
 extern const Il2CppType PointerEventData_t3807901092_0_0_0;
 extern const Il2CppType AbstractEventData_t4171500731_0_0_0;
@@ -881,8 +881,6 @@ static const RuntimeType* GenInst_Object_t631007953_0_0_0_Types[] = { (&Object_t
 extern const Il2CppGenericInst GenInst_Object_t631007953_0_0_0 = { 1, GenInst_Object_t631007953_0_0_0_Types };
 static const RuntimeType* GenInst_Display_t1387065949_0_0_0_Types[] = { (&Display_t1387065949_0_0_0) };
 extern const Il2CppGenericInst GenInst_Display_t1387065949_0_0_0 = { 1, GenInst_Display_t1387065949_0_0_0_Types };
-static const RuntimeType* GenInst_GameObject_t1113636619_0_0_0_Types[] = { (&GameObject_t1113636619_0_0_0) };
-extern const Il2CppGenericInst GenInst_GameObject_t1113636619_0_0_0 = { 1, GenInst_GameObject_t1113636619_0_0_0_Types };
 static const RuntimeType* GenInst_Touch_t1921856868_0_0_0_Types[] = { (&Touch_t1921856868_0_0_0) };
 extern const Il2CppGenericInst GenInst_Touch_t1921856868_0_0_0 = { 1, GenInst_Touch_t1921856868_0_0_0_Types };
 static const RuntimeType* GenInst_Keyframe_t4206410242_0_0_0_Types[] = { (&Keyframe_t4206410242_0_0_0) };
@@ -1133,6 +1131,8 @@ static const RuntimeType* GenInst_ICancelHandler_t3974364820_0_0_0_Types[] = { (
 extern const Il2CppGenericInst GenInst_ICancelHandler_t3974364820_0_0_0 = { 1, GenInst_ICancelHandler_t3974364820_0_0_0_Types };
 static const RuntimeType* GenInst_Transform_t3600365921_0_0_0_Types[] = { (&Transform_t3600365921_0_0_0) };
 extern const Il2CppGenericInst GenInst_Transform_t3600365921_0_0_0 = { 1, GenInst_Transform_t3600365921_0_0_0_Types };
+static const RuntimeType* GenInst_GameObject_t1113636619_0_0_0_Types[] = { (&GameObject_t1113636619_0_0_0) };
+extern const Il2CppGenericInst GenInst_GameObject_t1113636619_0_0_0 = { 1, GenInst_GameObject_t1113636619_0_0_0_Types };
 static const RuntimeType* GenInst_BaseInput_t3630163547_0_0_0_Types[] = { (&BaseInput_t3630163547_0_0_0) };
 extern const Il2CppGenericInst GenInst_BaseInput_t3630163547_0_0_0 = { 1, GenInst_BaseInput_t3630163547_0_0_0_Types };
 static const RuntimeType* GenInst_Int32_t2950945753_0_0_0_PointerEventData_t3807901092_0_0_0_Types[] = { (&Int32_t2950945753_0_0_0), (&PointerEventData_t3807901092_0_0_0) };
@@ -1947,7 +1947,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[616] =
 	&GenInst_Component_t1923634451_0_0_0,
 	&GenInst_Object_t631007953_0_0_0,
 	&GenInst_Display_t1387065949_0_0_0,
-	&GenInst_GameObject_t1113636619_0_0_0,
 	&GenInst_Touch_t1921856868_0_0_0,
 	&GenInst_Keyframe_t4206410242_0_0_0,
 	&GenInst_Color32_t2600501292_0_0_0,
@@ -2073,6 +2072,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[616] =
 	&GenInst_ISubmitHandler_t2790798304_0_0_0,
 	&GenInst_ICancelHandler_t3974364820_0_0_0,
 	&GenInst_Transform_t3600365921_0_0_0,
+	&GenInst_GameObject_t1113636619_0_0_0,
 	&GenInst_BaseInput_t3630163547_0_0_0,
 	&GenInst_Int32_t2950945753_0_0_0_PointerEventData_t3807901092_0_0_0,
 	&GenInst_PointerEventData_t3807901092_0_0_0,

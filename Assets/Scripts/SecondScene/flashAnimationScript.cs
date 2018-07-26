@@ -18,7 +18,6 @@ public class flashAnimationScript : MonoBehaviour {
     public void Update()
     {
         if (isHit){
-          
             m_Animator.SetBool("isHit", true);
             StartCoroutine(SetBack());
         }

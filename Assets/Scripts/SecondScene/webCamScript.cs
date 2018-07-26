@@ -19,6 +19,8 @@ public class webCamScript : MonoBehaviour {
     public GameObject lifeImage1;
     public GameObject lifeImage2;
     public GameObject lifeImage3;
+    public Text warningText;
+    private Animator warningTextAnimator;
 
     float totalTime = 60f; //2 minutes
     public Text timer;
@@ -35,9 +37,12 @@ public class webCamScript : MonoBehaviour {
     private int bulletsPerHit;
     private int lifies;
     private bool isGameOver;
+    private int placeNumber;
 
+    private TouchScreenKeyboard keyboard;
+  
 
-	protected void Start () {
+	public void Start () {
 
         if (Application.isMobilePlatform)
         {
@@ -46,8 +51,8 @@ public class webCamScript : MonoBehaviour {
             this.transform.parent = cameraParent.transform;
             cameraParent.transform.Rotate(Vector3.right, 90);
         }
-      
 
+       
         Input.gyro.enabled = true;
 
         WebCamTexture webCameraTexture = new WebCamTexture();
@@ -61,13 +66,18 @@ public class webCamScript : MonoBehaviour {
 
         bulletsPerHit = 1;
         lifies = 3;
-
         arToggle.isOn = isAROn;
         isGameOn = true;
         isGameOver = false;
-
+        collisionScript.ememiesKilled = 0;
         restartButton.SetActive(false);
         exitButton.SetActive(false);
+        EnemiesController.allEnemiesNumber = 0;
+        EnemiesController.allSuppliesNumber = 0;
+        placeNumber = 0;
+
+        warningTextAnimator = warningText.GetComponent<Animator>();
+      
 
 	}
 	
@@ -143,9 +153,15 @@ public class webCamScript : MonoBehaviour {
     {
         HandleCamera();
         if (isGameOn){
-           
             HandleTime();
-            mKilledLabel.text = "Destoryed: " + collisionScript.ememiesKilled;
+            string killedText = "Destoryed: " + collisionScript.ememiesKilled + "         Highest: ";
+            int highest = PlayerPrefs.GetInt("first");
+            if ( highest > collisionScript.ememiesKilled){
+                killedText += highest;
+            } else {
+                killedText += collisionScript.ememiesKilled;
+            }
+            mKilledLabel.text = killedText;
         } 
     }
 
@@ -176,6 +192,9 @@ public class webCamScript : MonoBehaviour {
                 && newPosition.z < zMaxRange && newPosition.z > zMinRange)
                 {
                     transform.position = newPosition;
+                    warningTextAnimator.SetBool("isAtEdge", false);
+                } else {
+                    warningTextAnimator.SetBool("isAtEdge", true);
                 }   
             }
          
@@ -239,17 +258,16 @@ public class webCamScript : MonoBehaviour {
         
         } 
 
-        if (other.tag == "Supply1") {
+        if (other.tag == "Supply1")
+        {
             bulletsPerHit++;
-            Destroy(other.gameObject);
-            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
+            suppliesRelatedMethod(other);
         }
 
         if (other.tag == "Supply2")
         {
             totalTime += 10f;
-            Destroy(other.gameObject);
-            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
+            suppliesRelatedMethod(other);
         }
 
         if (other.tag == "Supply3")
@@ -264,8 +282,7 @@ public class webCamScript : MonoBehaviour {
                 lifeImage2.SetActive(true);
              
             }
-            Destroy(other.gameObject);
-            AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
+            suppliesRelatedMethod(other);
            
         }
 
@@ -276,6 +293,13 @@ public class webCamScript : MonoBehaviour {
             ClearGameScene();
         }
 
+    }
+
+    private void suppliesRelatedMethod(Collider other)
+    {
+        Destroy(other.gameObject);
+        AudioSource.PlayClipAtPoint(getItem, transform.position, VOLUME);
+        EnemiesController.allSuppliesNumber--;
     }
 
     private void ClearGameScene()
@@ -293,13 +317,70 @@ public class webCamScript : MonoBehaviour {
         if (!isGameOver){
             GameObject gameover1 = Instantiate(Resources.Load("GameOver", typeof(GameObject))) as GameObject;
             isGameOver = true;
+            int firstPlaceInt = PlayerPrefs.GetInt("first");
+            int secondPlaceInt = PlayerPrefs.GetInt("second");
+            int thirdPlaceInt = PlayerPrefs.GetInt("third");
+            if (collisionScript.ememiesKilled > firstPlaceInt)
+            {
+                placeNumber = 1;
+                PlayerPrefs.SetInt("first", collisionScript.ememiesKilled);
+                if (Application.isMobilePlatform)
+                {
+                    keyboard = TouchScreenKeyboard.Open("first", TouchScreenKeyboardType.Default);
+
+                }
+                GameObject place = Instantiate(Resources.Load("FirstPlace", typeof(GameObject))) as GameObject;
+            }
+            else if (collisionScript.ememiesKilled > secondPlaceInt)
+            {
+                placeNumber = 2;
+                PlayerPrefs.SetInt("second", collisionScript.ememiesKilled);
+                if (Application.isMobilePlatform)
+                {
+                    keyboard = TouchScreenKeyboard.Open("second", TouchScreenKeyboardType.Default);
+
+                }
+                GameObject place = Instantiate(Resources.Load("SecondPlace", typeof(GameObject))) as GameObject;
+            }
+            else if (collisionScript.ememiesKilled > thirdPlaceInt)
+            {
+                placeNumber = 3;
+                PlayerPrefs.SetInt("third", collisionScript.ememiesKilled);
+                if (Application.isMobilePlatform)
+                {
+                    keyboard = TouchScreenKeyboard.Open("third", TouchScreenKeyboardType.Default);
+
+                }
+                GameObject place = Instantiate(Resources.Load("ThirdPlace", typeof(GameObject))) as GameObject;
+            }
+           
+           
         }
         bulletsPerHit = 1;
         Camera.main.transform.position = Vector3.zero;
         restartButton.SetActive(true);
         exitButton.SetActive(true);
+     
+      
+
+
     }
 
+
+    private void OnGUI()
+    {
+        TouchScreenKeyboard.Status status = keyboard.status;
+        if (status == TouchScreenKeyboard.Status.Done){
+            if (placeNumber ==1) {
+                PlayerPrefs.SetString("firstName", keyboard.text);
+            } else if (placeNumber == 2){
+                PlayerPrefs.SetString("secondName", keyboard.text);
+            } else if (placeNumber == 3) {
+                PlayerPrefs.SetString("thirdName", keyboard.text);
+            }
+
+        }
+    }
 
     public void ReStartGame(){
         SceneManager.LoadScene("ARTextScene");

@@ -36,23 +36,8 @@ public class collisionScript : MonoBehaviour
             Destroy(explosion, 2);
             Destroy(gameObject);
             ememiesKilled++;
+            EnemiesController.allEnemiesNumber--;
         }
-
-      
-
-        if (GameObject.FindGameObjectsWithTag("Player").Length == 0 )
-        {
-
-            //GameObject enemy = 
-            //GameObject enemy1 = Instantiate(Resources.Load("enemy1", typeof(GameObject)),pos) as GameObject;
-            //GameObject enemy2 = Instantiate(Resources.Load("enemy2", typeof(GameObject)),pos) as GameObject;
-            //GameObject enemy3 = Instantiate(Resources.Load("enemy3", typeof(GameObject)),pos) as GameObject;
-
-
-
-        }
-
-     
        
     }
 

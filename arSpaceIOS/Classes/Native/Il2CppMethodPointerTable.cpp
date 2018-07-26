@@ -7695,7 +7695,6 @@ extern "C" void GameObject_SetActive_m796801857 ();
 extern "C" void GameObject_get_activeSelf_m1767405923 ();
 extern "C" void GameObject_get_activeInHierarchy_m2006396688 ();
 extern "C" void GameObject_get_tag_m3951609671 ();
-extern "C" void GameObject_FindGameObjectsWithTag_m2585173894 ();
 extern "C" void GameObject_SendMessage_m3720186693 ();
 extern "C" void GameObject_BroadcastMessage_m3721316603 ();
 extern "C" void GameObject_BroadcastMessage_m217296818 ();
@@ -8036,6 +8035,15 @@ extern "C" void PlayerConnectionInternal_UnregisterInternal_m477908195 ();
 extern "C" void PlayerConnectionInternal_SendMessage_m2378413408 ();
 extern "C" void PlayerConnectionInternal_PollInternal_m3759016321 ();
 extern "C" void PlayerConnectionInternal_DisconnectAll_m4073996061 ();
+extern "C" void PlayerPrefs_TrySetInt_m835861542 ();
+extern "C" void PlayerPrefs_TrySetSetString_m1440604142 ();
+extern "C" void PlayerPrefs_SetInt_m2842000469 ();
+extern "C" void PlayerPrefs_GetInt_m1299643124 ();
+extern "C" void PlayerPrefs_GetInt_m3797620966 ();
+extern "C" void PlayerPrefs_SetString_m2101271233 ();
+extern "C" void PlayerPrefs_GetString_m614532710 ();
+extern "C" void PlayerPrefs_GetString_m389913383 ();
+extern "C" void PlayerPrefsException__ctor_m1374997736 ();
 extern "C" void PropertyAttribute__ctor_m1017741868 ();
 extern "C" void PropertyName__ctor_m1858502781_AdjustorThunk ();
 extern "C" void PropertyName__ctor_m3511806171_AdjustorThunk ();
@@ -8303,6 +8311,7 @@ extern "C" void TouchScreenKeyboard_Destroy_m267768093 ();
 extern "C" void TouchScreenKeyboard_Finalize_m3415749170 ();
 extern "C" void TouchScreenKeyboard_TouchScreenKeyboard_InternalConstructorHelper_m4131035092 ();
 extern "C" void TouchScreenKeyboard_get_isSupported_m1062200762 ();
+extern "C" void TouchScreenKeyboard_Open_m871123569 ();
 extern "C" void TouchScreenKeyboard_Open_m3609399077 ();
 extern "C" void TouchScreenKeyboard_get_text_m1797464608 ();
 extern "C" void TouchScreenKeyboard_set_text_m107652927 ();
@@ -10968,6 +10977,7 @@ extern "C" void GunShoot_HandleHit_m2751777149 ();
 extern "C" void GunShoot_SpawnDecal_m3331414376 ();
 extern "C" void mainCameraScipt__ctor_m63351000 ();
 extern "C" void mainCameraScipt_Start_m735070828 ();
+extern "C" void mainCameraScipt_HandleName_m450533147 ();
 extern "C" void mainCameraScipt_OnButtonDown_m3286132977 ();
 extern "C" void mainCameraScipt_Update_m2502302330 ();
 extern "C" void ParticleCollision__ctor_m4118077300 ();
@@ -10979,6 +10989,9 @@ extern "C" void ParticleMenu_Start_m2456041001 ();
 extern "C" void ParticleMenu_Navigate_m1672272913 ();
 extern "C" void spin__ctor_m1306856874 ();
 extern "C" void spin_Update_m1355771218 ();
+extern "C" void textScript__ctor_m3469883903 ();
+extern "C" void textScript_Start_m2630399039 ();
+extern "C" void textScript_Update_m397495985 ();
 extern "C" void VirtualJoyceStick__ctor_m301406260 ();
 extern "C" void VirtualJoyceStick_Start_m556748936 ();
 extern "C" void VirtualJoyceStick_Update_m966124290 ();
@@ -10998,6 +11011,11 @@ extern "C" void webCamScript_HandleCamera_m1263492610 ();
 extern "C" void webCamScript_HandleTime_m1725458896 ();
 extern "C" void webCamScript_UpdateLevelTimer_m2472818325 ();
 extern "C" void webCamScript_OnTriggerEnter_m1708050193 ();
+extern "C" void webCamScript_suppliesRelatedMethod_m262701839 ();
+extern "C" void webCamScript_ClearGameScene_m1762896711 ();
+extern "C" void webCamScript_OnGUI_m1018723370 ();
+extern "C" void webCamScript_ReStartGame_m1611691746 ();
+extern "C" void webCamScript_Exit_m2164145644 ();
 extern "C" void webCamScript_U3CStartU3Em__0_m2455209964 ();
 extern "C" void AlphaButtonClickMask__ctor_m1159171375 ();
 extern "C" void AlphaButtonClickMask_Start_m1273203541 ();
@@ -11333,7 +11351,7 @@ extern "C" void WaypointProgressTracker_Start_m1081584341 ();
 extern "C" void WaypointProgressTracker_Reset_m1659377711 ();
 extern "C" void WaypointProgressTracker_Update_m572671677 ();
 extern "C" void WaypointProgressTracker_OnDrawGizmos_m2504516940 ();
-extern const Il2CppMethodPointer g_MethodPointers[11314] = 
+extern const Il2CppMethodPointer g_MethodPointers[11332] = 
 {
 	Locale_GetText_m3374010885,
 	Locale_GetText_m1601577974,
@@ -19011,7 +19029,6 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	GameObject_get_activeSelf_m1767405923,
 	GameObject_get_activeInHierarchy_m2006396688,
 	GameObject_get_tag_m3951609671,
-	GameObject_FindGameObjectsWithTag_m2585173894,
 	GameObject_SendMessage_m3720186693,
 	GameObject_BroadcastMessage_m3721316603,
 	GameObject_BroadcastMessage_m217296818,
@@ -19352,6 +19369,15 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	PlayerConnectionInternal_SendMessage_m2378413408,
 	PlayerConnectionInternal_PollInternal_m3759016321,
 	PlayerConnectionInternal_DisconnectAll_m4073996061,
+	PlayerPrefs_TrySetInt_m835861542,
+	PlayerPrefs_TrySetSetString_m1440604142,
+	PlayerPrefs_SetInt_m2842000469,
+	PlayerPrefs_GetInt_m1299643124,
+	PlayerPrefs_GetInt_m3797620966,
+	PlayerPrefs_SetString_m2101271233,
+	PlayerPrefs_GetString_m614532710,
+	PlayerPrefs_GetString_m389913383,
+	PlayerPrefsException__ctor_m1374997736,
 	PropertyAttribute__ctor_m1017741868,
 	PropertyName__ctor_m1858502781_AdjustorThunk,
 	PropertyName__ctor_m3511806171_AdjustorThunk,
@@ -19619,6 +19645,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	TouchScreenKeyboard_Finalize_m3415749170,
 	TouchScreenKeyboard_TouchScreenKeyboard_InternalConstructorHelper_m4131035092,
 	TouchScreenKeyboard_get_isSupported_m1062200762,
+	TouchScreenKeyboard_Open_m871123569,
 	TouchScreenKeyboard_Open_m3609399077,
 	TouchScreenKeyboard_get_text_m1797464608,
 	TouchScreenKeyboard_set_text_m107652927,
@@ -22284,6 +22311,7 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	GunShoot_SpawnDecal_m3331414376,
 	mainCameraScipt__ctor_m63351000,
 	mainCameraScipt_Start_m735070828,
+	mainCameraScipt_HandleName_m450533147,
 	mainCameraScipt_OnButtonDown_m3286132977,
 	mainCameraScipt_Update_m2502302330,
 	ParticleCollision__ctor_m4118077300,
@@ -22295,6 +22323,9 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	ParticleMenu_Navigate_m1672272913,
 	spin__ctor_m1306856874,
 	spin_Update_m1355771218,
+	textScript__ctor_m3469883903,
+	textScript_Start_m2630399039,
+	textScript_Update_m397495985,
 	VirtualJoyceStick__ctor_m301406260,
 	VirtualJoyceStick_Start_m556748936,
 	VirtualJoyceStick_Update_m966124290,
@@ -22314,6 +22345,11 @@ extern const Il2CppMethodPointer g_MethodPointers[11314] =
 	webCamScript_HandleTime_m1725458896,
 	webCamScript_UpdateLevelTimer_m2472818325,
 	webCamScript_OnTriggerEnter_m1708050193,
+	webCamScript_suppliesRelatedMethod_m262701839,
+	webCamScript_ClearGameScene_m1762896711,
+	webCamScript_OnGUI_m1018723370,
+	webCamScript_ReStartGame_m1611691746,
+	webCamScript_Exit_m2164145644,
 	webCamScript_U3CStartU3Em__0_m2455209964,
 	AlphaButtonClickMask__ctor_m1159171375,
 	AlphaButtonClickMask_Start_m1273203541,

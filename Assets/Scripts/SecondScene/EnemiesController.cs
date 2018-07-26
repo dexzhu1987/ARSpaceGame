@@ -19,6 +19,8 @@ public class EnemiesController : MonoBehaviour {
     private float mNextSupplySpawnTime;
     public static List<GameObject> allEnemies;
     public static List<GameObject> allSupplies;
+    public static int allEnemiesNumber;
+    public static int allSuppliesNumber;
 
 	// Use this for initialization
 	void Start () {
@@ -38,13 +40,13 @@ public class EnemiesController : MonoBehaviour {
         if (webCamScript.isGameOn){
             mNextSpawnTime -= Time.deltaTime;
             mNextSupplySpawnTime -= Time.deltaTime;
-            if (mNextSpawnTime < 0)
+            if (mNextSpawnTime < 0 && allEnemiesNumber < 55)
             {
                 spawnEnemies();
             }
 
 
-            if (mNextSupplySpawnTime < 0 && !webCamScript.isAROn)
+            if (mNextSupplySpawnTime < 0 && !webCamScript.isAROn && allSuppliesNumber < 15)
             {
                 spawnSupplies();
             }
@@ -60,6 +62,7 @@ public class EnemiesController : MonoBehaviour {
         float xSpin = Random.Range(0, 360);
         en.transform.rotation = Quaternion.Euler(0, xSpin, 0);
         allEnemies.Add(en);
+        allEnemiesNumber++;
     }
 
     public void spawnSupplies(){
@@ -79,6 +82,7 @@ public class EnemiesController : MonoBehaviour {
 
         GameObject su = Instantiate(gameObjects[supplyNumber], pos, Quaternion.identity);
         allSupplies.Add(su);
+        allSuppliesNumber++;
     }
 
 

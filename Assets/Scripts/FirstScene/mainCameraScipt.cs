@@ -6,7 +6,12 @@ using UnityEngine.UI;
 public class mainCameraScipt : MonoBehaviour {
 
 
-    public Button fireButton; 
+    public Button fireButton;
+    public Text firstPlace;
+    public Text secondPlace;
+    public Text thirdPlace;
+
+
 	// Use this for initialization
 	void Start () {
         if (Application.isMobilePlatform)
@@ -19,9 +24,34 @@ public class mainCameraScipt : MonoBehaviour {
 
         Input.gyro.enabled = true;
 
+        int firstPlaceInt = PlayerPrefs.GetInt("first");
+        string firstName = PlayerPrefs.GetString("firstName");
+
+        firstPlace.text = "1). " + HandleName(firstName) + "       " + firstPlaceInt;
+
+        int secondPlaceInt = PlayerPrefs.GetInt("second");
+        string secondName = PlayerPrefs.GetString("secondName");
+        secondPlace.text = "2). "+ HandleName(secondName) + "  " + secondPlaceInt;
+
+        int thirdPlaceInt = PlayerPrefs.GetInt("third");
+        string thirdName = PlayerPrefs.GetString("thirdName");
+        thirdPlace.text = "3). "+ HandleName(thirdName)+"  "+ thirdPlaceInt;
+    
         fireButton.onClick.AddListener(OnButtonDown);
     
+       
 	}
+
+    private string HandleName(string name){
+        if (name.Length == 0 ){
+            return "DEX";
+        } else if (name.Length > 0 && name.Length <= 5){
+            return name;
+        } else if (name.Length > 5){
+            return name.Substring(0, 3);
+        }
+        return "DEX";
+    }
 
     void OnButtonDown()
     {

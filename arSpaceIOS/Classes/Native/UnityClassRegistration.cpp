@@ -186,7 +186,7 @@ class TilemapRenderer;
 class TrailRenderer; 
 class Rigidbody; template <> void RegisterClass<Rigidbody>(const char*);
 class Rigidbody2D; 
-namespace TextRenderingPrivate { class TextMesh; } 
+namespace TextRenderingPrivate { class TextMesh; } template <> void RegisterClass<TextRenderingPrivate::TextMesh>(const char*);
 class Transform; template <> void RegisterClass<Transform>(const char*);
 namespace UI { class RectTransform; } template <> void RegisterClass<UI::RectTransform>(const char*);
 class Tree; 
@@ -289,7 +289,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 85 non stripped classes
+	//Total: 86 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>("Core");
 	//1. Unity::Component
@@ -458,7 +458,9 @@ RegisterBuiltinTypes();
 	RegisterClass<LevelGameManager>("Core");
 	//83. LightmapSettings
 	RegisterClass<LightmapSettings>("Core");
-	//84. MeshCollider
+	//84. TextRenderingPrivate::TextMesh
+	RegisterClass<TextRenderingPrivate::TextMesh>("TextRendering");
+	//85. MeshCollider
 	RegisterClass<MeshCollider>("Physics");
 
 }
