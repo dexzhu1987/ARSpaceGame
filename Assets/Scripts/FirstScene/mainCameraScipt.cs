@@ -48,7 +48,7 @@ public class mainCameraScipt : MonoBehaviour {
         } else if (name.Length > 0 && name.Length <= 5){
             return name;
         } else if (name.Length > 5){
-            return name.Substring(0, 3);
+            return name.Substring(0, 5);
         }
         return "DEX";
     }

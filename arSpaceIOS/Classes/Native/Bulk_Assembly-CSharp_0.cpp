@@ -430,6 +430,7 @@ extern const uint32_t webCamScript_Spawn15DegreeBullets_m985852455_MetadataUsage
 extern const uint32_t webCamScript_Spawn30DegreeBullets_m3850022069_MetadataUsageId;
 extern const uint32_t webCamScript_ToggleValueChanged_m3690979357_MetadataUsageId;
 extern String_t* _stringLiteral1848871212;
+extern String_t* _stringLiteral1821176309;
 extern const uint32_t webCamScript_Update_m4223067181_MetadataUsageId;
 extern String_t* _stringLiteral729683400;
 extern const uint32_t webCamScript_HandleCamera_m1263492610_MetadataUsageId;
@@ -448,7 +449,9 @@ extern const RuntimeMethod* Enumerator_MoveNext_m4286844348_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_Dispose_m1341201278_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_Clear_m2500309205_RuntimeMethod_var;
 extern String_t* _stringLiteral1350712178;
-extern String_t* _stringLiteral3361472102;
+extern String_t* _stringLiteral1528865110;
+extern String_t* _stringLiteral1779471562;
+extern String_t* _stringLiteral2603751489;
 extern const uint32_t webCamScript_ClearGameScene_m1762896711_MetadataUsageId;
 extern const uint32_t webCamScript_OnGUI_m1018723370_MetadataUsageId;
 extern const uint32_t webCamScript_ReStartGame_m1611691746_MetadataUsageId;
@@ -7614,6 +7617,8 @@ extern "C"  bool Toggle_get_isOn_m1428293607 (Toggle_t2735377061 * __this, const
 extern "C"  void webCamScript_HandleCamera_m1263492610 (webCamScript_t4220051822 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void webCamScript::HandleTime()
 extern "C"  void webCamScript_HandleTime_m1725458896 (webCamScript_t4220051822 * __this, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.String System.String::Concat(System.Object,System.Object,System.Object)
+extern "C"  String_t* String_Concat_m1715369213 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, RuntimeObject * p1, RuntimeObject * p2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.Object,System.Object)
 extern "C"  String_t* String_Concat_m904156431 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, RuntimeObject * p1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::Rotate(System.Single,System.Single,System.Single)
@@ -10334,7 +10339,7 @@ IL_0011:
 		String_t* L_4 = ___name0;
 		NullCheck(L_4);
 		int32_t L_5 = String_get_Length_m3847582255(L_4, /*hidden argument*/NULL);
-		if ((((int32_t)L_5) > ((int32_t)3)))
+		if ((((int32_t)L_5) > ((int32_t)5)))
 		{
 			goto IL_002b;
 		}
@@ -10349,7 +10354,7 @@ IL_002b:
 		String_t* L_7 = ___name0;
 		NullCheck(L_7);
 		int32_t L_8 = String_get_Length_m3847582255(L_7, /*hidden argument*/NULL);
-		if ((((int32_t)L_8) <= ((int32_t)3)))
+		if ((((int32_t)L_8) <= ((int32_t)5)))
 		{
 			goto IL_0040;
 		}
@@ -11649,27 +11654,64 @@ extern "C"  void webCamScript_Update_m4223067181 (webCamScript_t4220051822 * __t
 		il2cpp_codegen_initialize_method (webCamScript_Update_m4223067181_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
+	String_t* V_0 = NULL;
+	int32_t V_1 = 0;
 	{
 		webCamScript_HandleCamera_m1263492610(__this, /*hidden argument*/NULL);
 		bool L_0 = ((webCamScript_t4220051822_StaticFields*)il2cpp_codegen_static_fields_for(webCamScript_t4220051822_il2cpp_TypeInfo_var))->get_isGameOn_3();
 		if (!L_0)
 		{
-			goto IL_0035;
+			goto IL_0075;
 		}
 	}
 	{
 		webCamScript_HandleTime_m1725458896(__this, /*hidden argument*/NULL);
-		Text_t1901882714 * L_1 = __this->get_mKilledLabel_18();
-		int32_t L_2 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
-		int32_t L_3 = L_2;
-		RuntimeObject * L_4 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_3);
+		int32_t L_1 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		int32_t L_2 = L_1;
+		RuntimeObject * L_3 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_2);
 		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
-		String_t* L_5 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral1848871212, L_4, /*hidden argument*/NULL);
-		NullCheck(L_1);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_1, L_5);
+		String_t* L_4 = String_Concat_m1715369213(NULL /*static, unused*/, _stringLiteral1848871212, L_3, _stringLiteral1821176309, /*hidden argument*/NULL);
+		V_0 = L_4;
+		int32_t L_5 = PlayerPrefs_GetInt_m3797620966(NULL /*static, unused*/, _stringLiteral2374226348, /*hidden argument*/NULL);
+		V_1 = L_5;
+		int32_t L_6 = V_1;
+		int32_t L_7 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		if ((((int32_t)L_6) <= ((int32_t)L_7)))
+		{
+			goto IL_0058;
+		}
+	}
+	{
+		String_t* L_8 = V_0;
+		int32_t L_9 = V_1;
+		int32_t L_10 = L_9;
+		RuntimeObject * L_11 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_10);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_12 = String_Concat_m904156431(NULL /*static, unused*/, L_8, L_11, /*hidden argument*/NULL);
+		V_0 = L_12;
+		goto IL_0069;
 	}
 
-IL_0035:
+IL_0058:
+	{
+		String_t* L_13 = V_0;
+		int32_t L_14 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		int32_t L_15 = L_14;
+		RuntimeObject * L_16 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_15);
+		IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+		String_t* L_17 = String_Concat_m904156431(NULL /*static, unused*/, L_13, L_16, /*hidden argument*/NULL);
+		V_0 = L_17;
+	}
+
+IL_0069:
+	{
+		Text_t1901882714 * L_18 = __this->get_mKilledLabel_18();
+		String_t* L_19 = V_0;
+		NullCheck(L_18);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_18, L_19);
+	}
+
+IL_0075:
 	{
 		return;
 	}
@@ -12207,6 +12249,9 @@ extern "C"  void webCamScript_ClearGameScene_m1762896711 (webCamScript_t42200518
 	int32_t V_5 = 0;
 	int32_t V_6 = 0;
 	int32_t V_7 = 0;
+	GameObject_t1113636619 * V_8 = NULL;
+	GameObject_t1113636619 * V_9 = NULL;
+	GameObject_t1113636619 * V_10 = NULL;
 	Exception_t * __last_unhandled_exception = 0;
 	NO_UNUSED_WARNING (__last_unhandled_exception);
 	Exception_t * __exception_local = 0;
@@ -12333,7 +12378,7 @@ IL_007a:
 		bool L_12 = __this->get_isGameOver_27();
 		if (L_12)
 		{
-			goto IL_01a5;
+			goto IL_0205;
 		}
 	}
 	{
@@ -12355,7 +12400,7 @@ IL_007a:
 		int32_t L_21 = V_5;
 		if ((((int32_t)L_20) <= ((int32_t)L_21)))
 		{
-			goto IL_0126;
+			goto IL_0146;
 		}
 	}
 	{
@@ -12375,78 +12420,103 @@ IL_007a:
 
 IL_0121:
 	{
-		goto IL_01a5;
+		RuntimeTypeHandle_t3027515415  L_25 = { reinterpret_cast<intptr_t> (GameObject_t1113636619_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_26 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_25, /*hidden argument*/NULL);
+		Object_t631007953 * L_27 = Resources_Load_m3480190876(NULL /*static, unused*/, _stringLiteral1528865110, L_26, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_28 = Object_Instantiate_m3403600534(NULL /*static, unused*/, L_27, /*hidden argument*/NULL);
+		V_8 = ((GameObject_t1113636619 *)IsInstSealed((RuntimeObject*)L_28, GameObject_t1113636619_il2cpp_TypeInfo_var));
+		goto IL_0205;
 	}
 
-IL_0126:
+IL_0146:
 	{
-		int32_t L_25 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
-		int32_t L_26 = V_6;
-		if ((((int32_t)L_25) <= ((int32_t)L_26)))
+		int32_t L_29 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		int32_t L_30 = V_6;
+		if ((((int32_t)L_29) <= ((int32_t)L_30)))
 		{
-			goto IL_0168;
+			goto IL_01a8;
 		}
 	}
 	{
 		__this->set_placeNumber_28(2);
-		int32_t L_27 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
-		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral3502150264, L_27, /*hidden argument*/NULL);
-		bool L_28 = Application_get_isMobilePlatform_m751658814(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if (!L_28)
+		int32_t L_31 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral3502150264, L_31, /*hidden argument*/NULL);
+		bool L_32 = Application_get_isMobilePlatform_m751658814(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_32)
 		{
-			goto IL_0163;
+			goto IL_0183;
 		}
 	}
 	{
-		TouchScreenKeyboard_t731888065 * L_29 = TouchScreenKeyboard_Open_m871123569(NULL /*static, unused*/, _stringLiteral3361472102, 0, /*hidden argument*/NULL);
-		__this->set_keyboard_29(L_29);
+		TouchScreenKeyboard_t731888065 * L_33 = TouchScreenKeyboard_Open_m871123569(NULL /*static, unused*/, _stringLiteral3502150264, 0, /*hidden argument*/NULL);
+		__this->set_keyboard_29(L_33);
 	}
 
-IL_0163:
+IL_0183:
 	{
-		goto IL_01a5;
+		RuntimeTypeHandle_t3027515415  L_34 = { reinterpret_cast<intptr_t> (GameObject_t1113636619_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_35 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_34, /*hidden argument*/NULL);
+		Object_t631007953 * L_36 = Resources_Load_m3480190876(NULL /*static, unused*/, _stringLiteral1779471562, L_35, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_37 = Object_Instantiate_m3403600534(NULL /*static, unused*/, L_36, /*hidden argument*/NULL);
+		V_9 = ((GameObject_t1113636619 *)IsInstSealed((RuntimeObject*)L_37, GameObject_t1113636619_il2cpp_TypeInfo_var));
+		goto IL_0205;
 	}
 
-IL_0168:
+IL_01a8:
 	{
-		int32_t L_30 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
-		int32_t L_31 = V_7;
-		if ((((int32_t)L_30) <= ((int32_t)L_31)))
+		int32_t L_38 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		int32_t L_39 = V_7;
+		if ((((int32_t)L_38) <= ((int32_t)L_39)))
 		{
-			goto IL_01a5;
+			goto IL_0205;
 		}
 	}
 	{
 		__this->set_placeNumber_28(3);
-		int32_t L_32 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
-		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral2342388883, L_32, /*hidden argument*/NULL);
-		bool L_33 = Application_get_isMobilePlatform_m751658814(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if (!L_33)
+		int32_t L_40 = ((collisionScript_t2453821997_StaticFields*)il2cpp_codegen_static_fields_for(collisionScript_t2453821997_il2cpp_TypeInfo_var))->get_ememiesKilled_4();
+		PlayerPrefs_SetInt_m2842000469(NULL /*static, unused*/, _stringLiteral2342388883, L_40, /*hidden argument*/NULL);
+		bool L_41 = Application_get_isMobilePlatform_m751658814(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_41)
 		{
-			goto IL_01a5;
+			goto IL_01e5;
 		}
 	}
 	{
-		TouchScreenKeyboard_t731888065 * L_34 = TouchScreenKeyboard_Open_m871123569(NULL /*static, unused*/, _stringLiteral2342388883, 0, /*hidden argument*/NULL);
-		__this->set_keyboard_29(L_34);
+		TouchScreenKeyboard_t731888065 * L_42 = TouchScreenKeyboard_Open_m871123569(NULL /*static, unused*/, _stringLiteral2342388883, 0, /*hidden argument*/NULL);
+		__this->set_keyboard_29(L_42);
 	}
 
-IL_01a5:
+IL_01e5:
+	{
+		RuntimeTypeHandle_t3027515415  L_43 = { reinterpret_cast<intptr_t> (GameObject_t1113636619_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_44 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_43, /*hidden argument*/NULL);
+		Object_t631007953 * L_45 = Resources_Load_m3480190876(NULL /*static, unused*/, _stringLiteral2603751489, L_44, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		Object_t631007953 * L_46 = Object_Instantiate_m3403600534(NULL /*static, unused*/, L_45, /*hidden argument*/NULL);
+		V_10 = ((GameObject_t1113636619 *)IsInstSealed((RuntimeObject*)L_46, GameObject_t1113636619_il2cpp_TypeInfo_var));
+	}
+
+IL_0205:
 	{
 		__this->set_bulletsPerHit_25(1);
-		Camera_t4157153871 * L_35 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_35);
-		Transform_t3600365921 * L_36 = Component_get_transform_m3162698980(L_35, /*hidden argument*/NULL);
+		Camera_t4157153871 * L_47 = Camera_get_main_m3643453163(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_47);
+		Transform_t3600365921 * L_48 = Component_get_transform_m3162698980(L_47, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-		Vector3_t3722313464  L_37 = Vector3_get_zero_m1409827619(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_36);
-		Transform_set_position_m3387557959(L_36, L_37, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_38 = __this->get_restartButton_6();
-		NullCheck(L_38);
-		GameObject_SetActive_m796801857(L_38, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_39 = __this->get_exitButton_7();
-		NullCheck(L_39);
-		GameObject_SetActive_m796801857(L_39, (bool)1, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_49 = Vector3_get_zero_m1409827619(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_48);
+		Transform_set_position_m3387557959(L_48, L_49, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_50 = __this->get_restartButton_6();
+		NullCheck(L_50);
+		GameObject_SetActive_m796801857(L_50, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_51 = __this->get_exitButton_7();
+		NullCheck(L_51);
+		GameObject_SetActive_m796801857(L_51, (bool)1, /*hidden argument*/NULL);
 		return;
 	}
 }
